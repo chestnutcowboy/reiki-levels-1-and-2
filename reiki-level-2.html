@@ -112,7 +112,7 @@ var TEACHER = {
   website: "https://theblackrootpress.com",
   email: "editor@theblackrootpress.com",
   paypalEmail: "luke.allis14@gmail.com",
-  paypalLink: "https://www.paypal.com/myaccount/transfer/homepage/pay"
+  paypalLink: "https://www.paypal.com/qrcodes/managed/5540da59-2d81-46f1-8863-8c0be7410e29?utm_source=consweb_more"
 };
 var PASS_MARK = 80;
 /* Chakra colors, root to crown, one per page: [main, deep text, soft tint] */
@@ -138,29 +138,30 @@ function attunementSteps(){return `
 
 
 
-/* Level 3 enrollment guidance only. Master course content is not public. */
+
+/* Level 3 payment and enrollment instructions; paid Master course stays off GitHub. */
 function masterEnrollmentSection(){return `
 <hr class="rainbow-rule">
 <h3>Continue your journey: Reiki Master (Level 3 · Shinpiden)</h3>
-<p>Levels 1 and 2 are free. Reiki Master training is offered through a one-time contribution; choose the amount that works for you:</p>
+<p>Reiki Levels 1 and 2 are free. Reiki Master training is available for a one-time contribution paid <strong>directly through PayPal</strong>.</p>
 <ul>
 <li><strong>$11.11 — Accessible Minimum</strong></li>
 <li><strong>$22.22 — Community Rate</strong></li>
 <li><strong>$33.33 — Supporting Rate</strong></li>
 <li><strong>$44.44 — Pay It Forward</strong></li>
 </ul>
-<p>Every contribution level unlocks the <strong>same complete Reiki Master classroom</strong>, including the Master attunement by arrangement and certificate. No additional Level 3 attunement or certificate payment is required.</p>
-<h3>How to get access</h3>
+<p>Choose any of the four amounts. Each gives you <strong>the same full Reiki Master classroom</strong>, including the Master attunement by arrangement and certificate. No additional payment for either is required.</p>
+<p><a class="btn" href="https://www.paypal.com/qrcodes/managed/5540da59-2d81-46f1-8863-8c0be7410e29?utm_source=consweb_more" target="_blank" rel="noopener noreferrer">Pay for Reiki Master Training with PayPal ↗</a></p>
+<h3>After your PayPal payment</h3>
 <ol>
-<li>Send your chosen amount through PayPal to <strong>${TEACHER.paypalEmail}</strong>. Enter the amount and recipient yourself; the link does not prefill them.</li>
-<li>Include an email address where I can reach you. If it is different from your PayPal email, email <a href="mailto:${TEACHER.email}?subject=Reiki%20Master%20payment%20confirmation">${TEACHER.email}</a> your name and PayPal payment details.</li>
-<li>Once I receive and verify your payment, I'll email you a private classroom password.</li>
-<li>Open the classroom link below, enter your password, and begin learning.</li>
+<li>Make your one-time contribution using the PayPal button above. It leads to the <strong>same payment destination as the PayPal QR code in this course</strong>, not a Wix checkout.</li>
+<li>Make sure I have an email address where I can reach you. If your email differs from your PayPal address, contact <a href="mailto:${TEACHER.email}?subject=Reiki%20Master%20payment%20confirmation">${TEACHER.email}</a> with your name and PayPal transaction details.</li>
+<li><strong>After I receive and verify your payment, I will email you the private classroom password.</strong></li>
+<li>Open the classroom link below, enter the password, and begin your training.</li>
 </ol>
-<p><a class="btn" href="${TEACHER.paypalLink}" target="_blank" rel="noopener noreferrer">Open PayPal to pay ↗</a></p>
 <p><strong>Already have your password?</strong></p>
 <p><a class="btn secondary" href="https://www.theblackrootpress.com/reiki-master-classroom-shinpiden" target="_blank" rel="noopener noreferrer">Enter the Reiki Master Classroom ↗</a></p>
-<p><small>This password and the materials are for individual use. Please do not share the password, provide access to others, or reproduce or redistribute course materials. Level 1 and Level 2 attunements are prerequisites for receiving the Master attunement.</small></p>
+<p><small>Classroom access is for individual use. Do not share the password, provide access to others, or copy or redistribute course materials. Reiki Level 1 and Level 2 attunements are prerequisites for receiving your Master attunement.</small></p>
 `;}
 
 /* ===== Lessons ===== */
