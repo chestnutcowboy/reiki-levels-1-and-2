@@ -137,6 +137,32 @@ function attunementSteps(){return `
 </ol>`;}
 
 
+
+/* Level 3 enrollment guidance only. Master course content is not public. */
+function masterEnrollmentSection(){return `
+<hr class="rainbow-rule">
+<h3>Continue your journey: Reiki Master (Level 3 · Shinpiden)</h3>
+<p>Levels 1 and 2 are free. Reiki Master training is offered through a one-time contribution; choose the amount that works for you:</p>
+<ul>
+<li><strong>$11.11 — Accessible Minimum</strong></li>
+<li><strong>$22.22 — Community Rate</strong></li>
+<li><strong>$33.33 — Supporting Rate</strong></li>
+<li><strong>$44.44 — Pay It Forward</strong></li>
+</ul>
+<p>Every contribution level unlocks the <strong>same complete Reiki Master classroom</strong>, including the Master attunement by arrangement and certificate. No additional Level 3 attunement or certificate payment is required.</p>
+<h3>How to get access</h3>
+<ol>
+<li>Send your chosen amount through PayPal to <strong>${TEACHER.paypalEmail}</strong>. Enter the amount and recipient yourself; the link does not prefill them.</li>
+<li>Include an email address where I can reach you. If it is different from your PayPal email, email <a href="mailto:${TEACHER.email}?subject=Reiki%20Master%20payment%20confirmation">${TEACHER.email}</a> your name and PayPal payment details.</li>
+<li>Once I receive and verify your payment, I'll email you a private classroom password.</li>
+<li>Open the classroom link below, enter your password, and begin learning.</li>
+</ol>
+<p><a class="btn" href="${TEACHER.paypalLink}" target="_blank" rel="noopener noreferrer">Open PayPal to pay ↗</a></p>
+<p><strong>Already have your password?</strong></p>
+<p><a class="btn secondary" href="https://www.theblackrootpress.com/reiki-master-classroom-shinpiden" target="_blank" rel="noopener noreferrer">Enter the Reiki Master Classroom ↗</a></p>
+<p><small>This password and the materials are for individual use. Please do not share the password, provide access to others, or reproduce or redistribute course materials. Level 1 and Level 2 attunements are prerequisites for receiving the Master attunement.</small></p>
+`;}
+
 /* ===== Lessons ===== */
 var LESSONS = [
 {title:"Welcome", html:function(){return `
@@ -183,6 +209,7 @@ ${attunementSteps()}
 <h3>Where your exchange goes</h3>
 <p>Every dollar from attunements goes directly back into <strong>${TEACHER.business}</strong>, an independent press publishing trans and nonbinary writers and artists. Your support helps fund its arts magazine, which pays contributors and gives away free handmade copies in the Portland community, and <em>Queer Civic Notes</em>, which helps keep the community informed and engaged.</p>
 <p><a class="btn secondary" href="${TEACHER.website}" target="_blank" rel="noopener">Visit The Black Root Press →</a></p>
+${masterEnrollmentSection()}
 `;}},
 
 {title:"What Is Reiki?", html:function(){return `
@@ -702,7 +729,8 @@ function gradeQuiz(){
       +'<div class="meta">Completed '+d+' · Taught by '+TEACHER.name+', Reiki Master</div></div>'
       +'<h3>Congratulations! Here\'s your next step</h3><p>Take a screenshot of the box above, then follow these steps to arrange your attunement:</p>'
       +attunementSteps()
-      +'<div class="callout"><strong>What\'s next:</strong> Reiki Level 2 is also free. If you\'d like to become a Reiki Master, you\'ll need your Level 1 and Level 2 attunements before taking the Level 3 Master course.</div>';
+      +'<div class="callout"><strong>What\'s next:</strong> Reiki Level 2 is also free. If you\'d like to become a Reiki Master, you\'ll need your Level 1 and Level 2 attunements before taking the Level 3 Master course.</div>'
+      +masterEnrollmentSection();
   } else {
     r.innerHTML="You scored "+score+"%. You need "+PASS_MARK+"% to pass. Review the feedback above and try again.<br><button class='btn' style='margin-top:12px' onclick='renderQuiz()'>Retake quiz</button>";
   }
