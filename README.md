@@ -3,9 +3,16 @@
 This public GitHub Pages site hosts **free Reiki Levels 1 and 2 only**. The Reiki Level 3 (Master / Shinpiden) course is a **separate paid course**, and must not be stored in the public repository.
 
 ## Files
-- `index.html` — course landing page (Level 3 paid enrollment notice, no course link)
+- `index.html` — free course landing page plus Level 3 PayPal enrollment instructions and classroom link
 - `reiki-level-1.html` — free Level 1 (Shoden)
 - `reiki-level-2.html` — free Level 2 (Okuden)
+
+## Reiki Master enrollment
+Access to the private Wix Level 3 classroom is granted by emailed password after a manually verified PayPal payment. The homepage and both free courses explain the four one-time amounts ($11.11, $22.22, $33.33, $44.44), payment instructions, password policy, and classroom link.
+
+Classroom link: https://www.theblackrootpress.com/reiki-master-classroom-shinpiden
+
+Never commit the classroom password or the Level 3 course HTML to this public repository.
 
 ## Publishing
 In **Settings → Pages**, select **Deploy from a branch**, **main** and **/(root)**.
