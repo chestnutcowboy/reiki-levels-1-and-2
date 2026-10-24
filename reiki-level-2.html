@@ -427,9 +427,7 @@ var FIG=(function(){
 })();
 
 /* ===== Position data =====
-   Sequences follow the Level 1 manual (self pp.40–47, table pp.55–64,
-   seated pp.65–72) with the Level 2 symbols added (L2 manual pp.26–32, 63–64).
-   The library follows the Level 2 manual's Lesson 16 (pp.72–83). */
+   Self-treatment, table and seated sequences, with the Level 2 symbols added. */
 var SEQ={};
 SEQ.self=[
 {n:1,name:"Eyes and forehead",area:"Third eye",fig:{t:"front",zoom:"head",hands:[{x:90,y:38,a:8,t:-1},{x:110,y:38,a:-8,t:1}]},
@@ -463,7 +461,7 @@ SEQ.self=[
 {n:8,name:"Upper chest",area:"Heart",fig:{t:"front",zoom:"upper",hands:[{x:82,y:106,a:90,el:[48,132]},{x:118,y:106,a:-90,el:[152,132]}]},
  how:"Place both hands horizontally across your upper chest, fingertips touching at the breastbone.",
  sym:"Cho Ku Rei on the backs of your hands.",
- trad:"From here down to position 11, the Level 1 manual links these holds to the major organs, digestion, and anger and emotions."},
+ trad:"From here down to position 11, these holds are traditionally linked to the major organs, digestion, and anger and emotions."},
 {n:9,name:"Solar plexus",area:"Solar plexus",fig:{t:"front",zoom:"upper",hands:[{x:82,y:140,a:90,el:[46,152]},{x:118,y:140,a:-90,el:[154,152]}]},
  how:"Move your hands down to just below your ribs, still horizontal with fingertips touching.",
  sym:"Cho Ku Rei; add Sei Heiki for anxiety or a churning stomach.",
@@ -503,7 +501,7 @@ SEQ.self=[
 {n:18,name:"Feet",area:"Grounding",fig:{t:"front",zoom:"legs",hands:[{x:82,y:284,a:180,s:0.9,el:[60,200]},{x:118,y:284,a:180,s:0.9,el:[140,200]}]},
  how:"Finish by holding both feet. Sit cross-legged (or in lotus if that's comfortable) and cup your feet in your hands. If that's awkward, rest one foot on the opposite knee and hold its top and sole, then change feet.",
  sym:"Seal the whole session with Cho Ku Rei, then return to gassho.",
- trad:"Traditionally used for grounding, leg pain and circulation. The Level 1 manual notes the reflexology points on the feet."}
+ trad:"Traditionally used for grounding, leg pain and circulation. The feet also hold reflexology points for the whole body."}
 ];
 
 /* Table session: practitioner standing or sitting at the head, then the side, then the feet */
@@ -582,7 +580,7 @@ SEQ.table=[
  sym:"Cho Ku Rei on the backs of your hands.",
  trad:"Traditionally used for leg pain and circulation."},
 {n:19,name:"Soles of the feet",part:"Face down",where:AT_FEET,fig:{t:"table",view:"back",zoom:"legs",hands:[{x:86,y:414,a:0,arm:180,al:50},{x:114,y:414,a:0,arm:180,al:50}]},
- how:"From the foot of the table, cup the soles of the feet. The Level 1 manual notes that the whole body can be reached through the feet.",
+ how:"From the foot of the table, cup the soles of the feet. The whole body can be reached through the feet.",
  sym:"Cho Ku Rei. Stay here a little longer to ground the client before you close.",
  trad:"Traditionally used for grounding."}
 ];
@@ -591,8 +589,8 @@ SEQ.closing=[
  how:"Rest your left hand on the crown and your right hand on the lower back at the base of the spine. Hold until the energy feels even between your hands.",
  sym:"Draw Cho Ku Rei over the whole body to seal the session."},
 {n:"B",name:"Smooth (comb) the aura",where:AT_SIDE,fig:{t:"table",view:"back",zoom:"full",hands:[],extra:'<path class="sweep" d="M150 30 C176 140 176 300 150 440"/><path class="sweep" d="M162 40 C190 150 190 300 164 430"/><path class="sweep" d="M174 50 C200 160 200 290 178 420"/><path class="sweep-h" d="M144 432 l6 10 l7 -10 M158 422 l6 10 l7 -10 M172 410 l6 10 l7 -10"/>'},
- how:"Sweep from crown to feet three times. The Level 1 manual's version: first a firm stroke along the body and on past the feet toward the floor, then a light stroke touching the body, then a pass a few inches above it. If the client prefers no touch, make all three passes above the body.",
- sym:"Thank Reiki. Optionally use Raku for grounding (manual p.70)."}
+ how:"Sweep from crown to feet three times. Traditionally: first a firm stroke along the body and on past the feet toward the floor, then a light stroke touching the body, then a pass a few inches above it. If the client prefers no touch, make all three passes above the body.",
+ sym:"Thank Reiki. Optionally use Raku for grounding."}
 ];
 
 /* Chair session, side view: you move from behind, to the side, to the front */
@@ -626,25 +624,25 @@ SEQ.chair=[
  sym:"Seal with Cho Ku Rei and give thanks."}
 ];
 
-/* Targeted positions library: Level 2 manual Lesson 16, pp.72–83.
+/* Targeted positions library.
    g: A = body parts (treating another person), B = everyday complaints, C = long-term conditions.
    area: head, throat, chest, abdomen, back, limbs */
 var LIB=[
-/* ---- A: Specific parts of the body (p.72–76), client lying down ---- */
+/* ---- A: Specific parts of the body, client lying down ---- */
 {g:"A",p:72,name:"Forehead",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:100,y:26,a:270,arm:20,al:70}]},how:"From the head of the table, lay one hand flat across the forehead."},
 {g:"A",p:72,name:"Head",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:80,y:34,a:200},{x:91,y:14,a:225}]},how:"Rest both hands on one side of the head: one over the temple, the other higher, toward the crown. Repeat on the other side."},
 {g:"A",p:72,name:"Temples",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:79,y:44,a:180},{x:121,y:44,a:180}]},how:"Heels of the hands at the hairline, palms over the temples, fingers pointing toward the jaw so your hands frame the face."},
-{g:"A",p:72,name:"Top of head",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:91,y:16,a:215}]},how:"Cup one hand over the top of the head. This is also where Chiryo begins (manual p.16)."},
+{g:"A",p:72,name:"Top of head",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:91,y:16,a:215}]},how:"Cup one hand over the top of the head. This is also where Chiryo begins."},
 {g:"A",p:72,name:"Back of neck",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:100,y:68,a:90,k:"under",arm:270,al:70},{x:68,y:86,a:180}]},how:"Slide one hand, palm up, under the nape of the neck. Rest the other near the shoulder."},
 {g:"A",p:72,name:"Back of head",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:90,y:16,a:180,k:"under"},{x:110,y:16,a:180,k:"under"}]},how:"Cradle the back of the head in both palms, under the occipital ridge."},
-{g:"A",p:72,name:"Between eyes and temples",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:100,y:32,a:180,two:true},{x:121,y:42,a:180}]},how:"Rest two fingertips lightly on the point between the eyebrows, and the other hand over the opposite temple. The manual asks for special care at the third eye (p.32)."},
+{g:"A",p:72,name:"Between eyes and temples",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:100,y:32,a:180,two:true},{x:121,y:42,a:180}]},how:"Rest two fingertips lightly on the point between the eyebrows, and the other hand over the opposite temple. Take special care at the third eye."},
 {g:"A",p:72,name:"Eyes",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:91,y:36,a:180,t:1},{x:109,y:36,a:180,t:-1}]},how:"Cup both hands side by side over the eyes, fingers together and pointing toward the chin, with no pressure on the eyes."},
 {g:"A",p:73,name:"Nasal bone",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:100,y:44,a:180,two:true,s:0.8},{x:112,y:16,a:160}]},how:"Thumb and index finger rest very lightly either side of the bridge of the nose; the other hand rests on the top of the head. Keep the nostrils clear."},
 {g:"A",p:73,name:"Middle of forehead",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:100,y:28,a:180,two:true}]},how:"One or two fingertips rest on the center of the forehead (the third eye)."},
 {g:"A",p:73,name:"Upper gum and mouth",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:101,y:51,a:270,two:true,s:0.75,arm:330,al:70},{x:112,y:16,a:160}]},how:"An index finger lies across the upper lip, just under the nose; the other hand rests on the head. Ask first, and hover if the client prefers."},
 {g:"A",p:73,name:"Tongue",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:100,y:66,a:270,s:0.85,arm:330,al:70},{x:112,y:16,a:160}]},how:"Cup the jaw and chin in one hand, fingertips near the lower lip; the other hand rests on the head. Hover if the client prefers."},
 {g:"A",p:73,name:"Gums and mouth",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:101,y:56,a:270,two:true,s:0.75,arm:330,al:70},{x:112,y:16,a:160}]},how:"Two fingers lie across the lips, or hover just above them; the other hand rests on the head."},
-{g:"A",p:73,name:"Throat cartilage",area:"throat",who:"other",hover:true,fig:{t:"table",zoom:"head",hands:[{x:100,y:72,a:270,k:"hover",arm:330,al:70},{x:68,y:86,a:180}]},how:"Hover one hand over the front of the throat (the larynx); rest the other near the shoulder. The manual's photo shows contact, but this course always hovers over the throat."},
+{g:"A",p:73,name:"Throat cartilage",area:"throat",who:"other",hover:true,fig:{t:"table",zoom:"head",hands:[{x:100,y:72,a:270,k:"hover",arm:330,al:70},{x:68,y:86,a:180}]},how:"Hover one hand over the front of the throat (the larynx); rest the other near the shoulder. Always hover over the throat."},
 {g:"A",p:73,name:"Side of nose",area:"head",who:"other",fig:{t:"table",zoom:"head",hands:[{x:100,y:48,a:180,two:true,s:0.8}]},how:"Thumb and index finger rest either side of the lower nose, beside the nostrils, without blocking them."},
 {g:"A",p:73,name:"Throat",area:"throat",who:"other",hover:true,fig:{t:"table",zoom:"head",hands:[{x:89,y:68,a:150,k:"hover"},{x:111,y:68,a:210,k:"hover"}]},how:"Hover both hands around the front and sides of the neck, below the jaw, like a loose collar."},
 {g:"A",p:74,name:"Breasts",area:"chest",who:"other",hover:true,fig:{t:"table",zoom:"upper",hands:[{x:82,y:118,a:180,k:"hover"},{x:118,y:118,a:180,k:"hover"}]},how:"From the head of the table, hover both hands above the chest, fingers pointing toward the feet. Always hover here."},
@@ -665,12 +663,12 @@ var LIB=[
 {g:"A",p:76,name:"Lumbar vertebrae 1–5",area:"back",who:"other",fig:{t:"table",view:"back",zoom:"torso",hands:[{x:88,y:190,a:180,arm:30,al:70},{x:112,y:190,a:180,arm:30,al:70}]},how:"Two hands parallel on the lower back, one each side of the spine, fingers toward the feet."},
 {g:"A",p:76,name:"Kidneys",area:"back",who:"other",fig:{t:"table",view:"back",zoom:"torso",hands:[{x:86,y:170,a:180,arm:30,al:70},{x:114,y:170,a:180,arm:30,al:70}]},how:"Two hands parallel on the middle and lower back, just above the waist, one over each kidney."},
 {g:"A",p:76,name:"Vertebrae 4–5",area:"back",who:"other",fig:{t:"table",view:"back",zoom:"torso",hands:[{x:100,y:204,a:180,two:true,arm:20,al:70}]},how:"Two extended fingertips rest on the spine at the lower lumbar vertebrae."},
-/* ---- B: Everyday complaints (p.77–80) ---- */
+/* ---- B: Everyday complaints ---- */
 {g:"B",p:77,name:"Back pain",area:"back",who:"other",fig:{t:"table",view:"back",zoom:"full",hands:[{x:100,y:96,a:270,arm:90,al:60},{x:100,y:196,a:270,arm:90,al:60}]},how:"Client face down: one hand near the shoulders and neck, the other on the lower back."},
 {g:"B",p:77,name:"Colds and flu",area:"head",who:"self",fig:{t:"front",zoom:"head",hands:[{x:80,y:36,a:-15,el:[38,52]},{x:120,y:36,a:15,el:[162,52]}]},how:"Palms over the ears and sides of the head, fingers pointing up and back, elbows lifted out to the sides."},
 {g:"B",p:77,name:"Constipation",area:"abdomen",who:"other",hover:true,fig:{t:"table",view:"back",zoom:"torso",hands:[{x:100,y:204,a:270,arm:90,al:60},{x:100,y:234,a:0,k:"hover",arm:90,al:60}]},how:"Client face down: one hand across the sacrum, the other hovering below it in a T. Hover; never touch the buttocks."},
 {g:"B",p:77,name:"Coughs",area:"throat",who:"self",fig:{t:"front",zoom:"upper",hands:[{x:100,y:72,a:90,s:0.85,side:"R",el:[62,124]},{x:110,y:106,a:0,side:"L",el:[132,160]}]},how:"One hand cups the front of the throat lightly; the other lies flat on the upper chest."},
-{g:"B",p:77,name:"Cystitis",area:"abdomen",who:"other",hover:true,fig:{t:"table",zoom:"torso",hands:[{x:100,y:216,a:270,k:"hover",arm:90,al:60},{x:84,y:206,a:300,k:"hover",arm:90,al:80}]},how:"Hover both hands above the lower abdomen, over the bladder. This is the least clear photo in the manual; always hover here."},
+{g:"B",p:77,name:"Cystitis",area:"abdomen",who:"other",hover:true,fig:{t:"table",zoom:"torso",hands:[{x:100,y:216,a:270,k:"hover",arm:90,al:60},{x:84,y:206,a:300,k:"hover",arm:90,al:80}]},how:"Hover both hands above the lower abdomen, over the bladder. Always hover here."},
 {g:"B",p:77,name:"Diarrhoea",area:"abdomen",who:"self",fig:{t:"front",zoom:"upper",hands:[{x:100,y:156,a:-90,side:"L",el:[152,162]},{x:100,y:180,a:90,side:"R",el:[48,182]}]},how:"Both hands flat on the abdomen, coming from opposite sides: one over the navel, one below it."},
 {g:"B",p:77,name:"Ear infections",area:"head",who:"self",fig:{t:"front",zoom:"head",hands:[{x:79,y:38,a:-4,t:-1},{x:121,y:38,a:4,t:1}]},how:"Palms cupped over the ears, fingers pointing up, elbows down in front of you."},
 {g:"B",p:77,name:"Fever",area:"chest",who:"self",fig:{t:"front",zoom:"upper",hands:[{x:100,y:104,a:-90,side:"L",el:[152,132]},{x:100,y:182,a:90,side:"R",el:[48,182]}]},how:"One hand on the upper chest, the other on the lower abdomen, pointing in opposite directions."},
@@ -692,7 +690,7 @@ var LIB=[
 {g:"B",p:79,name:"Tonsillitis",area:"throat",who:"self",fig:{t:"front",zoom:"upper",hands:[{x:100,y:62,a:-90,s:1.25,bh:true,side:"L",el:[158,26]},{x:100,y:74,a:90,s:0.85,side:"R",el:[56,112]}]},how:"One hand behind the neck, the other cupping the front of the throat lightly under the jaw."},
 {g:"B",p:80,name:"Toothache",area:"head",who:"self",fig:{t:"front",zoom:"head",hands:[{x:88,y:50,a:-12,t:-1},{x:112,y:50,a:12,t:1}]},how:"Cup your cheeks and jaw, as for mouth ulcers, with extra attention on the painful side."},
 {g:"B",p:80,name:"Viral infections",area:"head",who:"self",fig:{t:"front",zoom:"head",hands:[{x:100,y:40,a:-90,s:1.3,bh:true,side:"L",el:[158,30]},{x:100,y:26,a:90,side:"R",el:[44,50]}]},how:"One hand on the back of the head, the other on the forehead, as for jet lag."},
-/* ---- C: Chronic complaints (p.81–83) ---- */
+/* ---- C: Chronic complaints ---- */
 {g:"C",p:81,name:"Angina",area:"chest",who:"other",red:"Chest pain, pressure or tightness can be a heart attack. Call emergency services first; Reiki can be given while you wait.",fig:{t:"table",zoom:"upper",hands:[{x:100,y:90,a:270,arm:90,al:80},{x:100,y:120,a:0,arm:90,al:80}]},how:"From the side: one hand across the base of the throat and collarbones, the other over the heart (the table T position). Hover with women unless they've said contact is fine."},
 {g:"C",p:81,name:"Arthritis",area:"limbs",who:"self",fig:{t:"front",zoom:"upper",hands:[{x:92,y:170,a:-90,side:"L",el:[134,168]},{x:116,y:162,a:200,s:0.9,side:"R",el:[78,128]}]},how:"Hold the affected joint, here the opposite elbow and forearm, between your hands for as long as feels right."},
 {g:"C",p:81,name:"Asthma",area:"chest",who:"self",fig:{t:"front",zoom:"upper",hands:[{x:84,y:110,a:20,t:-1},{x:116,y:110,a:-20,t:1}]},how:"Hands flat on the upper chest, one on each side below the collarbones (over each lung), fingers angled in and up."},
@@ -740,7 +738,7 @@ function lessonSelf(k){return `
 <div class="kicker">Lesson ${k}</div>
 <h2>Self-Healing with the Symbols</h2>
 <p>Hawayo Takata taught her students to treat themselves first, then their families and friends, and only then other people. Your daily self-treatment is still the heart of your Reiki, and at Level 2 the symbols make it deeper and more focused.</p>
-${objectives(["follow the full 18-position self-treatment from the Level 1 manual, now with the symbols","choose a shorter routine for busy days","use the symbols in the way that suits each position"])}
+${objectives(["follow the full 18-position self-treatment, now with the symbols","choose a shorter routine for busy days","use the symbols in the way that suits each position"])}
 <h3>Before you begin</h3>
 <ol>
 <li><strong>Find a quiet place</strong> where you won't be disturbed. Sit upright in a chair with your feet flat on the floor, or lie down if you prefer. Soft music is fine.</li>
@@ -755,13 +753,13 @@ ${objectives(["follow the full 18-position self-treatment from the Level 1 manua
 <li>Move one hand at a time, so you stay in contact as you change positions.</li>
 </ul>
 <h3>The 18 self-treatment positions</h3>
-<p>These follow the Level 1 manual's sequence (pp.40–48): head first, then down the front of the body, the knees, the back, and finally the feet. Treat any area that hurts first, then do the full sequence. The positions are a guide; as you gain confidence, let your intuition lead.</p>
+<p>The sequence runs head first, then down the front of the body, the knees, the back, and finally the feet. Treat any area that hurts first, then do the full sequence. The positions are a guide; as you gain confidence, let your intuition lead.</p>
 ${figKey()}
 ${followBtn("self","Follow along: self-treatment")}
 ${posGrid(SEQ.self,"self")}
 <div class="callout"><strong>Shoulder or arm problems?</strong> If a position strains you, leave it out or lie down with a cushion under your arms. For the back of your body, you can also send Reiki with Hon Sha Ze Sho Nen instead of reaching.</div>
 <h3>Bringing the symbols in at each position</h3>
-<p>The Level 2 manual describes several ways to place a symbol at a hand position (pp.28–38). Pick whichever feels natural; they all work.</p>
+<p>There are several ways to place a symbol at a hand position. Pick whichever feels natural; they all work.</p>
 <ul>
 <li><strong>Visualize it on your palms</strong> before you place your hands.</li>
 <li><strong>Project it from your third eye</strong> onto the backs of your hands as they rest on each position.</li>
@@ -807,7 +805,7 @@ ${objectives(["prepare a treatment space and yourself","have a clear consent con
 <li><strong>A treatment table</strong> (a massage table is ideal) with two pillows and a light blanket. A sturdy bed or a mat on the floor works for friends and family; protect your back.</li>
 <li><strong>A box of tissues</strong> within reach. Emotional release is common, especially around the head and heart.</li>
 <li><strong>Optional:</strong> soft music, a plant or crystals. Ask before using incense or scents, since some people are sensitive to them.</li>
-<li><strong>Clear the room with Cho Ku Rei</strong>: draw it on each wall, the ceiling, the floor and the table (manual p.63).</li>
+<li><strong>Clear the room with Cho Ku Rei</strong>: draw it on each wall, the ceiling, the floor and the table.</li>
 </ul>
 <h3>Prepare yourself</h3>
 <ul>
@@ -822,7 +820,7 @@ ${objectives(["prepare a treatment space and yourself","have a clear consent con
 <p>Use your intake form for health information and preferences (Lesson ${k+4} covers forms and records). Agree on a simple signal, such as raising a hand, that means "pause" or "stop."</p>
 <h3>Touch, hover and the "always hover" areas</h3>
 ${figKey()}
-<p>Reiki works just as well with your hands a few centimeters above the body as on it. Some manual photos show contact on sensitive areas; this course always uses hovering there, which is the safe and professional standard.</p>
+<p>Reiki works just as well with your hands a few centimeters above the body as on it. On sensitive areas, always hover; it's the safe and professional standard.</p>
 <div class="callout warn"><strong>Always hover over:</strong> the throat, the chest and breasts, the groin and pelvic area, and the buttocks. <strong>Also hover over</strong> burns, wounds, recent surgery, fresh injuries, and anywhere the client asks you not to touch. If a client tenses or flinches, lift your hands into a hover and check in quietly.</div>
 <h3>Your hands</h3>
 <ul>
@@ -842,7 +840,7 @@ ${figKey()}
 <h3>When to pause and refer</h3>
 <p>Reiki is gentle and has no known harmful effects, but it never replaces medical care. Never diagnose, never suggest anyone stop medication, and never promise results.</p>
 <div class="callout warn"><strong>Get medical help first, and call emergency services in an emergency:</strong> chest pain or pressure, trouble breathing, signs of a stroke (face drooping, arm weakness, slurred speech), severe bleeding, a painful, swollen, warm leg (a possible blood clot), or thoughts of suicide or self-harm. You can give Reiki while you wait for help, but help comes first.</div>
-<p><strong>Medical devices and conditions.</strong> Your Level 1 manual advises not treating people with a pacemaker, or people with insulin-dependent diabetes who aren't monitoring their levels. There is no research showing that Reiki affects medical devices or medication, but do follow your client's wishes and their doctor's advice. Note any devices or conditions on the intake form, keep sessions shorter for anyone who is very unwell, and suggest people with diabetes check their levels as usual.</p>
+<p><strong>Medical devices and conditions.</strong> Traditional guidance advises not treating people with a pacemaker, or people with insulin-dependent diabetes who aren't monitoring their levels. There is no research showing that Reiki affects medical devices or medication, but do follow your client's wishes and their doctor's advice. Note any devices or conditions on the intake form, keep sessions shorter for anyone who is very unwell, and suggest people with diabetes check their levels as usual.</p>
 <h3>The shape of a session</h3>
 <ol class="flow">
 <li>Prepare the space and yourself</li>
@@ -863,20 +861,20 @@ ${practiceBox("<p>Set up your treatment space once, as if a client were coming. 
 function lessonTable(k){return `
 <div class="kicker">Lesson ${k}</div>
 <h2>Treating Others: The Table Session</h2>
-<p>This is the full treatment for another person lying on a table: 12 positions face up, then 7 face down, followed by a closing. It follows the Level 1 manual's sequence (pp.55–64), with the Level 2 symbols added from the Level 2 manual.</p>
+<p>This is the full treatment for another person lying on a table: 12 positions face up, then 7 face down, followed by a closing. The Level 2 symbols are added at each step.</p>
 ${objectives(["open a session with the symbols, gassho and Reiji-ho","give all 19 positions in order, helping your client turn over","close, seal and smooth the aura, and give aftercare","adapt the session to the time you have"])}
 <h3>How long?</h3>
 <table>
 <tr><th>Session</th><th>Time</th><th>What you do</th></tr>
 <tr><td><strong>Full treatment</strong></td><td>60–90 min</td><td>All 19 positions at 3–5 minutes each, plus opening and closing. Best for new clients and deep work.</td></tr>
 <tr><td><strong>Standard</strong></td><td>about 45 min</td><td>All 19 positions at about 2 minutes each.</td></tr>
-<tr><td><strong>Short Level 2 session</strong></td><td>15–20 min</td><td>Positions 1, 4, 7, 8, 10, 12 and 19, with the Reiki sandwich at each. The Level 2 manual says the symbols let you give a full treatment in about 15 minutes (p.22).</td></tr>
+<tr><td><strong>Short Level 2 session</strong></td><td>15–20 min</td><td>Positions 1, 4, 7, 8, 10, 12 and 19, with the Reiki sandwich at each. With the symbols, you can give a full treatment in about 15 minutes.</td></tr>
 </table>
 <h3>Opening the session</h3>
 <ol>
 <li><strong>Room and self ready</strong> (Lesson ${k-1}): Cho Ku Rei on the walls, ceiling, floor and table; hands washed; grounded and shielded.</li>
 <li><strong>Welcome and consent.</strong> Check in, confirm touch preferences, and help your client lie face up with a pillow under the head and knees. Offer the blanket.</li>
-<li><strong>Project Cho Ku Rei onto their third eye</strong> to help them relax (manual p.63).</li>
+<li><strong>Project Cho Ku Rei onto their third eye</strong> to help them relax.</li>
 <li><strong>Draw the symbols on your hands:</strong> the Reiki sandwich (Cho Ku Rei, Sei Heiki, Cho Ku Rei), saying each name three times.</li>
 <li><strong>Gassho and Reiji-ho at the head of the table.</strong> Ask Reiki to flow, ask for healing for their highest good, then raise your joined hands to your forehead and ask to be guided (Lesson ${k-3}).</li>
 <li><strong>Scan and cleanse the aura.</strong> Pass your hands slowly from head to feet about 15 cm (6 in) above the body, noticing warmth, coolness or tingling. Then sweep through the aura three times, head to feet, to clear it. Start where you felt drawn, then begin the positions.</li>
@@ -906,7 +904,7 @@ ${posGrid(SEQ.closing,"prac",{num:false})}
 <li><strong>Let your client rest</strong> for a minute or two. Tell them quietly that the session is complete and to take their time.</li>
 <li><strong>Help them up safely:</strong> roll onto one side, then push up to sitting. Let them sit for a moment before they stand; some people feel light-headed.</li>
 <li><strong>Offer a glass of water.</strong></li>
-<li><strong>Cleanse yourself:</strong> wash your hands in cold running water, drink a glass of cold water to ground yourself, do Kenyoku, and release the connection (manual p.41).</li>
+<li><strong>Cleanse yourself:</strong> wash your hands in cold running water, drink a glass of cold water to ground yourself, do Kenyoku, and release the connection.</li>
 </ol>
 <h3>Aftercare: what to tell your client</h3>
 <ul>
@@ -915,14 +913,14 @@ ${posGrid(SEQ.closing,"prac",{num:false})}
 <li>Notice how you sleep and feel over the next few days.</li>
 <li>Reiki works alongside medical care. If you have any health concerns, please see your doctor.</li>
 </ul>
-<p>Listen to how they felt without interpreting it or offering a diagnosis. If you're using the affirmation technique (manual p.63), give them their written affirmation to read each day.</p>
+<p>Listen to how they felt without interpreting it or offering a diagnosis. If you're using the affirmation technique, give them their written affirmation to read each day.</p>
 <h3>Using the symbols during the session</h3>
 <table>
 <tr><th>When</th><th>What to do</th></tr>
 <tr><td>At every position</td><td>Visualize Cho Ku Rei on the backs of your hands (or picture it entering the body), saying its name silently three times.</td></tr>
 <tr><td>Head and heart positions</td><td>Add Sei Heiki, or the full sandwich, for mental and emotional healing.</td></tr>
 <tr><td>Where your hands are drawn</td><td>Stay longer and use the Reiki sandwich (Chiryo, Lesson ${k-3}).</td></tr>
-<tr><td>Affirmations</td><td>Agree an affirmation with your client, then silently repeat it at each new position, paying special attention to the third eye (manual p.63).</td></tr>
+<tr><td>Affirmations</td><td>Agree an affirmation with your client, then silently repeat it at each new position, paying special attention to the third eye.</td></tr>
 <tr><td>Closing</td><td>Cho Ku Rei over the whole body to seal.</td></tr>
 </table>
 <h3>Protecting yourself as your practice grows</h3>
@@ -934,7 +932,7 @@ ${posGrid(SEQ.closing,"prac",{num:false})}
 </ul>
 ${check("You've finished position 12 at the feet. What comes next?",["The balancing hold","Quietly ask your client to turn over","Smooth the aura"],1,"After the front positions, help your client turn over for positions 13–19. The balancing hold and aura smoothing come at the very end.")}
 ${check("How do you move from one hand position to the next?",["Lift both hands away, then place them again","Move one hand at a time so you stay in contact","Slide both hands along the body with pressure"],1,"Moving one hand at a time keeps a continuous, reassuring connection.")}
-${check("How does the manual's table session finish, before the aura smoothing?",["Left hand on the crown, right hand at the base of the spine","Both hands on the knees","Both hands over the eyes"],0,"The balancing hold, crown and base of the spine, evens out the energy in the body. Then seal with Cho Ku Rei and smooth the aura three times.")}
+${check("How does the table session finish, before the aura smoothing?",["Left hand on the crown, right hand at the base of the spine","Both hands on the knees","Both hands over the eyes"],0,"The balancing hold, crown and base of the spine, evens out the energy in the body. Then seal with Cho Ku Rei and smooth the aura three times.")}
 ${practiceBox("<p>Give at least three full table sessions to friends or family who have said yes, using the follow-along player if it helps. Log each session, and ask your partner for one piece of feedback: what felt good, and what was uncomfortable.</p>")}
 `;}
 
@@ -942,7 +940,7 @@ ${practiceBox("<p>Give at least three full table sessions to friends or family w
 function lessonChair(k){return `
 <div class="kicker">Lesson ${k}</div>
 <h2>Treating Others: The Chair Session</h2>
-<p>A seated session (the Level 1 manual calls it Rapid Reiki, pp.65–72) covers the major energy centers in 15 to 30 minutes. It's ideal when there's no table, at events and workplaces, and for anyone who can't lie down comfortably, including many pregnant clients and people with back or mobility problems.</p>
+<p>A seated session (also called Rapid Reiki) covers the major energy centers in 15 to 30 minutes. It's ideal when there's no table, at events and workplaces, and for anyone who can't lie down comfortably, including many pregnant clients and people with back or mobility problems.</p>
 ${objectives(["set up a seated session","give the nine seated positions, front and back together","close a seated session"])}
 <h3>Setting up</h3>
 <ul>
@@ -972,23 +970,23 @@ function libCard(p,i){
   return '<figure class="pos lib-item" data-area="'+p.area+'" data-g="'+p.g+'" data-name="'+p.name.toLowerCase()+'"><div class="pfig">'+FIG.draw(Object.assign({},p.fig,{who:p.who==="self"?"self":"prac",label:p.name+". "+p.how}))+'</div><figcaption>'
    +'<strong>'+p.name+'</strong><span class="where">'+(p.who==="self"?"On yourself":"Treating another person")+'</span>'+(hover?'<span class="hv-tag">Hover</span>':'')
    +'<p>'+p.how+'</p>'+(p.red?'<p class="red"><strong>Seek help first:</strong> '+p.red+'</p>':'')
-   +'<p class="pg">'+grp+' · manual p.'+p.p+'</p></figcaption></figure>';
+   +'<p class="pg">'+grp+'</p></figcaption></figure>';
 }
 function lessonLib(k){
   var chips=function(list,attr){return list.map(function(c,i){return '<button type="button" class="chip'+(i===0?' on':'')+'" data-'+attr+'="'+c[0]+'" aria-pressed="'+(i===0)+'">'+c[1]+'</button>';}).join("");};
   return `
 <div class="kicker">Lesson ${k}</div>
 <h2>Targeted Hand Positions</h2>
-<p>The Level 2 manual's "Extra Reiki Hand Positions" (Lesson 16, pp.72–83) shows 78 photographed positions for specific parts of the body, everyday complaints and long-term conditions. This library redraws them so you can use them on yourself and with clients.</p>
+<p>This library gives targeted hand positions for specific parts of the body, everyday complaints and long-term conditions, for use on yourself and with clients.</p>
 ${objectives(["find a targeted position by body area or complaint","add targeted positions to a full session or self-treatment","use them safely, as support alongside medical care"])}
 <h3>How to use this library</h3>
 <ul>
-<li><strong>A full treatment comes first.</strong> As the manual puts it, full-body treatments are ideal; targeted positions add focus. Use them after a full or short session, or on their own when time is short.</li>
+<li><strong>A full treatment comes first.</strong> Full-body treatments are ideal; targeted positions add focus. Use them after a full or short session, or on their own when time is short.</li>
 <li><strong>Hold each one for 3 to 5 minutes,</strong> or longer if your hands are drawn there, and add the Reiki sandwich.</li>
 <li><strong>"Parts of the body" positions are for treating another person</strong> lying on a table; most "complaint" positions are shown on yourself, seated. You can adapt any of them either way.</li>
-<li><strong>The manual gives photos and captions only.</strong> The descriptions here are careful readings of those photos. Where a photo shows touch on the throat, chest, pelvic area or buttocks, this course uses hovering instead.</li>
+<li><strong>Hover on sensitive areas.</strong> On the throat, chest, pelvic area or buttocks, always hover rather than touch.</li>
 </ul>
-<div class="callout warn"><strong>Support, not a cure.</strong> These positions offer comfort and relaxation alongside medical care, never instead of it. Never suggest anyone stop treatment or medication, and see a doctor about any symptom that is new, severe or getting worse. The manual's position for <strong>DVT (deep vein thrombosis)</strong> isn't included here: a painful, swollen, warm leg can be a blood clot and needs urgent medical care, and holding the leg is not appropriate until a doctor has treated it.</div>
+<div class="callout warn"><strong>Support, not a cure.</strong> These positions offer comfort and relaxation alongside medical care, never instead of it. Never suggest anyone stop treatment or medication, and see a doctor about any symptom that is new, severe or getting worse. The traditional position for <strong>DVT (deep vein thrombosis)</strong> isn't included here: a painful, swollen, warm leg can be a blood clot and needs urgent medical care, and holding the leg is not appropriate until a doctor has treated it.</div>
 ${figKey()}
 <div class="lib-tools">
 <div class="chips" role="group" aria-label="Filter by group">${chips(LIB_GROUPS,"g")}</div>
@@ -1139,7 +1137,7 @@ var LESSONS = [
 <li>The full 18-position self-treatment, with the symbols</li>
 <li>Treating other people: preparation, consent and the "always hover" areas</li>
 <li>A complete illustrated table session (19 positions) and a seated chair session (9 positions)</li>
-<li>A library of 77 targeted hand positions from the Level 2 manual</li>
+<li>A library of 77 targeted hand positions</li>
 <li>Working with clients professionally and ethically</li>
 <li>Reiki for animals</li>
 <li>How your Level 2 attunement works</li>
@@ -1171,7 +1169,7 @@ ${masterEnrollmentSection()}
 <li><strong>A more intentional practice.</strong> The symbols give your sessions structure and focus.</li>
 </ul>
 <h3>How symbols are used</h3>
-<p>Your manual describes six ways to transfer a symbol to yourself or a client (pp.28, 31, 38). All of them work; use whichever feels natural.</p>
+<p>There are six ways to transfer a symbol to yourself or a client. All of them work; use whichever feels natural.</p>
 <ol>
 <li><strong>Project it from your third eye</strong>, as brilliant white light, onto the backs of your hands as they rest on each hand position.</li>
 <li><strong>Visualize it on your palms</strong> before you place your hands.</li>
@@ -1180,7 +1178,7 @@ ${masterEnrollmentSection()}
 <li><strong>Draw it on your palms</strong> with your index finger, then place your hands.</li>
 <li><strong>Draw it in the air</strong> with your index finger, in the direction you want Reiki to go.</li>
 </ol>
-<p>Then <strong>silently intone its name three times</strong>. The manual is clear that this completes the activation. Hold a clear, positive intention as you draw; many people see the symbol as white light.</p>
+<p>Then <strong>silently intone its name three times</strong>. This completes the activation. Hold a clear, positive intention as you draw; many people see the symbol as white light.</p>
 <p><strong>Cho Ku Rei always comes first.</strong> It is the "light switch" that activates the other symbols, so Sei Heiki and Hon Sha Ze Sho Nen are always used within a Reiki sandwich (Lessons 3 and 4).</p>
 <p>Many practitioners also add a short "rider" to their intention: <em>"if it be for the highest good."</em> It's a reminder that you aren't directing the outcome; Reiki goes where it's needed.</p>
 <h3>Honoring the symbols</h3>
@@ -1188,7 +1186,7 @@ ${masterEnrollmentSection()}
 <ul>
 <li>Treat the symbols as sacred tools, not decorations. Never let anyone watch you draw them unless they are a Level 2 practitioner or a Reiki Master.</li>
 <li>Practice drawing them privately until they flow naturally. Draw each one many times on paper, then burn or tear up the practice sheets with gratitude, as many teachers suggest.</li>
-<li>Learn them exactly as drawn in this course, which follows the traditional Usui forms in your manual. Other lineages draw some details differently; if you meet another version later, keep to the one you were attuned with.</li>
+<li>Learn them exactly as drawn in this course, which follows the traditional Usui forms. Other lineages draw some details differently; if you meet another version later, keep to the one you were attuned with.</li>
 </ul>
 <h3>Other symbols you may come across</h3>
 <p>Usui Reiki uses three symbols at Level 2 and one at Master level. As Reiki spread, some teachers added symbols from other traditions or from their own practice, such as the <strong>reversed Cho Ku Rei</strong> (drawn clockwise), <strong>Zonar</strong>, <strong>Harth</strong>, <strong>Johre</strong>, <strong>Raku</strong> and <strong>Motor Zanon</strong>. They aren't part of traditional Usui Reiki, and you don't need them. The three symbols in this course cover everything. If you're drawn to explore them later, learn them from a teacher who works with them.</p>
@@ -1207,7 +1205,7 @@ ${masterEnrollmentSection()}
 <p>Cho Ku Rei cuts through and removes resistance. In Japanese, <em>choku</em> suggests an imperial command, something immediate.</p>
 <h3>Drawing Cho Ku Rei</h3>
 <figure class="fig"><svg viewBox="0 0 560 300" role="img" aria-label="Cho Ku Rei with numbered strokes: 1, a horizontal line left to right; 2, a vertical line straight down; 3, three and a half circles counterclockwise, getting smaller and finishing on the vertical line" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ck" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#a8322f"/></marker></defs><rect width="560" height="300" rx="14" fill="#fdf1ef"/><path d="M70 40 L150 40 L150 274" fill="none" stroke="#d64541" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M150 62 A88.0 88.0 0 0 0 150 238 A77.0 77.0 0 0 0 150 84 A66.0 66.0 0 0 0 150 216 A55.0 55.0 0 0 0 150 106 A44.0 44.0 0 0 0 150 194 A33.0 33.0 0 0 0 150 128 A22.0 22.0 0 0 0 150 172" fill="none" stroke="#d64541" stroke-width="8" stroke-linecap="round"/><path d="M74 26 L124 26" stroke="#a8322f" stroke-width="2" marker-end="url(#ck)"/><path d="M168 48 L168 98" stroke="#a8322f" stroke-width="2" marker-end="url(#ck)"/><path d="M118 52 A92 92 0 0 0 56 120" fill="none" stroke="#a8322f" stroke-width="2" marker-end="url(#ck)"/><circle cx="52" cy="40" r="12" fill="#2b2438"/><text x="52" y="44.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">1</text><circle cx="172" cy="28" r="12" fill="#2b2438"/><text x="172" y="32.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">2</text><circle cx="132" cy="64" r="12" fill="#2b2438"/><text x="132" y="68.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">3</text><circle cx="290" cy="62" r="12" fill="#2b2438"/><text x="290" y="66.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">1</text><text x="312" y="67" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">A horizontal line,</text><text x="312" y="85" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#6b6478">left to right</text><circle cx="290" cy="124" r="12" fill="#2b2438"/><text x="290" y="128.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">2</text><text x="312" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">A vertical line,</text><text x="312" y="147" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#6b6478">straight down from the end</text><circle cx="290" cy="186" r="12" fill="#2b2438"/><text x="290" y="190.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">3</text><text x="312" y="191" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">Three and a half circles,</text><text x="312" y="209" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#6b6478">counterclockwise, getting smaller,</text><text x="312" y="227" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#6b6478">finishing on the vertical line</text><text x="290" y="268" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12.5" fill="#6b6478">Then silently intone "Cho Ku Rei" three times.</text></svg></figure>
-<p>Practice drawing it slowly and smoothly, then silently intone "Cho Ku Rei" three times. If a situation calls for it, write the problem on a piece of paper, draw Cho Ku Rei over the writing, intone its name three times, and hold the paper between your palms for a few minutes (manual p.28).</p>
+<p>Practice drawing it slowly and smoothly, then silently intone "Cho Ku Rei" three times. If a situation calls for it, write the problem on a piece of paper, draw Cho Ku Rei over the writing, intone its name three times, and hold the paper between your palms for a few minutes.</p>
 <h3>When to use it</h3>
 <table>
 <tr><th>Use</th><th>How</th></tr>
@@ -1234,13 +1232,13 @@ ${masterEnrollmentSection()}
 </table>
 <figure class="fig"><svg viewBox="0 0 560 200" role="img" aria-label="Two overlapping circles representing harmony" xmlns="http://www.w3.org/2000/svg"><rect width="560" height="200" rx="14" fill="#e9f5ee"/><circle cx="245" cy="100" r="62" fill="#2fa36b" opacity=".55"/><circle cx="315" cy="100" r="62" fill="#2e86de" opacity=".55"/><text x="205" y="105" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#fff">Earth</text><text x="355" y="105" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#fff">Sky</text><text x="280" y="186" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#2b2438">Harmony: mind and heart, body and spirit, brought into balance</text></svg></figure>
 <h3>The symbol</h3>
-<p>Reiki historians trace Sei Heiki to <em>kiriku</em>, the Japanese form of the Sanskrit seed syllable <em>Hrih</em>. In Buddhism, Hrih is the seed syllable of Amida Buddha, and in Japanese practice it is also linked with Kannon, the bodhisattva of compassion. Follow the six numbered strokes below, exactly as drawn in your manual (p.30).</p>
+<p>Reiki historians trace Sei Heiki to <em>kiriku</em>, the Japanese form of the Sanskrit seed syllable <em>Hrih</em>. In Buddhism, Hrih is the seed syllable of Amida Buddha, and in Japanese practice it is also linked with Kannon, the bodhisattva of compassion. Follow the six numbered strokes below, exactly as drawn.</p>
 <figure class="fig"><svg viewBox="0 0 600 380" role="img" aria-label="Sei Heiki with numbered strokes. Left side first: 1, a three-part zigzag; 2, a short line straight down; 3, a curve out to the right and down. Then the right side: 4, a long curve from the top to the bottom; 5 and 6, two small curves on the outside of it near the top. All strokes are drawn top to bottom." xmlns="http://www.w3.org/2000/svg"><rect width="600" height="380" rx="14" fill="#eaf6ef"/><path d="M152 40 L100 96 L154 80 L104 132" fill="none" stroke="#2fa36b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M104 132 L102 176" fill="none" stroke="#2fa36b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M102 176 C182 196 196 280 118 340" fill="none" stroke="#2fa36b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M188 36 C262 96 268 230 206 350" fill="none" stroke="#2fa36b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M216 54 C246 52 252 86 233 96" fill="none" stroke="#2fa36b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M238 108 C266 108 270 146 248 158" fill="none" stroke="#2fa36b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="152" cy="22" r="12" fill="#2b2438"/><text x="152" y="26.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">1</text><circle cx="80" cy="156" r="12" fill="#2b2438"/><text x="80" y="160.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">2</text><circle cx="80" cy="206" r="12" fill="#2b2438"/><text x="80" y="210.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">3</text><circle cx="196" cy="18" r="12" fill="#2b2438"/><text x="196" y="22.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">4</text><circle cx="270" cy="58" r="12" fill="#2b2438"/><text x="270" y="62.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">5</text><circle cx="286" cy="128" r="12" fill="#2b2438"/><text x="286" y="132.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">6</text><text x="330" y="48" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.2" fill="#1d6e47">LEFT SIDE FIRST</text><circle cx="330" cy="76" r="12" fill="#2b2438"/><text x="330" y="80.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">1</text><text x="352" y="81" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">A three-part zigzag:</text><text x="352" y="99" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#6b6478">down-left, right, down-left</text><circle cx="330" cy="128" r="12" fill="#2b2438"/><text x="330" y="132.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">2</text><text x="352" y="133" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">Straight down,</text><text x="352" y="151" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#6b6478">a short line</text><circle cx="330" cy="172" r="12" fill="#2b2438"/><text x="330" y="176.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">3</text><text x="352" y="177" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">A curve,</text><text x="352" y="195" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#6b6478">out to the right and down</text><text x="330" y="226" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12.5" font-weight="700" letter-spacing="1.2" fill="#1d6e47">THEN THE RIGHT SIDE</text><circle cx="330" cy="254" r="12" fill="#2b2438"/><text x="330" y="258.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">4</text><text x="352" y="259" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">A long curve,</text><text x="352" y="277" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#6b6478">from the top all the way down</text><circle cx="330" cy="306" r="12" fill="#2b2438"/><text x="330" y="310.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">5</text><circle cx="358" cy="306" r="12" fill="#2b2438"/><text x="358" y="310.3" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff">6</text><text x="380" y="311" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">Two small curves</text><text x="380" y="329" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#6b6478">on the outside, near the top</text><text x="330" y="360" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12.5" fill="#6b6478">Top to bottom; intone it three times.</text></svg></figure>
 <h3>How to draw Sei Heiki</h3>
 <ul>
 <li><strong>Six strokes, left side first.</strong> Stroke 1 is a three-part zigzag; stroke 2 a short line straight down; stroke 3 a curve out to the right and down. Then the right side: stroke 4 is one long curve from the top to the bottom, and strokes 5 and 6 are two small curves on its outside, near the top.</li>
 <li><strong>Every stroke top to bottom.</strong> Keep this order whether you draw it in the air, on your palm or on paper. Some practitioners see the two hemispheres of the brain in its two sides, a fitting image for a symbol that balances them.</li>
-<li><strong>Activate it within the Reiki sandwich.</strong> Draw Cho Ku Rei and intone it three times; draw Sei Heiki on top and intone it three times; then draw Cho Ku Rei on top again and intone it three more times (manual p.31).</li>
+<li><strong>Activate it within the Reiki sandwich.</strong> Draw Cho Ku Rei and intone it three times; draw Sei Heiki on top and intone it three times; then draw Cho Ku Rei on top again and intone it three more times.</li>
 </ul>
 <h3>Learning it</h3>
 <ol>
@@ -1260,7 +1258,7 @@ ${masterEnrollmentSection()}
 <li><strong>Relationships:</strong> calming arguments, improving poor communication, calming a tense atmosphere.</li>
 <li><strong>Mind:</strong> memory, intuition, inspiration and creativity; finding lost things.</li>
 <li><strong>Protection:</strong> on every level, including while traveling.</li>
-<li><strong>Questions:</strong> write a question on paper, draw the Reiki sandwich over it, and let the answer come intuitively (manual p.33).</li>
+<li><strong>Questions:</strong> write a question on paper, draw the Reiki sandwich over it, and let the answer come intuitively.</li>
 </ul>
 <div class="callout warn">Never use Reiki to manipulate anyone. Sei Heiki supports a person's own wishes for themselves, with their consent.</div>
 <h3>The affirmation technique</h3>
@@ -1276,7 +1274,7 @@ ${masterEnrollmentSection()}
 <p>Sei Heiki is usually used together with Cho Ku Rei: Cho Ku Rei adds power, and Sei Heiki directs it toward harmony. The combination <strong>Cho Ku Rei, Sei Heiki, Cho Ku Rei</strong> is often called the <strong>Reiki sandwich</strong>, with Sei Heiki held between two layers of power.</p>
 <ul>
 <li>Visualize the sandwich flowing from your third eye into your client's third eye, adding the rider "if it be for the highest good," or draw it on your hands and place them over the third eye. Use it for emotional or mental blocks, addictions and unwanted habits.</li>
-<li>Hold this position with the utmost care. You're working deep in the client's mind, so guard your own thoughts, and ask the client's higher self for consent before you begin (manual p.32).</li>
+<li>Hold this position with the utmost care. You're working deep in the client's mind, so guard your own thoughts, and ask the client's higher self for consent before you begin.</li>
 <li>You can also draw the sandwich on your palms, then rest them on any hand position.</li>
 <li>Keep tissues nearby. Emotions often rise when Sei Heiki is used.</li>
 </ul>
@@ -1287,10 +1285,10 @@ ${masterEnrollmentSection()}
 <h2>Hon Sha Ze Sho Nen: The Distance Symbol</h2>
 <p><strong>Hon Sha Ze Sho Nen</strong> (pronounced "hon-shah-zay-show-nen") is the distant or absent healing symbol. It transcends time and space: past, present and future. With it you can send Reiki across a room or across the world, back to heal a childhood hurt, or ahead to an operation, interview or exam. Like every symbol, it is activated by Cho Ku Rei first.</p>
 <h3>Where it comes from</h3>
-<p>Unlike the other two symbols, Hon Sha Ze Sho Nen is built from five Japanese kanji, written together as one tall figure. Your manual gives each part a meaning: <strong>Hon</strong>, the essence or cause; <strong>Sha</strong>, coming into existence (like a potter revealing a vase hidden in the clay); <strong>Ze</strong>, harmonizing appropriately; <strong>Sho</strong>, correctly or justly; and <strong>Nen</strong>, the heart or the thoughts, now.</p>
+<p>Unlike the other two symbols, Hon Sha Ze Sho Nen is built from five Japanese kanji, written together as one tall figure. Each part has a meaning: <strong>Hon</strong>, the essence or cause; <strong>Sha</strong>, coming into existence (like a potter revealing a vase hidden in the clay); <strong>Ze</strong>, harmonizing appropriately; <strong>Sho</strong>, correctly or justly; and <strong>Nen</strong>, the heart or the thoughts, now.</p>
 <figure class="fig"><svg viewBox="0 0 560 360" role="img" aria-label="The five kanji behind Hon Sha Ze Sho Nen" xmlns="http://www.w3.org/2000/svg"><rect width="560" height="360" rx="14" fill="#eeeefb"/><rect x="150" y="30" width="58" height="58" rx="10" fill="#3c4fc6"/><text x="179" y="72" text-anchor="middle" font-size="36" fill="#fff" font-family="serif">本</text><text x="226" y="56" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="16" font-weight="600" fill="#2b2438">hon</text><text x="226" y="76" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#6b6478">the essence or cause</text><rect x="150" y="94" width="58" height="58" rx="10" fill="#4a49c5"/><text x="179" y="136" text-anchor="middle" font-size="36" fill="#fff" font-family="serif">者</text><text x="226" y="120" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="16" font-weight="600" fill="#2b2438">sha</text><text x="226" y="140" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#6b6478">coming into existence</text><rect x="150" y="158" width="58" height="58" rx="10" fill="#5847c4"/><text x="179" y="200" text-anchor="middle" font-size="36" fill="#fff" font-family="serif">是</text><text x="226" y="184" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="16" font-weight="600" fill="#2b2438">ze</text><text x="226" y="204" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#6b6478">harmonizing appropriately</text><rect x="150" y="222" width="58" height="58" rx="10" fill="#6a3fc1"/><text x="179" y="264" text-anchor="middle" font-size="36" fill="#fff" font-family="serif">正</text><text x="226" y="248" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="16" font-weight="600" fill="#2b2438">sho</text><text x="226" y="268" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#6b6478">correctly or justly</text><rect x="150" y="286" width="58" height="58" rx="10" fill="#9b3fb5"/><text x="179" y="328" text-anchor="middle" font-size="36" fill="#fff" font-family="serif">念</text><text x="226" y="312" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="16" font-weight="600" fill="#2b2438">nen</text><text x="226" y="332" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#6b6478">the heart or the thoughts, now</text></svg></figure>
 <h3>The symbol</h3>
-<p>This is the longest and most complex symbol, so take your time with it. It has 21 strokes, drawn exactly as numbered below (manual pp.35–37).</p>
+<p>This is the longest and most complex symbol, so take your time with it. It has 21 strokes, drawn exactly as numbered below.</p>
 <figure class="fig"><svg viewBox="0 0 600 580" role="img" aria-label="Hon Sha Ze Sho Nen with 21 numbered strokes, drawn top to bottom and left to right in the order HON (strokes 1 to 5), SHA (6 to 10), SHO (11 to 14), ZE (15 and 16) and NEN (17 to 21). ZE is drawn after SHO but spoken before it." xmlns="http://www.w3.org/2000/svg"><rect width="600" height="580" rx="14" fill="#efebfa"/><path d="M100 62 L210 58" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M155 30 L155 140" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M152 68 L100 112" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M158 68 L214 108" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M128 120 L184 118" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M106 158 L216 152" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M174 136 C162 178 142 204 110 226" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M140 188 L140 246" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M140 188 L198 186 L198 246" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M142 212 L194 212" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M116 248 L220 244" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M168 246 L168 318" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M134 268 L134 306" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M168 280 L206 278" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M160 326 C150 360 128 388 90 404" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M164 340 C184 372 206 392 238 402" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M124 426 L180 424" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M110 452 L186 448 C172 488 142 524 96 552" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M210 446 C186 474 188 522 216 550" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M230 470 C220 484 220 502 230 514" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M246 456 C260 474 260 504 244 522" fill="none" stroke="#6a3fc1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="62" r="9" fill="#2b2438"/><text x="86" y="65.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">1</text><circle cx="172" cy="26" r="9" fill="#2b2438"/><text x="172" y="29.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">2</text><circle cx="86" cy="112" r="9" fill="#2b2438"/><text x="86" y="115.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">3</text><circle cx="228" cy="110" r="9" fill="#2b2438"/><text x="228" y="113.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">4</text><circle cx="114" cy="126" r="9" fill="#2b2438"/><text x="114" y="129.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">5</text><circle cx="92" cy="158" r="9" fill="#2b2438"/><text x="92" y="161.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">6</text><circle cx="190" cy="136" r="9" fill="#2b2438"/><text x="190" y="139.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">7</text><circle cx="124" cy="196" r="9" fill="#2b2438"/><text x="124" y="199.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">8</text><circle cx="212" cy="190" r="9" fill="#2b2438"/><text x="212" y="193.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">9</text><circle cx="210" cy="214" r="9" fill="#2b2438"/><text x="210" y="217.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">10</text><circle cx="100" cy="250" r="9" fill="#2b2438"/><text x="100" y="253.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">11</text><circle cx="184" cy="262" r="9" fill="#2b2438"/><text x="184" y="265.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">12</text><circle cx="118" cy="276" r="9" fill="#2b2438"/><text x="118" y="279.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">13</text><circle cx="222" cy="280" r="9" fill="#2b2438"/><text x="222" y="283.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">14</text><circle cx="140" cy="334" r="9" fill="#2b2438"/><text x="140" y="337.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">15</text><circle cx="190" cy="340" r="9" fill="#2b2438"/><text x="190" y="343.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">16</text><circle cx="108" cy="424" r="9" fill="#2b2438"/><text x="108" y="427.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">17</text><circle cx="96" cy="466" r="9" fill="#2b2438"/><text x="96" y="469.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">18</text><circle cx="196" cy="442" r="9" fill="#2b2438"/><text x="196" y="445.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">19</text><circle cx="230" cy="452" r="9" fill="#2b2438"/><text x="230" y="455.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">20</text><circle cx="262" cy="448" r="9" fill="#2b2438"/><text x="262" y="451.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">21</text><text x="290" y="34" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="700" fill="#51309a">HON</text><text x="340" y="34" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12.5" fill="#6b6478">Strokes 1–5</text><text x="290" y="54" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13.5" font-style="italic" fill="#2b2438">The essence or cause</text><text x="290" y="74" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#2b2438">Across, down, sweep left, sweep right,</text><text x="290" y="91" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#2b2438">then a short line low across (the root)</text><text x="290" y="124" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="700" fill="#51309a">SHA</text><text x="340" y="124" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12.5" fill="#6b6478">Strokes 6–10</text><text x="290" y="144" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13.5" font-style="italic" fill="#2b2438">Coming into existence</text><text x="290" y="164" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#2b2438">Across, a curve down to the left, down,</text><text x="290" y="181" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#2b2438">across and down (like an n), a line across</text><text x="290" y="214" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="700" fill="#51309a">SHO</text><text x="340" y="214" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12.5" fill="#6b6478">Strokes 11–14</text><text x="290" y="234" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13.5" font-style="italic" fill="#2b2438">Correctly or justly</text><text x="290" y="254" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#2b2438">A line across that seals SHA, down from its</text><text x="290" y="271" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#2b2438">middle, a short line down left, a short line right</text><text x="290" y="318" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="700" fill="#51309a">ZE</text><text x="340" y="318" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12.5" fill="#6b6478">Strokes 15–16</text><text x="290" y="338" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13.5" font-style="italic" fill="#2b2438">Harmonizing appropriately</text><text x="290" y="358" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#2b2438">A curve down to the left,</text><text x="290" y="375" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#2b2438">then a curve down to the right</text><text x="290" y="414" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="700" fill="#51309a">NEN</text><text x="340" y="414" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12.5" fill="#6b6478">Strokes 17–21</text><text x="290" y="434" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13.5" font-style="italic" fill="#2b2438">The heart or the thoughts, now</text><text x="290" y="454" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#2b2438">Across; across then down to the left;</text><text x="290" y="471" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#2b2438">then three small curves</text><rect x="286" y="500" width="294" height="54" rx="8" fill="#fff" stroke="#d6cdee"/><text x="298" y="522" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#51309a">ZE is drawn after SHO,</text><text x="298" y="541" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" fill="#2b2438">but spoken before it: Hon Sha Ze Sho Nen.</text></svg></figure>
 <h3>How to draw Hon Sha Ze Sho Nen</h3>
 <ul>
@@ -1314,7 +1312,7 @@ ${masterEnrollmentSection()}
 <li><strong>Situations and places:</strong> groups and organizations, towns, cities and countries, disaster and crisis situations, world peace.</li>
 <li><strong>When touch isn't possible:</strong> someone in hospital, a person with burns, or a sleeping child.</li>
 </ul>
-<div class="callout"><strong>The Full Reiki Sandwich (manual p.39):</strong> <strong>Cho Ku Rei, Sei Heiki, Cho Ku Rei, Hon Sha Ze Sho Nen, Cho Ku Rei</strong>, intoning each name three times. It brings all three symbols together: Cho Ku Rei activates and seals, Sei Heiki brings harmony, and Hon Sha Ze Sho Nen carries Reiki across distance and time. You can project it from your third eye to your recipient's third eye.</div>
+<div class="callout"><strong>The Full Reiki Sandwich:</strong> <strong>Cho Ku Rei, Sei Heiki, Cho Ku Rei, Hon Sha Ze Sho Nen, Cho Ku Rei</strong>, intoning each name three times. It brings all three symbols together: Cho Ku Rei activates and seals, Sei Heiki brings harmony, and Hon Sha Ze Sho Nen carries Reiki across distance and time. You can project it from your third eye to your recipient's third eye.</div>
 `;}},
 
 {title:"Distance Healing", html:function(){return `
@@ -1513,7 +1511,7 @@ ${attunementSteps()}
 
 var QUIZ = [
 {q:"What does Okuden mean?", a:["First teachings","Inner teachings","Mystery teachings","Distance teachings"], c:1, why:"Okuden means 'inner teachings.' Shoden is Level 1 and Shinpiden is Level 3."},
-{q:"After drawing a symbol, what completes its activation?", a:["Clapping three times","Silently intoning its name three times","Blowing on your hands","Writing it on paper"], c:1, why:"The manual says to silently intone the symbol's name three times; the symbol works through its name."},
+{q:"After drawing a symbol, what completes its activation?", a:["Clapping three times","Silently intoning its name three times","Blowing on your hands","Writing it on paper"], c:1, why:"Silently intone the symbol's name three times; the symbol works through its name."},
 {q:"Which symbol is known as the power symbol?", a:["Cho Ku Rei","Sei Heiki","Hon Sha Ze Sho Nen","Dai Ko Myo"], c:0, why:"Cho Ku Rei is the power symbol and the activator, the light switch that turns on the other symbols."},
 {q:"Which of these is a common use of Cho Ku Rei?", a:["Diagnosing illness","Sealing the healing at the end of a session","Replacing the hand positions","Contacting spirits"], c:1, why:"Cho Ku Rei is used to power up, focus, protect, cleanse spaces and seal a session."},
 {q:"Sei Heiki works mainly with:", a:["Physical strength","The mind and emotions","Distance and time","Cleansing crystals"], c:1, why:"Sei Heiki is the mental and emotional symbol, associated with harmony."},
@@ -1529,7 +1527,7 @@ var QUIZ = [
 {q:"When treating another person, which areas should you always hover over rather than touch?", a:["The shoulders and knees","The throat, chest, groin and buttocks","The feet","The top of the head"], c:1, why:"Always hover over the throat, chest and breasts, groin and pelvic area, and buttocks, as well as injuries, burns and recent surgery."},
 {q:"How do you move from one hand position to the next?", a:["Lift both hands, then place them again","One hand at a time, so you stay in contact","Slide both hands firmly along the body","Clap to clear the energy first"], c:1, why:"Moving one hand at a time keeps a calm, continuous connection."},
 {q:"In the table session, what do you do after the 12 face-up positions?", a:["End the session","Quietly ask your client to turn over for the back positions","Start again at the head","Give the balancing hold"], c:1, why:"After the front, the client turns over for positions 13 to 19. The balancing hold and aura smoothing come at the very end."},
-{q:"How does the manual's table session finish?", a:["Hands over the eyes","Left hand on the crown and right hand at the base of the spine, then smoothing the aura three times","Both hands on the knees","Drawing Hon Sha Ze Sho Nen on the client's back"], c:1, why:"The balancing hold evens out the energy; then seal with Cho Ku Rei and comb the aura three times, head to feet."},
+{q:"How does the table session finish?", a:["Hands over the eyes","Left hand on the crown and right hand at the base of the spine, then smoothing the aura three times","Both hands on the knees","Drawing Hon Sha Ze Sho Nen on the client's back"], c:1, why:"The balancing hold evens out the energy; then seal with Cho Ku Rei and comb the aura three times, head to feet."},
 {q:"A client can't lie down comfortably because of back pain. What do you offer?", a:["Nothing; Reiki needs a table","A seated chair session","A session standing up","Only distance Reiki"], c:1, why:"The nine-position chair session covers all the main energy centers while the client sits."},
 {q:"During a session, your client suddenly has chest pain and shortness of breath. What do you do?", a:["Continue with the heart position","Call emergency services right away, and give Reiki only while you wait","Tell them it's an energy release","Use the Reiki sandwich and wait"], c:1, why:"These can be signs of a medical emergency. Help comes first; Reiki can support them while they wait."},
 {q:"What's the best way to use the targeted hand positions library?", a:["Instead of seeing a doctor","As extra focus alongside a full or short session, and alongside medical care","Only on the first day after your attunement","Only for animals"], c:1, why:"Full treatments are ideal; targeted positions add focus, and they always complement medical care rather than replacing it."},

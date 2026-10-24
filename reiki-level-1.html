@@ -427,9 +427,7 @@ var FIG=(function(){
 })();
 
 /* ===== Position data =====
-   Sequences follow the Level 1 manual (self pp.40–47, table pp.55–64,
-   seated pp.65–72) with the Level 2 symbols added (L2 manual pp.26–32, 63–64).
-   The library follows the Level 2 manual's Lesson 16 (pp.72–83). */
+   Self-treatment, table and seated sequences, with the Level 2 symbols added. */
 var SEQ={};
 SEQ.self=[
 {n:1,name:"Eyes and forehead",area:"Third eye",fig:{t:"front",zoom:"head",hands:[{x:90,y:38,a:8,t:-1},{x:110,y:38,a:-8,t:1}]},
@@ -463,7 +461,7 @@ SEQ.self=[
 {n:8,name:"Upper chest",area:"Heart",fig:{t:"front",zoom:"upper",hands:[{x:82,y:106,a:90,el:[48,132]},{x:118,y:106,a:-90,el:[152,132]}]},
  how:"Place both hands horizontally across your upper chest, fingertips touching at the breastbone.",
  sym:"Cho Ku Rei on the backs of your hands.",
- trad:"From here down to position 11, the Level 1 manual links these holds to the major organs, digestion, and anger and emotions."},
+ trad:"From here down to position 11, these holds are traditionally linked to the major organs, digestion, and anger and emotions."},
 {n:9,name:"Solar plexus",area:"Solar plexus",fig:{t:"front",zoom:"upper",hands:[{x:82,y:140,a:90,el:[46,152]},{x:118,y:140,a:-90,el:[154,152]}]},
  how:"Move your hands down to just below your ribs, still horizontal with fingertips touching.",
  sym:"Cho Ku Rei; add Sei Heiki for anxiety or a churning stomach.",
@@ -503,7 +501,7 @@ SEQ.self=[
 {n:18,name:"Feet",area:"Grounding",fig:{t:"front",zoom:"legs",hands:[{x:82,y:284,a:180,s:0.9,el:[60,200]},{x:118,y:284,a:180,s:0.9,el:[140,200]}]},
  how:"Finish by holding both feet. Sit cross-legged (or in lotus if that's comfortable) and cup your feet in your hands. If that's awkward, rest one foot on the opposite knee and hold its top and sole, then change feet.",
  sym:"Seal the whole session with Cho Ku Rei, then return to gassho.",
- trad:"Traditionally used for grounding, leg pain and circulation. The Level 1 manual notes the reflexology points on the feet."}
+ trad:"Traditionally used for grounding, leg pain and circulation. The feet also hold reflexology points for the whole body."}
 ];
 
 /* Table session: practitioner standing or sitting at the head, then the side, then the feet */
@@ -582,7 +580,7 @@ SEQ.table=[
  sym:"Cho Ku Rei on the backs of your hands.",
  trad:"Traditionally used for leg pain and circulation."},
 {n:19,name:"Soles of the feet",part:"Face down",where:AT_FEET,fig:{t:"table",view:"back",zoom:"legs",hands:[{x:86,y:414,a:0,arm:180,al:50},{x:114,y:414,a:0,arm:180,al:50}]},
- how:"From the foot of the table, cup the soles of the feet. The Level 1 manual notes that the whole body can be reached through the feet.",
+ how:"From the foot of the table, cup the soles of the feet. The whole body can be reached through the feet.",
  sym:"Cho Ku Rei. Stay here a little longer to ground the client before you close.",
  trad:"Traditionally used for grounding."}
 ];
@@ -591,8 +589,8 @@ SEQ.closing=[
  how:"Rest your left hand on the crown and your right hand on the lower back at the base of the spine. Hold until the energy feels even between your hands.",
  sym:"Draw Cho Ku Rei over the whole body to seal the session."},
 {n:"B",name:"Smooth (comb) the aura",where:AT_SIDE,fig:{t:"table",view:"back",zoom:"full",hands:[],extra:'<path class="sweep" d="M150 30 C176 140 176 300 150 440"/><path class="sweep" d="M162 40 C190 150 190 300 164 430"/><path class="sweep" d="M174 50 C200 160 200 290 178 420"/><path class="sweep-h" d="M144 432 l6 10 l7 -10 M158 422 l6 10 l7 -10 M172 410 l6 10 l7 -10"/>'},
- how:"Sweep from crown to feet three times. The Level 1 manual's version: first a firm stroke along the body and on past the feet toward the floor, then a light stroke touching the body, then a pass a few inches above it. If the client prefers no touch, make all three passes above the body.",
- sym:"Thank Reiki. Optionally use Raku for grounding (manual p.70)."}
+ how:"Sweep from crown to feet three times. Traditionally: first a firm stroke along the body and on past the feet toward the floor, then a light stroke touching the body, then a pass a few inches above it. If the client prefers no touch, make all three passes above the body.",
+ sym:"Thank Reiki. Optionally use Raku for grounding."}
 ];
 
 /* Chair session, side view: you move from behind, to the side, to the front */
@@ -761,7 +759,7 @@ function practiceBox(t){return '<div class="practice"><p class="obj-h">Practice 
   SEQ.chair[8].how="Kneel in front and cup the feet, thumbs open, cupping them to the floor. Then comb the aura three times, wash your hands in cold water, and offer the client a glass of water.";
 })();
 
-/* Hand positions for the Five Principles (Level 1 manual pp.23–27) */
+/* Hand positions for the Five Principles */
 var PRINCIPLE_HOLDS=[
 {name:"Not worrying: root and heart",fig:{t:"front",zoom:"upper",hands:[{x:100,y:104,a:-90,side:"L",el:[152,132]},{x:100,y:186,a:90,side:"R",el:[48,186]}]},
  how:"One hand on the root chakra (low on the abdomen) and the other on the heart, for as long as feels right. Eases the blockages that stress, worry and anxiety create."},
@@ -783,7 +781,7 @@ function lesson1Self(k){return `
 <div class="kicker">Lesson ${k}</div>
 <h2>Self-Healing with Reiki</h2>
 <p>Self-healing is the heart of Level 1. Hawayo Takata taught her students to heal themselves first, then their families, then their friends, and only then other people. A daily self-treatment deepens your connection to Reiki, keeps your own energy balanced, builds sensitivity in your hands, and is your strongest foundation as a practitioner.</p>
-${objectives(["give yourself the full 18-position self-treatment from your manual","hold your hands correctly and know how long to stay","fit Reiki into your day with shorter routines and Reiki breaks"])}
+${objectives(["give yourself the full 18-position self-treatment","hold your hands correctly and know how long to stay","fit Reiki into your day with shorter routines and Reiki breaks"])}
 <div class="callout">You can't pour from an empty cup. The more consistently you treat yourself, the clearer a channel you become for others.</div>
 <h3>Preparing for self-healing</h3>
 <ol>
@@ -801,7 +799,7 @@ ${objectives(["give yourself the full 18-position self-treatment from your manua
 <li>Move one hand at a time so you always keep contact.</li>
 </ul>
 <h3>The 18 self-treatment positions</h3>
-<p>These follow your manual's sequence (pp.40–48): the head, down the front of the body, the knees, the back, and finally the feet. The positions are a guide. Once you know them, let your intuition lead.</p>
+<p>The sequence runs: the head, down the front of the body, the knees, the back, and finally the feet. The positions are a guide. Once you know them, let your intuition lead.</p>
 ${figKey()}
 ${followBtn("self","Follow along: self-treatment")}
 ${posGrid(SEQ.self,"self")}
@@ -826,7 +824,7 @@ ${posGrid(SEQ.self,"self")}
 <li>Imagine that area filling with healing light. Let the light grow brighter and larger until it surrounds your whole body.</li>
 <li>When you feel refreshed, gently open your eyes and carry on with your day.</li>
 </ol>
-<p><strong>No time for a break?</strong> Your manual suggests tapping gently 20 to 30 times on your upper chest over the thymus (between the throat and the heart), or resting a hand there for a few minutes, to boost your vitality.</p>
+<p><strong>No time for a break?</strong> Try tapping gently 20 to 30 times on your upper chest over the thymus (between the throat and the heart), or resting a hand there for a few minutes, to boost your vitality.</p>
 <h3>Listening to your body</h3>
 <ul>
 <li><strong>Follow your hands.</strong> If a position feels warm, tingly or "busy," stay longer. If it feels complete, move on.</li>
@@ -834,7 +832,7 @@ ${posGrid(SEQ.self,"self")}
 <li><strong>Feeling nothing is okay.</strong> Some days are quiet. Reiki is still flowing; your sensitivity will grow with practice.</li>
 <li><strong>Journal.</strong> A few notes after each session (sensations, feelings, how you slept) help you notice changes over weeks. Your practice log is a good place for them.</li>
 </ul>
-${check("How long does your manual suggest staying in each self-treatment position?",["About 30 seconds","3 to 5 minutes","20 minutes"],1,"Three to five minutes per position, or until the sensation in your hands changes.")}
+${check("How long should you stay in each self-treatment position?",["About 30 seconds","3 to 5 minutes","20 minutes"],1,"Three to five minutes per position, or until the sensation in your hands changes.")}
 ${check("Which position finishes the full self-treatment?",["Hands over the eyes","Holding your feet","Hands on the crown"],1,"After the V at the base of the spine (17), you finish by holding your feet (18), which grounds you.")}
 ${check("You feel a mid-afternoon slump. What does the ultradian rhythm technique suggest?",["Have a coffee and push on","Cup your hands over your eyes and take a short Reiki break","Skip Reiki until the evening"],1,"Treat the dip as a cue to rest: hands over the eyes, find what needs Reiki, and fill yourself with light.")}
 ${practiceBox("<p>Give yourself the full 18-position self-treatment at least three times this week, using the follow-along player if it helps, and a short routine on the other days. Log each session: which positions felt warm, tingly or quiet.</p>")}
@@ -845,7 +843,7 @@ ${practiceBox("<p>Give yourself the full 18-position self-treatment at least thr
 function lesson1Table(k){return `
 <div class="kicker">Lesson ${k}</div>
 <h2>Treating Others: The Table Session</h2>
-<p>At Level 1 you can share Reiki with friends, family and pets. (Working with paying clients is covered at Level 2.) This lesson follows your manual's full-body treatment (pp.49–64): preparing, opening, 19 hand positions, and closing.</p>
+<p>At Level 1 you can share Reiki with friends, family and pets. (Working with paying clients is covered at Level 2.) This lesson covers the full-body treatment: preparing, opening, 19 hand positions, and closing.</p>
 ${objectives(["prepare the room, yourself and the person you're treating","open a session with an invocation and an aura cleanse","give all 19 positions, face up then face down","close the session and look after both of you afterward"])}
 <h3>Before the session</h3>
 <ul>
@@ -904,7 +902,7 @@ ${posGrid(SEQ.closing,"prac",{num:false})}
 <h3>What they might feel</h3>
 <p>Tell first-timers that any of these is normal, and so is feeling none of them: heat or cold (they may feel cold where you feel heat), seeing colors, memory flashes, involuntary twitches, itchiness, a rumbling stomach, pins and needles, emotional release, a sense of your hands moving when they're still, or falling asleep. Deep sighs and small movements are good signs that they're relaxing. If they feel nothing, explain that Reiki often works subtly and changes may show over the following days.</p>
 <h3>How long, and how often?</h3>
-<p>A full treatment takes <strong>60 to 90 minutes</strong>. Traditionally, someone new to Reiki was offered <strong>four full treatments on four consecutive days</strong> to get the flow going (manual p.11). When time is short, use the chair session in the next lesson.</p>
+<p>A full treatment takes <strong>60 to 90 minutes</strong>. Traditionally, someone new to Reiki was offered <strong>four full treatments on four consecutive days</strong> to get the flow going. When time is short, use the chair session in the next lesson.</p>
 <h3>After the session</h3>
 <p>Gently tell them the session is complete, give them time, and ask how they feel. Listen rather than interpret, and never tell anyone what you think is "wrong" with them. Suggest they drink water and take it easy for the rest of the day.</p>
 ${check("You're about to start. What do you do right after the invocation?",["Go straight to position 1","Cleanse the aura: hands about six inches above the body, head to feet, three times","Ask them to turn over"],1,"The aura cleanse clears superficial energy, builds rapport and shows you where to focus.")}
@@ -917,7 +915,7 @@ ${practiceBox("<p>Give at least two full table treatments this week to friends o
 function lesson1Chair(k){return `
 <div class="kicker">Lesson ${k}</div>
 <h2>Rapid Reiki and Group Sessions</h2>
-<p>A full treatment isn't always practical. Rapid Reiki (manual pp.65–72) covers all the major chakras while the person sits upright, in 15 to 30 minutes. It's ideal when someone is short of time, away from your treatment room, or can't lie down comfortably.</p>
+<p>A full treatment isn't always practical. Rapid Reiki covers all the major chakras while the person sits upright, in 15 to 30 minutes. It's ideal when someone is short of time, away from your treatment room, or can't lie down comfortably.</p>
 ${objectives(["give the nine Rapid Reiki positions","know when to choose a seated session","organize a group treatment"])}
 <h3>Setting up</h3>
 <ul>
@@ -1011,7 +1009,7 @@ ${objectives(["explain what the word Reiki means","describe your role as a chann
 <p>Together, Reiki is commonly understood as "spiritually guided life-force energy."</p>
 <h3>The practitioner as a channel</h3>
 <p>A central idea in Reiki is that the practitioner doesn't use their <em>own</em> energy. You act as a channel: Reiki flows through you to the recipient. This is why giving Reiki should leave you feeling balanced rather than drained. If you feel depleted after a session, that's a sign to revisit grounding and protection (Lesson 8).</p>
-<p>Your manual puts it this way: Reiki is never <em>sent</em>; it is <em>drawn</em> through the channel by the person receiving it, to wherever it's needed. The practitioner receives a little Reiki too as it flows through them.</p>
+<p>Put simply, Reiki is never <em>sent</em>; it is <em>drawn</em> through the channel by the person receiving it, to wherever it's needed. The practitioner receives a little Reiki too as it flows through them.</p>
 <h3>Tuning in: the radio</h3>
 <p>Dr. Hayashi described Reiki to Hawayo Takata like radio waves. We can't see them, but they're all around us; when you switch on a radio and tune it, you hear the programme. Reiki is everywhere in the same way, and your attunement tunes you in. Once you've been attuned, the connection stays with you for life.</p>
 <h3>What happens in a session</h3>
@@ -1094,9 +1092,9 @@ ${objectives(["recite the Five Principles","use a meditation to explore one prin
 <li><strong>Honest work:</strong> This covers integrity in all you do, including your Reiki practice.</li>
 <li><strong>Kindness:</strong> This includes kindness to yourself.</li>
 </ul>
-<p>This course lists the principles in the order of Usui's original Japanese, which begins with anger. Some English translations, including your manual, begin with worry. The meaning is the same.</p>
+<p>This course lists the principles in the order of Usui's original Japanese, which begins with anger. Some English translations begin with worry. The meaning is the same.</p>
 <h3>Meditating on a principle</h3>
-<p>Your manual suggests reading the principles aloud at least twice a day, and keeping a framed copy where you'll see it (or in your healing room). To go deeper:</p>
+<p>Read the principles aloud at least twice a day, and keep a framed copy where you'll see it (or in your healing room). To go deeper:</p>
 <ol>
 <li>Sit or lie comfortably and close your eyes.</li>
 <li>Repeat one principle aloud several times, like a mantra.</li>
@@ -1104,12 +1102,12 @@ ${objectives(["recite the Five Principles","use a meditation to explore one prin
 <li>Afterward, write down everything you noticed. Repeat the meditation for each principle, and again each year, and compare your notes to see how you've grown.</li>
 </ol>
 <h3>A hand position for each principle</h3>
-<p>Your manual gives a two-hand position to rebalance each principle (pp.23–27). You can use them on yourself or on another person; stay as long as feels right.</p>
+<p>Each principle has a two-hand position to rebalance it. You can use them on yourself or on another person; stay as long as feels right.</p>
 ${figKey()}
 ${principleHolds()}
 <div class="callout">The Five Principles aren't commandments; they are gifts of wisdom.</div>
 ${check("Why does each principle begin with \"Just for today\"?",["Because Reiki only works for one day","Committing to one day at a time is achievable, and each day is a fresh start","It's a translation error"],1,"You don't have to be perfect. If you slip up today, you can begin again tomorrow.")}
-${check("Which hand position does your manual give for letting go of worry?",["One hand on the root chakra and one on the heart","Both hands on the feet","Both hands on the crown"],0,"Root and heart: worry is said to block the root chakra.")}
+${check("Which hand position helps you let go of worry?",["One hand on the root chakra and one on the heart","Both hands on the feet","Both hands on the crown"],0,"Root and heart: worry is said to block the root chakra.")}
 ${practiceBox("<p>For the next week, read the principles aloud each morning and evening. Each day, pick one to focus on, meditate on it, and use its hand position for a few minutes.</p>")}
 `;}},
 
@@ -1274,7 +1272,7 @@ ${objectives(["adapt Reiki for pregnancy, babies, children and older adults","of
 <li><strong>Care for the family.</strong> Loved ones and caregivers often need Reiki as much as the person who is dying, both before and after the death.</li>
 <li><strong>Care for yourself.</strong> This work can stir your own grief. Give yourself Reiki and reach out for support.</li>
 </ul>
-${check("A child falls and is upset but not badly hurt. After first aid, where can you place your hands?",["One hand on the tummy (solar plexus) and one on the lower back","On the knees only","Nowhere; Reiki is only for adults"],0,"Your manual suggests the solar plexus and the base of the spine to soothe shock.")}
+${check("A child falls and is upset but not badly hurt. After first aid, where can you place your hands?",["One hand on the tummy (solar plexus) and one on the lower back","On the knees only","Nowhere; Reiki is only for adults"],0,"The solar plexus and the base of the spine help soothe shock.")}
 `;}},
 
 {title:"Animals, Plants & Everyday Life", html:function(){return `
@@ -1337,7 +1335,7 @@ ${attunementSteps()}
 <h3>During the attunement</h3>
 <p>Simply relax and breathe. You may notice warmth, tingling, colors, emotion, or deep peace, or very little at all. Every experience is valid; the attunement works either way.</p>
 <h3>The 21-day integration</h3>
-<p>Traditionally, the 21 days after an attunement are a time of adjustment, echoing Usui's 21 days on Mount Kurama. Your manual describes it as a cleansing cycle through the seven chakras: starting at the root and ending at the crown, each chakra takes about a day, and the cycle happens three times (7 × 3 = 21 days).</p>
+<p>Traditionally, the 21 days after an attunement are a time of adjustment, echoing Usui's 21 days on Mount Kurama. It is described as a cleansing cycle through the seven chakras: starting at the root and ending at the crown, each chakra takes about a day, and the cycle happens three times (7 × 3 = 21 days).</p>
 <figure class="fig"><svg viewBox="0 0 600 300" role="img" aria-label="Ring of 21 days in rainbow colors" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="300" rx="14" fill="#f3eefb"/><circle cx="300.0" cy="40.0" r="13" fill="#d64541"/><text x="300.0" y="44.0" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">1</text><circle cx="332.4" cy="44.9" r="13" fill="#e2553f"/><text x="332.4" y="48.9" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">2</text><circle cx="362.0" cy="59.1" r="13" fill="#e8603c"/><text x="362.0" y="63.1" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">3</text><circle cx="386.0" cy="81.4" r="13" fill="#ec7530"/><text x="386.0" y="85.4" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">4</text><circle cx="402.4" cy="109.8" r="13" fill="#f08a24"/><text x="402.4" y="113.8" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">5</text><circle cx="409.7" cy="141.8" r="13" fill="#f29f12"/><text x="409.7" y="145.8" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">6</text><circle cx="407.2" cy="174.5" r="13" fill="#f4b400"/><text x="407.2" y="178.5" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">7</text><circle cx="395.3" cy="205.0" r="13" fill="#c6b524"/><text x="395.3" y="209.0" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">8</text><circle cx="374.8" cy="230.6" r="13" fill="#99b437"/><text x="374.8" y="234.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">9</text><circle cx="347.7" cy="249.1" r="13" fill="#7cb342"/><text x="347.7" y="253.1" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">10</text><circle cx="316.4" cy="258.8" r="13" fill="#55ab57"/><text x="316.4" y="262.8" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">11</text><circle cx="283.6" cy="258.8" r="13" fill="#2fa36b"/><text x="283.6" y="262.8" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">12</text><circle cx="252.3" cy="249.1" r="13" fill="#25a387"/><text x="252.3" y="253.1" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">13</text><circle cx="225.2" cy="230.6" r="13" fill="#1aa3a3"/><text x="225.2" y="234.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">14</text><circle cx="204.7" cy="205.0" r="13" fill="#2495c0"/><text x="204.7" y="209.0" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">15</text><circle cx="192.8" cy="174.5" r="13" fill="#2e86de"/><text x="192.8" y="178.5" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">16</text><circle cx="190.3" cy="141.8" r="13" fill="#356bd2"/><text x="190.3" y="145.8" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">17</text><circle cx="197.6" cy="109.8" r="13" fill="#3c4fc6"/><text x="197.6" y="113.8" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">18</text><circle cx="214.0" cy="81.4" r="13" fill="#5347c4"/><text x="214.0" y="85.4" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">19</text><circle cx="238.0" cy="59.1" r="13" fill="#6a3fc1"/><text x="238.0" y="63.1" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">20</text><circle cx="267.6" cy="44.9" r="13" fill="#9b3fb5"/><text x="267.6" y="48.9" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">21</text><text x="300" y="148" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="40" font-weight="300" fill="#2b2438">21</text><text x="300" y="172" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" letter-spacing="2" fill="#6b6478">DAYS OF</text><text x="300" y="190" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" letter-spacing="2" fill="#6b6478">INTEGRATION</text></svg></figure>
 <p>During this time:</p>
 <ul>
@@ -1363,7 +1361,7 @@ ${attunementSteps()}
 <li>After 10 minutes, bring your hands to gassho and give thanks.</li>
 </ol>
 <p>If anything feels overwhelming, reach out to your teacher.</p>
-${check("How does your manual explain the 21 days after an attunement?",["A cleansing cycle through the seven chakras, root to crown, three times","A waiting period before you can use Reiki","A time to avoid Reiki"],0,"About a day per chakra, three times over: 7 × 3 = 21 days. Daily self-treatment supports it.")}
+${check("How are the 21 days after an attunement explained?",["A cleansing cycle through the seven chakras, root to crown, three times","A waiting period before you can use Reiki","A time to avoid Reiki"],0,"About a day per chakra, three times over: 7 × 3 = 21 days. Daily self-treatment supports it.")}
 `;}},
 
 {title:"Final Quiz", quiz:true}
@@ -1384,12 +1382,12 @@ var QUIZ = [
 {q:"Which position is usually best for a Reiki session late in pregnancy?", a:["Lying flat on the back","Lying on the side, supported with pillows","Lying face down","Standing"], c:1, why:"Many care providers advise against lying flat on the back later in pregnancy. Side-lying with pillows, or sitting, is more comfortable."},
 {q:"How should you begin giving Reiki to an animal?", a:["Hold it still so it can't move away","Offer your hands, let it come to you, and stop when it moves away","Only treat animals asleep","Always place your hands on the belly first"], c:1, why:"Let the animal lead. It will show you where it wants Reiki and when it's had enough."},
 {q:"A few days after a session, a client develops a severe new pain. What should you advise?", a:["It's a healing crisis, so ignore it","Book more Reiki sessions","See a doctor","Drink more water and wait a month"], c:2, why:"Never assume a new, severe or worsening symptom is a healing crisis. It needs medical attention."},
-{q:"How many self-treatment positions are there in your manual's full sequence?", a:["7","10","18","30"], c:2, why:"Eighteen positions: the head, the front of the body, the knees, the back and finally the feet."},
+{q:"How many positions are there in the full self-treatment sequence?", a:["7","10","18","30"], c:2, why:"Eighteen positions: the head, the front of the body, the knees, the back and finally the feet."},
 {q:"How should your hands be held during a treatment?", a:["Fingers spread wide","Cupped, with fingers together, as though holding water","Clenched","Pressing firmly"], c:1, why:"Cupped hands with closed fingers, resting lightly."},
 {q:"What do you do just before the first hand position on another person?", a:["Massage their shoulders","An invocation, then cleanse the aura from head to feet three times","Draw a symbol","Ask them to turn over"], c:1, why:"Invocation, then an aura cleanse about six inches above the body."},
 {q:"How does a full table treatment finish?", a:["Hands over the eyes","The balancing hold (crown and base of the spine), then combing the aura three times","Hands on the knees","Nothing; you just stop"], c:1, why:"Balance the energy, comb the aura, offer cold water, and wash your hands under cold running water."},
 {q:"How long does Rapid Reiki take?", a:["About 5 minutes","15 to 30 minutes","60 to 90 minutes","Two hours"], c:1, why:"Rapid Reiki covers the major chakras in 15 to 30 minutes, with the person seated."},
-{q:"Which hand position does your manual give for the principle of gratitude?", a:["Third eye and back of the head","Both feet","Throat and knees","Heart and feet"], c:0, why:"One hand on the third eye and one over the occipital ridge."},
+{q:"Which hand position is used for the principle of gratitude?", a:["Third eye and back of the head","Both feet","Throat and knees","Heart and feet"], c:0, why:"One hand on the third eye and one over the occipital ridge."},
 {q:"What is traditionally recommended during the 21 days after an attunement?", a:["Avoid giving yourself Reiki","Daily self-treatment, plenty of water and rest","Give Reiki to as many people as possible","Fast completely"], c:1, why:"Daily self-treatment, water and rest support the integration period."}
 ];
 
