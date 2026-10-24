@@ -84,6 +84,104 @@ th{background:var(--c-soft)}
   main{padding:16px 12px 30px}
   header h1 small{display:none}
 }
+/* ===== Hand-position figures ===== */
+.rkfig{display:block;width:100%;height:auto}
+.rkfig .tbl{fill:#fbf8f3;stroke:#d9d1c4;stroke-width:1.5}
+.rkfig .pillow{fill:#fff;stroke:#d9d1c4;stroke-width:1.2}
+.rkfig .chair{fill:#ece5f2;stroke:#cfc5da;stroke-width:1.2}
+.rkfig .chairl{stroke:#cfc5da;stroke-width:5;stroke-linecap:round;fill:none}
+.rkfig .body path,.rkfig .body rect,.rkfig .body ellipse{fill:#efe6db;stroke:#8c8296;stroke-width:1.6;stroke-linejoin:round}
+.rkfig .hair{fill:#7a675c;stroke:#5d4d44;stroke-width:1}
+.rkfig .face{fill:none;stroke:#7d7288;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.rkfig .fold,.rkfig .spine{fill:none;stroke:#b3a9bb;stroke-width:1.2;stroke-linecap:round}
+.rkfig .spine{stroke-dasharray:3 4}
+.rkfig .limb-o{fill:none;stroke:#8c8296;stroke-width:13;stroke-linecap:round;stroke-linejoin:round}
+.rkfig .limb{fill:none;stroke:#efe6db;stroke-width:10;stroke-linecap:round;stroke-linejoin:round}
+.rkfig .parm{stroke:#c4572f;stroke-opacity:.28;stroke-width:15;stroke-linecap:round}
+.rkfig .hand path,.rkfig .hand ellipse{fill:#d0683f;stroke:#7e2f13;stroke-width:1.3;stroke-linejoin:round}
+.rkfig .hand .fl{fill:none;stroke:#7e2f13;stroke-opacity:.55;stroke-width:1}
+.rkfig .hand.hover path,.rkfig .hand.hover ellipse{fill:#d0683f;fill-opacity:.16;stroke:#b0461f;stroke-dasharray:3.5 2.5;stroke-width:1.6}
+.rkfig .hand.hover .fl{stroke-dasharray:none;stroke-opacity:.35}
+.rkfig .hand.under path,.rkfig .hand.under ellipse{fill:#d0683f;fill-opacity:.38;stroke:#7e2f13;stroke-opacity:.75;stroke-dasharray:1.5 2.5}
+.rkfig .badge circle{fill:#2b2438}
+.rkfig .badge text{fill:#fff;font:700 12px system-ui,sans-serif}
+.rkfig .sweep{fill:none;stroke:#2e86de;stroke-width:2.2;stroke-dasharray:6 5;stroke-linecap:round}
+.rkfig .sweep-h{fill:none;stroke:#2e86de;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.fig-key{display:flex;flex-wrap:wrap;gap:6px 18px;font:13px system-ui,sans-serif;color:var(--muted);margin:8px 0 14px}
+.fig-key span{display:inline-flex;align-items:center;gap:6px}
+.fig-key i{display:inline-block;width:20px;height:12px;border-radius:6px;background:#d0683f;border:1.3px solid #7e2f13}
+.fig-key i.hv{background:rgba(208,104,63,.16);border:1.6px dashed #b0461f}
+.fig-key i.un{background:rgba(208,104,63,.5);border:1.3px dotted #7e2f13}
+.pos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin:16px 0}
+.pos{margin:0;border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.pos .pfig{background:#fdfbf8;border-bottom:1px solid var(--line);padding:6px 10px 0;display:flex;justify-content:center}
+.pos .pfig svg{max-width:220px;max-height:230px}
+.pos figcaption{padding:10px 14px 14px;font:14.5px/1.5 system-ui,sans-serif}
+.pos figcaption strong{display:block;font-size:16px;margin-bottom:2px}
+.pos .where{display:inline-block;font-size:12px;letter-spacing:.3px;color:var(--c-deep);background:var(--c-soft);border-radius:999px;padding:1px 9px;margin:2px 0 6px}
+.pos .hv-tag{display:inline-block;font-size:12px;color:#8a3a12;background:#fbe7dc;border-radius:999px;padding:1px 9px;margin:2px 0 6px 4px}
+.pos p{margin:4px 0}
+.pos .sym{color:var(--muted)}
+.pos .sym b{color:var(--ink);font-weight:600}
+.pos .trad{color:var(--muted);font-size:13px}
+.pos .red{background:#fde8e6;color:#8e231d;border-radius:8px;padding:6px 8px;font-size:13px}
+.pos .pg{font-size:12px;color:var(--muted)}
+.part-h{font:600 13px system-ui,sans-serif;letter-spacing:1px;text-transform:uppercase;color:var(--c-deep);margin:22px 0 0}
+.obj{background:var(--c-soft);border-radius:10px;padding:12px 18px;margin:18px 0}
+.obj-h{font:600 12px system-ui,sans-serif;letter-spacing:1.2px;text-transform:uppercase;color:var(--c-deep);margin:0 0 4px}
+.obj ul{margin:4px 0;padding-left:20px}
+.practice{border:2px dashed var(--c);border-radius:10px;padding:12px 18px;margin:24px 0}
+.practice p{margin:6px 0}
+.script{border-left:4px solid var(--c);background:#faf8f5;padding:12px 16px;border-radius:6px;font-style:italic;margin:12px 0}
+.flow{counter-reset:f;list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.flow li{counter-increment:f;background:var(--c-soft);border-radius:999px;padding:6px 14px 6px 8px;font:14px system-ui,sans-serif}
+.flow li::before{content:counter(f);display:inline-block;width:22px;height:22px;border-radius:50%;background:var(--c-deep);color:#fff;text-align:center;font:600 12px/22px system-ui,sans-serif;margin-right:8px}
+.ck{border:1px solid var(--line);border-left:4px solid var(--c);border-radius:10px;padding:12px 16px;margin:18px 0;font:15px system-ui,sans-serif}
+.ck-h{font:600 12px system-ui,sans-serif;letter-spacing:1.2px;text-transform:uppercase;color:var(--c-deep);margin:0}
+.ck-q{font-weight:600;margin:4px 0 10px}
+.ck-opts{display:flex;flex-direction:column;gap:6px}
+.ck-opts button{text-align:left;background:#fff;border:1px solid #c9c1d3;border-radius:8px;padding:9px 12px;font:15px system-ui,sans-serif;color:var(--ink);cursor:pointer}
+.ck-opts button:hover:not(:disabled){background:var(--c-soft)}
+.ck-opts button.pick-ok{border-color:var(--ok);background:#e6f4ec}
+.ck-opts button.pick-bad{border-color:var(--bad);background:#fbeceb}
+.ck-opts button:disabled{cursor:default;color:var(--ink)}
+.ck-fb{margin:8px 0 0;min-height:1px}
+.ck-fb.ok{color:var(--ok)} .ck-fb.bad{color:var(--bad)}
+.lib-tools{background:var(--card);padding:10px 0 4px;border-bottom:1px solid var(--line)}
+@media (min-width:821px){.lib-tools{position:sticky;top:-32px;z-index:2}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.chip{border:1px solid #c9c1d3;background:#fff;border-radius:999px;padding:5px 12px;font:13.5px system-ui,sans-serif;color:var(--ink);cursor:pointer}
+.chip.on{background:var(--c-deep);border-color:var(--c-deep);color:#fff}
+.lib-search input{width:100%;max-width:360px;padding:8px 12px;border:1px solid #b9b1c4;border-radius:8px;font:16px system-ui,sans-serif;margin-top:6px}
+.lib-count{font:13px system-ui,sans-serif;margin:6px 0 0}
+.lib-item[hidden]{display:none}
+body.pl-open{overflow:hidden}
+.player{position:fixed;inset:0;z-index:40;background:rgba(32,26,42,.72);display:flex;align-items:center;justify-content:center;padding:16px}
+.pl-box{background:#fff;border-radius:14px;max-width:820px;width:100%;max-height:100%;overflow:auto;padding:16px 20px 18px;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+.pl-top{display:flex;justify-content:space-between;align-items:center;font:600 13px system-ui,sans-serif;color:var(--c-deep);letter-spacing:.5px;text-transform:uppercase}
+.pl-x{background:none;border:0;font-size:22px;cursor:pointer;color:var(--muted);padding:4px 8px}
+.pl-body{display:flex;gap:20px;align-items:center;margin:8px 0 12px}
+.pl-fig{flex:0 0 46%;background:#fdfbf8;border-radius:10px;display:flex;justify-content:center;min-height:120px}
+.pl-fig svg{max-height:52vh}
+.pl-text h3{margin:0 0 4px;font-size:24px;font-weight:normal;color:var(--c-deep)}
+.pl-text p{margin:8px 0;font-size:17px}
+.pl-text .sym{font:15px system-ui,sans-serif;color:var(--muted)}
+.pl-ctrl{border-top:1px solid var(--line);padding-top:12px}
+.pl-time{font:600 34px/1 ui-monospace,Menlo,Consolas,monospace;text-align:center}
+.pl-bar{height:6px;background:#eee8f2;border-radius:3px;margin:10px 0;overflow:hidden}
+.pl-bar i{display:block;height:100%;width:0;background:var(--rainbow);background-size:820px 100%;transition:width .25s linear}
+.pl-btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.pl-opts{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;font:14px system-ui,sans-serif;color:var(--muted);margin-top:10px}
+.pl-opts select{font:14px system-ui,sans-serif;padding:3px 6px;margin-left:4px}
+@media (max-width:640px){
+  .pl-body{flex-direction:column;gap:8px}
+  .pl-fig{flex:none;width:100%}
+  .pl-fig svg{max-height:34vh}
+  .pl-text h3{font-size:20px}
+  .pl-text p{font-size:16px}
+  .pos-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+}
+@media print{.player,.lib-tools,[data-follow]{display:none!important}.pos{break-inside:avoid}}
 /* ===== Saved progress, practice log, accessibility ===== */
 .skip{position:absolute;left:-9999px;top:8px;z-index:20;background:#fff;color:var(--ink);padding:8px 14px;border-radius:6px;font:15px system-ui,sans-serif}
 .skip:focus{left:8px}
@@ -228,6 +326,625 @@ function masterEnrollmentSection(){return `
 `;}
 
 /* ===== Lessons ===== */
+/* ===== Hand-position illustrations =====
+   Original line drawings built from a few body templates, so every position
+   is drawn in the same style. Hands: solid = resting lightly on the body,
+   dashed = hovering just above it, faint = slid underneath (e.g. under the head). */
+var FIG=(function(){
+  function f(n){return Math.round(n*10)/10;}
+  function rot(x,y,a){var r=a*Math.PI/180;return [x*Math.cos(r)-y*Math.sin(r),x*Math.sin(r)+y*Math.cos(r)];}
+  /* hand pointing "up" (fingers toward -y), wrist at +y, centred on 0,0 */
+  var PALM="M-8.5,19 C-9.6,10 -9.6,2 -8.6,-5 L-8.2,-15.5 Q-8,-21 -3,-21.6 L3,-21.6 Q8,-21 8.2,-15.5 L8.6,-5 C9.6,2 9.6,10 8.5,19 Z";
+  var FINGERS="M-4.1,-5.5 L-4.1,-19 M0,-5.5 L0,-20.6 M4.1,-5.5 L4.1,-19";
+  var TWO="M-4,13 L-4,-11 Q-4,-15 0,-15 Q4,-15 4,-11 L4,13 Z";
+  function hand(h,arms){
+    var s=h.s||1,a=h.a||0,k=h.k||"touch",out="";
+    var w=rot(0,19*s,a),wx=h.x+w[0],wy=h.y+w[1];
+    if(arms==="prac"&&h.arm!==false){
+      var ad=(h.arm!==undefined?h.arm:a+180)*Math.PI/180, L=h.al||90;
+      out+='<line class="parm" x1="'+f(wx)+'" y1="'+f(wy)+'" x2="'+f(wx+Math.sin(ad)*L)+'" y2="'+f(wy-Math.cos(ad)*L)+'"/>';
+    }
+    out+='<g class="hand '+k+'" transform="translate('+f(h.x)+' '+f(h.y)+') rotate('+a+') scale('+s+')">';
+    if(h.two)out+='<path d="'+TWO+'"/><path class="fl" d="M0,-12 L0,10"/>';
+    else{
+      var t=h.t||1;
+      out+='<ellipse class="th" cx="'+(t*9.5)+'" cy="3" rx="3.4" ry="8.5" transform="rotate('+(t*-16)+' '+(t*9.5)+' 3)"/>';
+      out+='<path d="'+PALM+'"/><path class="fl" d="'+FINGERS+'"/>';
+    }
+    return out+'</g>';
+  }
+  /* self-treatment arms: shoulder -> elbow -> wrist, drawn as outlined limbs */
+  function selfArm(h,sh){
+    var s=h.s||1,a=h.a||0,w=rot(0,19*s,a),wx=h.x+w[0],wy=h.y+w[1];
+    var e=h.el;
+    if(!e){var ad=(a+180)*Math.PI/180;e=[wx+Math.sin(ad)*52,wy-Math.cos(ad)*52];}
+    var d="M"+f(sh[0])+","+f(sh[1])+" L"+f(e[0])+","+f(e[1])+" L"+f(wx)+","+f(wy);
+    return '<path class="limb-o" d="'+d+'"/><path class="limb" d="'+d+'"/>';
+  }
+  /* ---- templates ---- */
+  var T={};
+  T.table=function(o){ // top-down, lying, head at top
+    var up=o.view!=="back",g="",bg='<rect class="tbl" x="30" y="2" width="140" height="456" rx="14"/>';
+    if(up)bg+='<rect class="pillow" x="64" y="8" width="72" height="44" rx="12"/>';
+    else bg+='<rect class="pillow" x="70" y="4" width="60" height="30" rx="10"/>';
+    var M=function(d){return d.replace(/(-?\d+\.?\d*)\s(-?\d+\.?\d*)/g,function(m,x,y){return f(200-x)+" "+y;});};
+    var arm="M52 92 Q42 96 41 112 L38 236 Q38 248 46 248 Q53 248 53 238 L57 150 L58 104 Z";
+    var leg="M67 228 L99 230 L97 252 L95 330 L93 404 L79 404 L76 330 L68 252 Z";
+    g+='<g class="body"><path d="'+arm+'"/><path d="'+M(arm)+'"/><path d="'+leg+'"/><path d="'+M(leg)+'"/>'
+     +'<path d="M90 76 Q74 78 62 82 Q50 86 50 100 L54 150 Q58 176 70 194 Q64 210 66 230 L134 230 Q136 210 130 194 Q142 176 146 150 L150 100 Q150 86 138 82 Q126 78 110 76 Z"/>'
+     +'<rect x="92" y="60" width="16" height="20" rx="4"/>'
+     +'<ellipse cx="86" cy="416" rx="9" ry="14"/><ellipse cx="114" cy="416" rx="9" ry="14"/>'
+     +'<ellipse cx="100" cy="40" rx="20" ry="25"/></g>';
+    g+='<path class="fold" d="M78 322 q8 4 16 0 M106 322 q8 4 16 0"/>';
+    if(up){
+      g+='<path class="hair" d="M80 40 Q78 14 100 14 Q122 14 120 40 Q117 24 100 22 Q83 24 80 40Z"/>';
+      g+='<path class="face" d="M89 38 q4 3 8 0 M103 38 q4 3 8 0 M100 41 l-2 7 h4 M95 55 q5 3 10 0"/>';
+    }else{
+      g+='<ellipse class="hair" cx="100" cy="40" rx="20" ry="25"/><path class="face" d="M100 18 L100 40"/>';
+      g+='<path class="spine" d="M100 80 L100 226"/><path class="fold" d="M66 106 q12 10 22 2 M134 106 q-12 10 -22 2"/>';
+    }
+    return {vb:{head:"38 -6 124 118",upper:"22 2 156 196",torso:"22 60 156 200",full:"18 -2 164 464",legs:"22 220 156 230",lower:"22 150 156 200"}[o.zoom||"full"],bg:bg,body:g};
+  };
+  function seatedBody(back){
+    var g='';
+    var M=function(d){return d.replace(/(-?\d+\.?\d*)\s(-?\d+\.?\d*)/g,function(m,x,y){return f(200-x)+" "+y;});};
+    var thigh="M62 186 L98 186 L97 220 Q80 230 63 220 Z",shin="M70 226 L92 226 L90 284 L74 284 Z";
+    g+='<g class="body"><path d="'+shin+'"/><path d="'+M(shin)+'"/><ellipse cx="82" cy="290" rx="12" ry="6"/><ellipse cx="118" cy="290" rx="12" ry="6"/>'
+     +'<path d="'+thigh+'"/><path d="'+M(thigh)+'"/><ellipse cx="80" cy="221" rx="17" ry="9"/><ellipse cx="120" cy="221" rx="17" ry="9"/>'
+     +'<path d="M90 74 Q74 76 62 80 Q50 84 50 98 L54 150 Q56 172 62 190 L138 190 Q144 172 146 150 L150 98 Q150 84 138 80 Q126 76 110 74 Z"/>'
+     +'<rect x="92" y="58" width="16" height="20" rx="4"/><ellipse cx="100" cy="40" rx="19" ry="24"/></g>';
+    if(back){g+='<ellipse class="hair" cx="100" cy="40" rx="19" ry="24"/><path class="spine" d="M100 80 L100 188"/><path class="fold" d="M70 104 q12 12 22 2 M130 104 q-12 12 -22 2"/>';}
+    else{g+='<path class="hair" d="M81 40 Q79 16 100 16 Q121 16 119 40 Q116 26 100 24 Q84 26 81 40Z"/><path class="face" d="M90 38 q4 3 8 0 M102 38 q4 3 8 0 M100 41 l-2 7 h4 M95 53 q5 3 10 0"/>';}
+    return g;
+  }
+  T.front=function(o){return {vb:{head:"40 -4 120 120",upper:"26 -4 148 210",full:"20 -4 160 304",legs:"30 150 140 150"}[o.zoom||"upper"],bg:'<rect class="chair" x="58" y="70" width="84" height="122" rx="8"/>',body:seatedBody(false),sh:{R:[57,88],L:[143,88]}};};
+  T.back=function(o){return {vb:{head:"40 -4 120 120",upper:"26 -4 148 210",full:"20 -4 160 304"}[o.zoom||"upper"],bg:'<rect class="chair" x="58" y="70" width="84" height="122" rx="8"/>',body:seatedBody(true),sh:{R:[143,88],L:[57,88]}};};
+  T.side=function(o){
+    var bg='<rect class="chair" x="70" y="96" width="8" height="112" rx="3"/><rect class="chair" x="70" y="198" width="98" height="8" rx="3"/><path class="chairl" d="M76 206 L76 292 M162 206 L162 292"/>';
+    var g='';
+    g+='<g class="body"><path d="M170 206 L188 206 L186 282 L172 282 Z"/><path d="M166 280 L198 280 Q204 290 196 293 L166 293 Z"/>'
+     +'<path d="M86 178 L178 184 Q191 186 191 198 Q191 211 178 211 L86 205 Z"/>'
+     +'<path d="M98 74 Q84 80 84 100 L86 198 L140 198 Q138 160 136 130 Q140 100 130 84 Q122 74 110 74 Z"/>'
+     +'<rect x="102" y="58" width="16" height="22" rx="4"/><ellipse cx="112" cy="40" rx="19" ry="24"/></g>'
+     +'<path class="hair" d="M93 44 Q90 16 112 16 Q128 16 131 32 Q118 22 104 30 Q100 40 102 60 Q94 56 93 44Z"/><path class="face" d="M131 36 q4 6 0 10 M124 36 q3 2 6 0 M125 54 q3 1 5 -1"/>';
+    if(!o.noArm)g+='<path class="limb-o" d="M110 90 L116 156 L160 176"/><path class="limb" d="M110 90 L116 156 L160 176"/>';
+    return {vb:{upper:"60 -4 160 214",full:"56 -4 166 304",legs:"80 140 140 160"}[o.zoom||"upper"],bg:bg,body:g};
+  };
+  /* who is giving: self arms attach to the body; practitioner arms come in from outside */
+  function draw(o){
+    var t=T[o.t](o),hs=o.hands||[],arms=o.who==="self"?"self":"prac",below="",above="",armsSvg="";
+    hs.forEach(function(h){
+      if(arms==="self"){armsSvg+=selfArm(h,t.sh[h.side||(h.x<100?(o.t==="back"?"L":"R"):(o.t==="back"?"R":"L"))]);}
+      if(h.bh)below+=hand(h,arms); else above+=hand(h,arms);
+    });
+    var lab=o.label?' role="img" aria-label="'+o.label.replace(/"/g,"&quot;")+'"':' aria-hidden="true"';
+    var vb=t.vb.split(" ").map(Number),bs=vb[2]/130;
+    var badge=o.n?'<g class="badge" transform="translate('+f(vb[0]+14*bs)+' '+f(vb[1]+14*bs)+') scale('+f(bs)+')"><circle cx="0" cy="0" r="11"/><text x="0" y="4.2" text-anchor="middle">'+o.n+'</text></g>':'';
+    var extra=o.extra||"";
+    return '<svg class="rkfig" viewBox="'+t.vb+'" xmlns="http://www.w3.org/2000/svg"'+lab+'>'+t.bg+below+t.body+(arms==="self"?armsSvg:"")+above+extra+badge+'</svg>';
+  }
+  return {draw:draw};
+})();
+
+/* ===== Position data =====
+   Sequences follow the Level 1 manual (self pp.40–47, table pp.55–64,
+   seated pp.65–72) with the Level 2 symbols added (L2 manual pp.26–32, 63–64).
+   The library follows the Level 2 manual's Lesson 16 (pp.72–83). */
+var SEQ={};
+SEQ.self=[
+{n:1,name:"Eyes and forehead",area:"Third eye",fig:{t:"front",zoom:"head",hands:[{x:90,y:38,a:8,t:-1},{x:110,y:38,a:-8,t:1}]},
+ how:"Cup your hands slightly, fingers together, and rest them over your eyes, cheekbones and forehead. Let the heels of your hands rest near your chin, without pressing on your eyes.",
+ sym:"Start here with the Reiki sandwich (Cho Ku Rei, Sei He Ki, Cho Ku Rei) on the backs of your hands.",
+ trad:"Traditionally used for stress, tired eyes, colds and sinus congestion, and a busy mind."},
+{n:2,name:"Crown",area:"Crown",fig:{t:"front",zoom:"head",hands:[{x:88,y:15,a:80,el:[42,46]},{x:112,y:15,a:-80,el:[158,46]}]},
+ how:"Rest both hands on the top of your head, fingertips touching at the midline. Let your elbows relax out to the sides.",
+ sym:"Visualize Cho Ku Rei on the backs of your hands and say its name three times.",
+ trad:"Traditionally used for headaches, stress and emotional overwhelm."},
+{n:3,name:"Sides of the head",area:"Temples",fig:{t:"front",zoom:"head",hands:[{x:78,y:38,a:-4,t:-1},{x:122,y:38,a:4,t:1}]},
+ how:"Place your hands on either side of your head, palms over your ears and fingers covering your temples.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for balance, ear and hearing problems, colds, and balancing the two sides of the brain."},
+{n:4,name:"Back of the head",area:"Occipital ridge",fig:{t:"back",zoom:"head",hands:[{x:91,y:46,a:80,el:[40,46]},{x:109,y:46,a:-80,el:[160,46]}]},
+ how:"Lift your hands behind your head and rest them over the bony ridge at the base of the skull (the occipital ridge), fingers pointing toward each other.",
+ sym:"Add Sei He Ki here if you're working on worry, habits or sleep.",
+ trad:"Traditionally used for headaches, stress, fears, shock and low mood."},
+{n:5,name:"Base of the neck and shoulders",area:"Neck",fig:{t:"back",zoom:"upper",hands:[{x:88,y:82,a:168,el:[70,58]},{x:112,y:82,a:192,el:[130,58]}]},
+ how:"Reach over your shoulders and rest your hands across the base of your neck and the tops of your shoulders.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for tight neck and shoulder muscles, stress and tension."},
+{n:6,name:"Throat",area:"Throat",fig:{t:"front",zoom:"upper",hands:[{x:92,y:73,a:-35,s:0.85,t:-1,el:[82,128]},{x:108,y:73,a:35,s:0.85,t:1,el:[118,128]}]},
+ how:"Wrap your hands loosely around your neck so the heels of your hands meet over your throat. Keep the touch very light; hover if you prefer.",
+ sym:"Sei He Ki supports self-expression; seal with Cho Ku Rei.",
+ trad:"Traditionally used for self-expression, the voice, and coughs and colds."},
+{n:7,name:"Heart and thymus",area:"Heart",fig:{t:"front",zoom:"upper",hands:[{x:104,y:98,a:-90,side:"L",el:[152,130]},{x:100,y:124,a:0,side:"R",el:[64,152]}]},
+ how:"Form a T: your left hand lies across your chest over your heart, and your right hand points up the center of your chest below it, over the thymus.",
+ sym:"A good place for the full Reiki sandwich, especially for emotional healing.",
+ trad:"Traditionally used for the heart, lungs, immune system and emotional healing."},
+{n:8,name:"Upper chest",area:"Heart",fig:{t:"front",zoom:"upper",hands:[{x:82,y:106,a:90,el:[48,132]},{x:118,y:106,a:-90,el:[152,132]}]},
+ how:"Place both hands horizontally across your upper chest, fingertips touching at the breastbone.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"From here down to position 11, the Level 1 manual links these holds to the major organs, digestion, and anger and emotions."},
+{n:9,name:"Solar plexus",area:"Solar plexus",fig:{t:"front",zoom:"upper",hands:[{x:82,y:140,a:90,el:[46,152]},{x:118,y:140,a:-90,el:[154,152]}]},
+ how:"Move your hands down to just below your ribs, still horizontal with fingertips touching.",
+ sym:"Cho Ku Rei; add Sei He Ki for anxiety or a churning stomach.",
+ trad:"Traditionally used for digestion, stress and personal confidence."},
+{n:10,name:"Navel",area:"Sacral",fig:{t:"front",zoom:"upper",hands:[{x:82,y:166,a:90,el:[46,168]},{x:118,y:166,a:-90,el:[154,168]}]},
+ how:"Move your hands down to your navel, fingertips touching.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for digestion and the intestines."},
+{n:11,name:"Lower abdomen (V)",area:"Root",fig:{t:"front",zoom:"upper",hands:[{x:84,y:184,a:135,el:[52,164]},{x:116,y:184,a:225,el:[148,164]}]},
+ how:"Bring your hands down into a V just inside your hip bones, fingertips pointing toward each other below your navel.",
+ sym:"Cho Ku Rei; this is a grounding place to finish the front of the body.",
+ trad:"Traditionally used for the reproductive system and for grounding."},
+{n:12,name:"Front of the knees",area:"Legs",fig:{t:"front",zoom:"legs",hands:[{x:80,y:214,a:180,s:0.9},{x:120,y:214,a:180,s:0.9}]},
+ how:"Lean forward and rest one hand over each kneecap.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for leg pain and circulation."},
+{n:13,name:"Backs of the knees",area:"Legs",fig:{t:"front",zoom:"legs",hands:[{x:80,y:226,a:180,s:0.9,k:"under"},{x:120,y:226,a:180,s:0.9,k:"under"}]},
+ how:"Slide your hands behind your knees and let them rest there.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for leg pain and circulation."},
+{n:14,name:"Shoulder blades",area:"Upper back",fig:{t:"back",zoom:"upper",hands:[{x:80,y:98,a:180,el:[72,50]},{x:120,y:98,a:180,el:[128,50]}]},
+ how:"Reach over your shoulders and rest your hands on the tops of your shoulder blades. If this strains your arms, cross them and hold the opposite shoulders instead.",
+ sym:"Cho Ku Rei. If you can't reach comfortably, send Reiki to your back with Hon Sha Ze Sho Nen instead.",
+ trad:"Traditionally used for the back, the spine and stress."},
+{n:15,name:"Middle back",area:"Back",fig:{t:"back",zoom:"upper",hands:[{x:84,y:138,a:90,el:[44,150]},{x:116,y:138,a:-90,el:[156,150]}]},
+ how:"Bring your hands behind you at the middle of your back, horizontal with fingertips touching over the spine.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for the kidneys and adrenal area, back pain and stress."},
+{n:16,name:"Lower back",area:"Back",fig:{t:"back",zoom:"upper",hands:[{x:84,y:164,a:90,el:[44,168]},{x:116,y:164,a:-90,el:[156,168]}]},
+ how:"Move your hands down to your waist, fingertips touching over the spine.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for lower back pain."},
+{n:17,name:"Base of the spine (V)",area:"Root",fig:{t:"back",zoom:"upper",hands:[{x:86,y:182,a:135,el:[48,160]},{x:114,y:182,a:225,el:[152,160]}]},
+ how:"Finish with your hands in a V over the base of your spine (the sacrum), fingertips pointing down toward each other.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for grounding, the lower back and sciatic discomfort."},
+{n:18,name:"Feet",area:"Grounding",fig:{t:"front",zoom:"legs",hands:[{x:82,y:284,a:180,s:0.9,el:[60,200]},{x:118,y:284,a:180,s:0.9,el:[140,200]}]},
+ how:"Finish by holding both feet. Sit cross-legged (or in lotus if that's comfortable) and cup your feet in your hands. If that's awkward, rest one foot on the opposite knee and hold its top and sole, then change feet.",
+ sym:"Seal the whole session with Cho Ku Rei, then return to gassho.",
+ trad:"Traditionally used for grounding, leg pain and circulation. The Level 1 manual notes the reflexology points on the feet."}
+];
+
+/* Table session: practitioner standing or sitting at the head, then the side, then the feet */
+var AT_HEAD="You: seated or standing at the head",AT_SIDE="You: at the client's side",AT_FEET="You: at the foot of the table";
+SEQ.table=[
+{n:1,name:"Eyes and forehead",part:"Face up",where:AT_HEAD,fig:{t:"table",zoom:"head",hands:[{x:91,y:36,a:180,t:1},{x:109,y:36,a:180,t:-1}]},
+ how:"Cup your hands and rest them lightly over the eyes, cheekbones and forehead, fingertips toward the chin. Keep the nose and mouth uncovered, and keep the weight of your hands in your own arms.",
+ sym:"Before you place your hands, draw the Reiki sandwich on your palms. Here, visualize Sei He Ki between two Cho Ku Rei.",
+ trad:"Third eye. Traditionally used for stress, the eyes and sinuses, and a busy mind."},
+{n:2,name:"Crown",part:"Face up",where:AT_HEAD,fig:{t:"table",zoom:"head",hands:[{x:88,y:18,a:205,t:1},{x:112,y:18,a:155,t:-1}]},
+ how:"Slide your hands up so your palms cup the top of the head, fingertips curving down toward the ears.",
+ sym:"Cho Ku Rei on the backs of your hands, its name said silently three times.",
+ trad:"Crown. Traditionally used for headaches and emotional overwhelm."},
+{n:3,name:"Temples",part:"Face up",where:AT_HEAD,fig:{t:"table",zoom:"head",hands:[{x:78,y:42,a:180},{x:122,y:42,a:180}]},
+ how:"Bring your hands down the sides of the head so your palms cover the temples and ears. Move one hand at a time so you never lose contact.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for balance, the ears, and colds."},
+{n:4,name:"Back of the head",part:"Face up",where:AT_HEAD,fig:{t:"table",zoom:"head",hands:[{x:90,y:16,a:180,k:"under"},{x:110,y:16,a:180,k:"under"}]},
+ how:"Gently roll the head to one side and slide one hand underneath, then roll it onto that hand and slide in the other. The back of the head rests in your palms, fingertips at the base of the skull (the occipital ridge).",
+ sym:"Sei He Ki and Cho Ku Rei. Many clients drift into deep relaxation here.",
+ trad:"Traditionally used for headaches, stress, fears and shock."},
+{n:5,name:"Throat",part:"Face up",where:AT_HEAD,fig:{t:"table",zoom:"head",hands:[{x:89,y:64,a:150,k:"hover"},{x:111,y:64,a:210,k:"hover"}]},
+ how:"Hover: hold your hands a few centimeters above the throat in a V, or rest them along the jawbones with the heels meeting below the chin. Never put weight on the throat.",
+ sym:"Sei He Ki supports expression and communication.",
+ trad:"Throat. Traditionally used for the voice, self-expression, and coughs and colds."},
+{n:6,name:"Shoulders",part:"Face up",where:AT_HEAD,fig:{t:"table",zoom:"upper",hands:[{x:66,y:84,a:180},{x:134,y:84,a:180}]},
+ how:"Rest one hand on each shoulder, fingers pointing toward the feet.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for tight shoulders, and aches in the arms and hands."},
+{n:7,name:"Heart (T)",part:"Face up",where:AT_SIDE,fig:{t:"table",zoom:"upper",hands:[{x:100,y:90,a:270,arm:90,al:80},{x:100,y:120,a:0,arm:90,al:80}]},
+ how:"Move to the client's side. Form a T: one hand across the collarbones, the other below it along the center of the chest, over the breastbone. With women, hover over the chest unless they've told you contact is fine.",
+ sym:"A natural place for the full Reiki sandwich.",
+ trad:"Heart. Traditionally used for the heart and lungs, the immune system and emotional healing."},
+{n:8,name:"Solar plexus",part:"Face up",where:AT_SIDE,fig:{t:"table",zoom:"torso",hands:[{x:81,y:150,a:270,arm:90,al:60},{x:119,y:150,a:270,arm:90,al:60}]},
+ how:"Place your hands end to end across the body just below the ribs.",
+ sym:"Cho Ku Rei; add Sei He Ki for anxiety.",
+ trad:"Solar plexus. Traditionally used for digestion, stress and confidence."},
+{n:9,name:"Waist and navel",part:"Face up",where:AT_SIDE,fig:{t:"table",zoom:"torso",hands:[{x:81,y:186,a:270,arm:90,al:60},{x:119,y:186,a:270,arm:90,al:60}]},
+ how:"Move down to just below the navel, hands end to end.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Sacral area. Traditionally used for the intestines and the emotions."},
+{n:10,name:"Lower abdomen (V)",part:"Face up",where:AT_SIDE,fig:{t:"table",zoom:"torso",hands:[{x:88,y:214,a:150,k:"hover",arm:90,al:60},{x:112,y:214,a:210,k:"hover",arm:90,al:60}]},
+ how:"Hover: form a V above the lower abdomen, inside the hip bones. Do not touch the pelvic area.",
+ sym:"Cho Ku Rei. This grounds the front of the body.",
+ trad:"Root. Traditionally used for the reproductive system and grounding."},
+{n:11,name:"Knees",part:"Face up",where:AT_SIDE,fig:{t:"table",zoom:"legs",hands:[{x:86,y:318,a:180,s:0.9,arm:40,al:70},{x:114,y:318,a:180,s:0.9,arm:40,al:70}]},
+ how:"Rest one hand over each kneecap. If the client has a knee injury, hover.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for leg pain and circulation."},
+{n:12,name:"Feet",part:"Face up",where:AT_FEET,fig:{t:"table",zoom:"legs",hands:[{x:86,y:412,a:0,arm:180,al:50},{x:114,y:412,a:0,arm:180,al:50}]},
+ how:"Move to the foot of the table and cup the feet, palms over the tops of the feet or the soles. When you finish, quietly ask the client to turn over.",
+ sym:"Cho Ku Rei; feel the client settle and ground.",
+ trad:"Traditionally used for grounding."},
+{n:13,name:"Tops of the shoulders",part:"Face down",where:AT_SIDE,fig:{t:"table",view:"back",zoom:"upper",hands:[{x:81,y:92,a:270,arm:90,al:70},{x:119,y:92,a:270,arm:90,al:70}]},
+ how:"With the client face down, place your hands across the tops of the shoulders, fingers pointing across the body.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for the back and the spine, and for stress."},
+{n:14,name:"Shoulder blades",part:"Face down",where:AT_SIDE,fig:{t:"table",view:"back",zoom:"upper",hands:[{x:81,y:116,a:270,arm:90,al:70},{x:119,y:116,a:270,arm:90,al:70}]},
+ how:"Move down one hand-width so your hands rest across the shoulder blades.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Behind the heart. Traditionally used for the lungs and emotional heaviness."},
+{n:15,name:"Middle back",part:"Face down",where:AT_SIDE,fig:{t:"table",view:"back",zoom:"torso",hands:[{x:81,y:150,a:270,arm:90,al:60},{x:119,y:150,a:270,arm:90,al:60}]},
+ how:"Continue down to the middle of the back.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for the kidneys and adrenal area, and back pain."},
+{n:16,name:"Lower back",part:"Face down",where:AT_SIDE,fig:{t:"table",view:"back",zoom:"torso",hands:[{x:81,y:186,a:270,arm:90,al:60},{x:119,y:186,a:270,arm:90,al:60}]},
+ how:"Move down to the waist.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for lower back pain."},
+{n:17,name:"Base of the spine (T)",part:"Face down",where:AT_SIDE,fig:{t:"table",view:"back",zoom:"torso",hands:[{x:100,y:204,a:270,arm:90,al:60},{x:100,y:234,a:0,k:"hover",arm:90,al:60}]},
+ how:"Rest one hand across the sacrum (the flat bone at the base of the spine). Form a T with the other hand, hovering it above the base of the spine. Do not touch the buttocks.",
+ sym:"Cho Ku Rei. This grounds the back of the body.",
+ trad:"Root. Traditionally used for grounding and the lower back."},
+{n:18,name:"Backs of the knees",part:"Face down",where:AT_SIDE,fig:{t:"table",view:"back",zoom:"legs",hands:[{x:86,y:318,a:180,s:0.9,arm:40,al:70},{x:114,y:318,a:180,s:0.9,arm:40,al:70}]},
+ how:"Rest one hand behind each knee.",
+ sym:"Cho Ku Rei on the backs of your hands.",
+ trad:"Traditionally used for leg pain and circulation."},
+{n:19,name:"Soles of the feet",part:"Face down",where:AT_FEET,fig:{t:"table",view:"back",zoom:"legs",hands:[{x:86,y:414,a:0,arm:180,al:50},{x:114,y:414,a:0,arm:180,al:50}]},
+ how:"From the foot of the table, cup the soles of the feet. The Level 1 manual notes that the whole body can be reached through the feet.",
+ sym:"Cho Ku Rei. Stay here a little longer to ground the client before you close.",
+ trad:"Traditionally used for grounding."}
+];
+SEQ.closing=[
+{n:"A",name:"Balancing hold",where:AT_SIDE,fig:{t:"table",view:"back",zoom:"full",hands:[{x:100,y:16,a:270,arm:90,al:70},{x:100,y:210,a:270,arm:90,al:70}]},
+ how:"Rest your left hand on the crown and your right hand on the lower back at the base of the spine. Hold until the energy feels even between your hands.",
+ sym:"Draw Cho Ku Rei over the whole body to seal the session."},
+{n:"B",name:"Smooth (comb) the aura",where:AT_SIDE,fig:{t:"table",view:"back",zoom:"full",hands:[],extra:'<path class="sweep" d="M150 30 C176 140 176 300 150 440"/><path class="sweep" d="M162 40 C190 150 190 300 164 430"/><path class="sweep" d="M174 50 C200 160 200 290 178 420"/><path class="sweep-h" d="M144 432 l6 10 l7 -10 M158 422 l6 10 l7 -10 M172 410 l6 10 l7 -10"/>'},
+ how:"Sweep from crown to feet three times. The Level 1 manual's version: first a firm stroke along the body and on past the feet toward the floor, then a light stroke touching the body, then a pass a few inches above it. If the client prefers no touch, make all three passes above the body.",
+ sym:"Thank Reiki. Optionally use Raku for grounding (manual p.70)."}
+];
+
+/* Chair session, side view: you move from behind, to the side, to the front */
+SEQ.chair=[
+{n:1,name:"Shoulders and invocation",where:"You: standing behind",fig:{t:"side",noArm:false,hands:[{x:104,y:80,a:160,arm:330,al:70}]},
+ how:"Stand behind the client and rest both hands on their shoulders. Make your silent invocation, Reiji-ho or gassho.",
+ sym:"Project Cho Ku Rei to the client's third eye, then draw the Reiki sandwich on your palms."},
+{n:2,name:"Crown",where:"You: standing behind",fig:{t:"side",hands:[{x:110,y:21,a:90,arm:290,al:70}]},
+ how:"Rest both hands lightly on the top of the head.",
+ sym:"Cho Ku Rei on the backs of your hands."},
+{n:3,name:"Forehead and back of the head",where:"You: seated at the side",fig:{t:"side",hands:[{x:134,y:34,a:0,arm:150,al:70},{x:90,y:42,a:0,arm:210,al:70}]},
+ how:"Move to the client's side. Rest one hand across the forehead and the other at the back of the head, over the occipital ridge. From here, sit down for positions 3 to 8.",
+ sym:"Sei He Ki and Cho Ku Rei."},
+{n:4,name:"Throat and back of the neck",where:"You: seated at the side",fig:{t:"side",hands:[{x:135,y:74,a:0,k:"hover",arm:140,al:70},{x:92,y:76,a:0,arm:210,al:70}]},
+ how:"Hover one hand in front of the throat and rest the other at the back of the neck.",
+ sym:"Sei He Ki for expression."},
+{n:5,name:"Heart and between the shoulder blades",where:"You: seated at the side",fig:{t:"side",hands:[{x:143,y:114,a:0,arm:140,al:70},{x:82,y:112,a:0,arm:220,al:70}]},
+ how:"One hand on the breastbone (hover with women unless they've said contact is fine), the other between the shoulder blades.",
+ sym:"A good place for the full Reiki sandwich."},
+{n:6,name:"Solar plexus and middle back",where:"You: seated at the side",fig:{t:"side",hands:[{x:141,y:148,a:0,arm:140,al:70},{x:82,y:148,a:0,arm:220,al:70}]},
+ how:"One hand just below the ribs, the other directly behind it on the back.",
+ sym:"Cho Ku Rei; add Sei He Ki for anxiety."},
+{n:7,name:"Lower abdomen and base of the spine",where:"You: seated at the side",fig:{t:"side",hands:[{x:142,y:182,a:0,k:"hover",arm:140,al:70},{x:83,y:184,a:0,arm:220,al:70}]},
+ how:"Hover one hand in front of the lower abdomen and rest the other on the lower back at the base of the spine.",
+ sym:"Cho Ku Rei to ground."},
+{n:8,name:"Knees",where:"You: seated or kneeling in front",fig:{t:"side",zoom:"full",hands:[{x:178,y:188,a:270,arm:60,al:60}]},
+ how:"Move in front of the client and rest one hand on each knee.",
+ sym:"Cho Ku Rei on the backs of your hands."},
+{n:9,name:"Feet",where:"You: kneeling in front",fig:{t:"side",zoom:"full",hands:[{x:186,y:278,a:290,arm:80,al:60}]},
+ how:"Kneel and cup the feet. Then comb the aura three times from head to feet, wash your hands in cold water, and offer the client a glass of water.",
+ sym:"Seal with Cho Ku Rei and give thanks."}
+];
+
+
+/* ===== Hands-on lessons: helpers ===== */
+function figKey(){return '<div class="fig-key" aria-hidden="true"><span><i></i>Hands resting lightly on the body</span><span><i class="hv"></i>Hovering just above the body</span><span><i class="un"></i>Hands slid underneath</span></div>';}
+function figFor(p,who,n){return FIG.draw(Object.assign({},p.fig,{who:who,n:n,label:(n?"Position "+n+": ":"")+p.name+". "+p.how}));}
+function posCard(p,who,opts){
+  opts=opts||{};
+  var hover=(p.fig.hands||[]).some(function(h){return h.k==="hover";});
+  return '<figure class="pos"><div class="pfig">'+figFor(p,who,opts.num===false?null:p.n)+'</div><figcaption>'
+    +'<strong>'+(opts.num===false?'':p.n+'. ')+p.name+'</strong>'
+    +(p.where?'<span class="where">'+p.where+'</span>':'')+(hover?'<span class="hv-tag">Hover</span>':'')
+    +'<p>'+p.how+'</p>'
+    +(p.sym?'<p class="sym"><b>Symbols:</b> '+p.sym+'</p>':'')
+    +(p.trad?'<p class="trad">'+p.trad+'</p>':'')
+    +'</figcaption></figure>';
+}
+function posGrid(list,who,opts){return '<div class="pos-grid">'+list.map(function(p){return posCard(p,who,opts);}).join("")+'</div>';}
+function followBtn(seq,label){return '<p><button class="btn" data-follow="'+seq+'">▶ '+(label||"Follow along")+'</button> <span class="muted" style="font:14px system-ui,sans-serif">One position at a time, with a timer and a soft chime.</span></p>';}
+function check(q,opts,c,why){
+  return '<div class="ck" data-c="'+c+'" data-why="'+why.replace(/"/g,"&quot;")+'"><p class="ck-h">Check yourself</p><p class="ck-q">'+q+'</p><div class="ck-opts">'
+    +opts.map(function(o,i){return '<button type="button" data-i="'+i+'">'+o+'</button>';}).join("")+'</div><p class="ck-fb" aria-live="polite"></p></div>';
+}
+function objectives(items){return '<div class="obj"><p class="obj-h">In this lesson you will</p><ul>'+items.map(function(i){return '<li>'+i+'</li>';}).join("")+'</ul></div>';}
+function practiceBox(t){return '<div class="practice"><p class="obj-h">Practice before the next lesson</p>'+t+'<p><button class="linkbtn" data-open-log="1">Open your practice log</button></p></div>';}
+
+/* ===== Hands-on interactivity: checks, library filters, follow-along player ===== */
+(function(){
+  var content=document.getElementById("content");
+  content.addEventListener("click",function(e){
+    var b=e.target.closest(".ck-opts button");
+    if(b){
+      var ck=b.closest(".ck"),c=+ck.getAttribute("data-c"),ok=+b.getAttribute("data-i")===c,fb=ck.querySelector(".ck-fb");
+      ck.querySelectorAll(".ck-opts button").forEach(function(x){x.classList.remove("pick-bad");});
+      if(ok){ck.classList.add("done");ck.querySelectorAll(".ck-opts button").forEach(function(x){x.disabled=true;});b.classList.add("pick-ok");}
+      else b.classList.add("pick-bad");
+      fb.className="ck-fb "+(ok?"ok":"bad");
+      fb.textContent=(ok?"Correct. ":"Not quite. Try again. ")+(ok?ck.getAttribute("data-why"):"");
+      return;
+    }
+    var ch=e.target.closest(".chip");
+    if(ch){
+      var grp=ch.parentNode;grp.querySelectorAll(".chip").forEach(function(x){x.classList.remove("on");x.setAttribute("aria-pressed","false");});
+      ch.classList.add("on");ch.setAttribute("aria-pressed","true");libFilter();return;
+    }
+    var fo=e.target.closest("[data-follow]");
+    if(fo){openPlayer(fo.getAttribute("data-follow"),fo);return;}
+    var lg=e.target.closest("[data-open-log]");
+    if(lg&&typeof showLog==="function"){showLog();}
+  });
+  content.addEventListener("input",function(e){if(e.target.id==="libSearch")libFilter();});
+  function libFilter(){
+    var g=content.querySelector(".chip.on[data-g]"),a=content.querySelector(".chip.on[data-area]"),q=(document.getElementById("libSearch")||{}).value||"";
+    g=g?g.getAttribute("data-g"):"all";a=a?a.getAttribute("data-area"):"all";q=q.trim().toLowerCase();
+    var n=0;
+    content.querySelectorAll(".lib-item").forEach(function(it){
+      var show=(g==="all"||it.getAttribute("data-g")===g)&&(a==="all"||it.getAttribute("data-area")===a)&&(!q||it.textContent.toLowerCase().indexOf(q)>=0);
+      it.hidden=!show;if(show)n++;
+    });
+    var c=document.getElementById("libCount");if(c)c.textContent="Showing "+n+" of "+LIB.length+" positions";
+    var em=document.getElementById("libEmpty");if(em)em.hidden=n>0;
+  }
+  window.libFilter=libFilter;
+
+  /* Follow-along player */
+  var P=null;
+  function chime(){
+    if(!P||!P.sound)return;
+    try{var C=window.AudioContext||window.webkitAudioContext;P.ac=P.ac||new C();var ac=P.ac,t=ac.currentTime;
+      [528,792].forEach(function(fq,i){var o=ac.createOscillator(),g=ac.createGain();o.type="sine";o.frequency.value=fq;g.gain.setValueAtTime(0,t+i*.18);g.gain.linearRampToValueAtTime(.18,t+i*.18+.02);g.gain.exponentialRampToValueAtTime(.001,t+i*.18+1.6);o.connect(g);g.connect(ac.destination);o.start(t+i*.18);o.stop(t+i*.18+1.7);});
+    }catch(e){}
+  }
+  function fmt(s){s=Math.max(0,Math.ceil(s));return Math.floor(s/60)+":"+("0"+(s%60)).slice(-2);}
+  function openPlayer(seq,from){
+    var list=seq==="table"?SEQ.table.concat(SEQ.closing):SEQ[seq];
+    P={seq:seq,list:list,i:0,mins:seq==="chair"?2:3,left:0,run:false,sound:true,from:from,timer:null,wake:null};
+    var ov=document.createElement("div");ov.className="player";ov.setAttribute("role","dialog");ov.setAttribute("aria-modal","true");ov.setAttribute("aria-label","Follow-along practice");
+    ov.innerHTML='<div class="pl-box"><div class="pl-top"><span class="pl-step" id="plStep"></span><button class="pl-x" id="plClose" aria-label="Close follow-along">✕</button></div>'
+      +'<div class="pl-body"><div class="pl-fig" id="plFig"></div><div class="pl-text"><h3 id="plName" tabindex="-1"></h3><span class="where" id="plWhere"></span><p id="plHow"></p><p class="sym" id="plSym"></p></div></div>'
+      +'<div class="pl-ctrl"><div class="pl-time" id="plTime" aria-live="off">3:00</div><div class="pl-bar"><i id="plBar"></i></div>'
+      +'<div class="pl-btns"><button class="btn secondary" id="plPrev">← Back</button><button class="btn" id="plPlay">▶ Start timer</button><button class="btn secondary" id="plNext">Next →</button></div>'
+      +'<div class="pl-opts"><label>Minutes per position <select id="plMins">'+[1,2,3,4,5].map(function(m){return '<option'+(m===P.mins?' selected':'')+'>'+m+'</option>';}).join("")+'</select></label>'
+      +'<label><input type="checkbox" id="plSound" checked> Chime between positions</label></div></div></div>';
+    document.body.appendChild(ov);P.el=ov;document.body.classList.add("pl-open");
+    ov.querySelector("#plClose").onclick=closePlayer;
+    ov.querySelector("#plPrev").onclick=function(){go2(P.i-1);};
+    ov.querySelector("#plNext").onclick=function(){go2(P.i+1);};
+    ov.querySelector("#plPlay").onclick=toggle;
+    ov.querySelector("#plMins").onchange=function(){P.mins=+this.value;P.left=P.mins*60;paint();};
+    ov.querySelector("#plSound").onchange=function(){P.sound=this.checked;};
+    ov.addEventListener("keydown",function(e){
+      if(e.key==="Escape"){closePlayer();}
+      else if(e.key==="Tab"){var f=[].slice.call(ov.querySelectorAll("button,select,input")).filter(function(x){return !x.disabled;});var a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}}
+    });
+    go2(0);ov.querySelector("#plName").focus();
+  }
+  function go2(i){
+    if(!P)return;if(i<0)i=0;
+    if(i>=P.list.length){stop();P.el.querySelector("#plStep").textContent="Complete";P.el.querySelector("#plName").textContent="Session complete";P.el.querySelector("#plHow").textContent="Well done. Give thanks, drink a glass of water, and note this session in your practice log.";P.el.querySelector("#plSym").textContent="";P.el.querySelector("#plWhere").textContent="";P.el.querySelector("#plFig").innerHTML="";P.i=P.list.length;paint();return;}
+    P.i=i;P.left=P.mins*60;var p=P.list[i];
+    P.el.querySelector("#plStep").textContent=(typeof p.n==="number"?"Position "+p.n:"Closing "+p.n)+" · "+(i+1)+" of "+P.list.length;
+    P.el.querySelector("#plFig").innerHTML=figFor(p,P.seq==="self"?"self":"prac",null);
+    P.el.querySelector("#plName").textContent=p.name;
+    var w=P.el.querySelector("#plWhere");w.textContent=p.where||"";w.hidden=!p.where;
+    P.el.querySelector("#plHow").textContent=p.how;
+    P.el.querySelector("#plSym").innerHTML=p.sym?"<b>Symbols:</b> "+p.sym:"";
+    paint();
+  }
+  function paint(){
+    if(!P)return;var tot=P.mins*60;
+    P.el.querySelector("#plTime").textContent=P.i>=P.list.length?"✓":fmt(P.left);
+    P.el.querySelector("#plBar").style.width=(P.i>=P.list.length?100:Math.round((1-P.left/tot)*100))+"%";
+    P.el.querySelector("#plPlay").textContent=P.run?"❚❚ Pause":(P.i>=P.list.length?"↺ Start again":"▶ Start timer");
+    P.el.querySelector("#plPrev").disabled=P.i===0;P.el.querySelector("#plNext").disabled=P.i>=P.list.length;
+  }
+  function toggle(){
+    if(P.i>=P.list.length){go2(0);return;}
+    if(P.run)stop();else{P.run=true;P.last=Date.now();P.timer=setInterval(tick,250);try{navigator.wakeLock&&navigator.wakeLock.request("screen").then(function(l){P&&(P.wake=l);}).catch(function(){});}catch(e){}chime();}
+    paint();
+  }
+  function stop(){if(!P)return;P.run=false;clearInterval(P.timer);try{P.wake&&P.wake.release();}catch(e){}P.wake=null;}
+  function tick(){
+    var now=Date.now();P.left-=(now-P.last)/1000;P.last=now;
+    if(P.left<=0){chime();var r=P.run;go2(P.i+1);if(r&&P.i<P.list.length){P.run=true;}else stop();}
+    paint();
+  }
+  function closePlayer(){if(!P)return;stop();var f=P.from;P.el.remove();document.body.classList.remove("pl-open");P=null;if(f)f.focus();}
+})();
+
+/* ===== Level 1 adjustments to the shared sequences =====
+   Level 1 uses the same positions as Level 2, without the symbol cues. */
+(function(){
+  ["self","table","closing","chair"].forEach(function(k){SEQ[k].forEach(function(p){delete p.sym;});});
+  SEQ.chair[0].how="Stand behind the client and rest both hands on their shoulders. Make your silent invocation.";
+  SEQ.chair[8].how="Kneel in front and cup the feet, thumbs open, cupping them to the floor. Then comb the aura three times, wash your hands in cold water, and offer the client a glass of water.";
+})();
+
+/* Hand positions for the Five Principles (Level 1 manual pp.23–27) */
+var PRINCIPLE_HOLDS=[
+{name:"Not worrying: root and heart",fig:{t:"front",zoom:"upper",hands:[{x:100,y:104,a:-90,side:"L",el:[152,132]},{x:100,y:186,a:90,side:"R",el:[48,186]}]},
+ how:"One hand on the root chakra (low on the abdomen) and the other on the heart, for as long as feels right. Eases the blockages that stress, worry and anxiety create."},
+{name:"Not being angry: third eye and root",fig:{t:"front",zoom:"upper",hands:[{x:100,y:26,a:-90,side:"L",el:[154,30]},{x:100,y:186,a:90,side:"R",el:[48,186]}]},
+ how:"One hand on the third eye (forehead) and the other on the root chakra. Helps you step back from anger and choose how to respond."},
+{name:"Doing your work honestly: third eye and solar plexus",fig:{t:"front",zoom:"upper",hands:[{x:100,y:26,a:-90,side:"L",el:[154,30]},{x:100,y:146,a:90,side:"R",el:[48,160]}]},
+ how:"One hand on the third eye and the other on the solar plexus, just below the ribs."},
+{name:"Gratitude: third eye and back of the head",fig:{t:"front",zoom:"head",hands:[{x:100,y:40,a:-90,s:1.3,bh:true,side:"L",el:[158,30]},{x:100,y:26,a:90,side:"R",el:[44,50]}]},
+ how:"One hand on the third eye and the other over the occipital ridge at the back of the head."},
+{name:"Kindness, step 1: third eye and root",fig:{t:"front",zoom:"upper",hands:[{x:100,y:26,a:-90,side:"L",el:[154,30]},{x:100,y:186,a:90,side:"R",el:[48,186]}]},
+ how:"Begin with one hand on the third eye and the other on the root chakra."},
+{name:"Kindness, step 2: throat and heart",fig:{t:"front",zoom:"upper",hands:[{x:100,y:72,a:90,s:0.85,side:"R",el:[62,124]},{x:110,y:106,a:0,side:"L",el:[132,160]}]},
+ how:"When you feel ready, move the upper hand down to the throat and the lower hand up to the heart, and stay until it feels complete."}
+];
+function principleHolds(){return '<div class="pos-grid">'+PRINCIPLE_HOLDS.map(function(p){return posCard(p,"self",{num:false});}).join("")+'</div>';}
+
+/* ===== Lesson: Self-Healing with Reiki (Level 1) ===== */
+function lesson1Self(k){return `
+<div class="kicker">Lesson ${k}</div>
+<h2>Self-Healing with Reiki</h2>
+<p>Self-healing is the heart of Level 1. Hawayo Takata taught her students to heal themselves first, then their families, then their friends, and only then other people. A daily self-treatment deepens your connection to Reiki, keeps your own energy balanced, builds sensitivity in your hands, and is your strongest foundation as a practitioner.</p>
+${objectives(["give yourself the full 18-position self-treatment from your manual","hold your hands correctly and know how long to stay","fit Reiki into your day with shorter routines and Reiki breaks"])}
+<div class="callout">You can't pour from an empty cup. The more consistently you treat yourself, the clearer a channel you become for others.</div>
+<h3>Preparing for self-healing</h3>
+<ol>
+<li><strong>Find your space.</strong> Somewhere quiet where you won't be disturbed; soft music is fine. Sit upright with your feet flat on the floor, or lie on your back. Use pillows under your elbows so your arms can rest without strain.</li>
+<li><strong>Gassho.</strong> Bring your palms together at your heart. Take a few slow breaths and let the day settle.</li>
+<li><strong>Breathe in Reiki (Joshin Kokyu Ho).</strong> As you breathe in through your nose, imagine light flowing in through the crown of your head and down to your lower belly, just below the navel (the hara). As you breathe out, imagine it spreading through your whole body and out through your hands.</li>
+<li><strong>Set your intention,</strong> for example: "I am open to receiving Reiki for my highest good."</li>
+<li><strong>If something hurts,</strong> place your hands there first, then go on to the full self-treatment.</li>
+</ol>
+<h3>How to hold your hands</h3>
+<ul>
+<li>Keep your fingers together and your hands relaxed and gently cupped, "as though holding water."</li>
+<li>Rest your hands lightly, with no pressure and no massage.</li>
+<li>Stay <strong>3 to 5 minutes</strong> in each position, or until the sensation in your hands changes.</li>
+<li>Move one hand at a time so you always keep contact.</li>
+</ul>
+<h3>The 18 self-treatment positions</h3>
+<p>These follow your manual's sequence (pp.40–48): the head, down the front of the body, the knees, the back, and finally the feet. The positions are a guide. Once you know them, let your intuition lead.</p>
+${figKey()}
+${followBtn("self","Follow along: self-treatment")}
+${posGrid(SEQ.self,"self")}
+<div class="callout"><strong>Can't reach a position?</strong> If a position strains your shoulders or back, leave it out, lie down with a cushion under your arms, or cross your arms and hold the opposite shoulders instead. A little Reiki is better than none.</div>
+<h3>Closing your session</h3>
+<p>Return to gassho and thank Reiki and yourself. Sweep your aura by passing your hands a few inches above your body from head to toe, or use Kenyoku (Lesson 8). Then drink a large glass of water, close your eyes for a moment, and notice any thoughts or feelings that came up. If you feel light-headed, rest until it passes.</p>
+<h3>Making it a daily practice</h3>
+<p>A morning self-treatment gives you a positive start to the day; one at night helps you relax and sleep. Good places include your bed, a comfortable chair, or even the bath.</p>
+<table>
+<tr><th>Routine</th><th>When</th><th>What to do</th></tr>
+<tr><td><strong>Full session</strong><br>60–90 min</td><td>A few times a week, and daily during the 21 days after your attunement</td><td>All 18 positions, 3–5 minutes each</td></tr>
+<tr><td><strong>Short session</strong><br>about 20 min</td><td>On busy days</td><td>Positions 1, 2, 4, 7, 9, 11, 17 and 18, two or three minutes each</td></tr>
+<tr><td><strong>Morning reset</strong><br>10 min</td><td>Before you get out of bed</td><td>Read the Five Principles, then crown (2), heart (7) and solar plexus (9)</td></tr>
+<tr><td><strong>Bedtime</strong><br>15 min</td><td>Lying in bed</td><td>Back of head (4), heart (7), solar plexus (9), lower abdomen (11). It's fine to fall asleep; Reiki keeps flowing.</td></tr>
+<tr><td><strong>In the moment</strong><br>1–3 min</td><td>Whenever you feel stressed</td><td>One hand on your heart, one on your solar plexus. Breathe.</td></tr>
+</table>
+<h3>Reiki breaks through the day (the ultradian rhythm)</h3>
+<p>Your body runs in natural cycles of roughly 90 to 120 minutes, called <strong>ultradian rhythms</strong>. At the low point of each cycle you may notice yawning, wandering focus, a daydreamy feeling, or a craving for coffee or a snack. Instead of pushing through, take a short Reiki break:</p>
+<ol>
+<li>Cup your hands over your eyes (self position 1), close your eyes and go inside.</li>
+<li>Notice any part of your body that feels tight, sore or tired, and move your hands there for as long as you need.</li>
+<li>Imagine that area filling with healing light. Let the light grow brighter and larger until it surrounds your whole body.</li>
+<li>When you feel refreshed, gently open your eyes and carry on with your day.</li>
+</ol>
+<p><strong>No time for a break?</strong> Your manual suggests tapping gently 20 to 30 times on your upper chest over the thymus (between the throat and the heart), or resting a hand there for a few minutes, to boost your vitality.</p>
+<h3>Listening to your body</h3>
+<ul>
+<li><strong>Follow your hands.</strong> If a position feels warm, tingly or "busy," stay longer. If it feels complete, move on.</li>
+<li><strong>Let emotions move.</strong> Tears, sighs, laughter or memories can surface. Let them come and go without judging them.</li>
+<li><strong>Feeling nothing is okay.</strong> Some days are quiet. Reiki is still flowing; your sensitivity will grow with practice.</li>
+<li><strong>Journal.</strong> A few notes after each session (sensations, feelings, how you slept) help you notice changes over weeks. Your practice log is a good place for them.</li>
+</ul>
+${check("How long does your manual suggest staying in each self-treatment position?",["About 30 seconds","3 to 5 minutes","20 minutes"],1,"Three to five minutes per position, or until the sensation in your hands changes.")}
+${check("Which position finishes the full self-treatment?",["Hands over the eyes","Holding your feet","Hands on the crown"],1,"After the V at the base of the spine (17), you finish by holding your feet (18), which grounds you.")}
+${check("You feel a mid-afternoon slump. What does the ultradian rhythm technique suggest?",["Have a coffee and push on","Cup your hands over your eyes and take a short Reiki break","Skip Reiki until the evening"],1,"Treat the dip as a cue to rest: hands over the eyes, find what needs Reiki, and fill yourself with light.")}
+${practiceBox("<p>Give yourself the full 18-position self-treatment at least three times this week, using the follow-along player if it helps, and a short routine on the other days. Log each session: which positions felt warm, tingly or quiet.</p>")}
+<div class="callout warn">Self-healing supports your wellbeing, but it doesn't replace medical or mental health care. If you're dealing with a health condition, use Reiki alongside the care of a qualified professional.</div>
+`;}
+
+/* ===== Lesson: Treating Others, the table session (Level 1) ===== */
+function lesson1Table(k){return `
+<div class="kicker">Lesson ${k}</div>
+<h2>Treating Others: The Table Session</h2>
+<p>At Level 1 you can share Reiki with friends, family and pets. (Working with paying clients is covered at Level 2.) This lesson follows your manual's full-body treatment (pp.49–64): preparing, opening, 19 hand positions, and closing.</p>
+${objectives(["prepare the room, yourself and the person you're treating","open a session with an invocation and an aura cleanse","give all 19 positions, face up then face down","close the session and look after both of you afterward"])}
+<h3>Before the session</h3>
+<ul>
+<li><strong>Ask permission.</strong> Never give Reiki without consent.</li>
+<li><strong>Explain what will happen,</strong> especially for someone new to Reiki, and ask whether they prefer light touch or hands just above the body.</li>
+<li>They stay <strong>fully clothed</strong>. Ask them to remove shoes, glasses, belts and anything tight.</li>
+</ul>
+<h3>Prepare the room</h3>
+<ul>
+<li>A light, clean room that feels safe, where you won't be interrupted. Unplug the phone and let others know not to disturb you.</li>
+<li>A therapy table if possible, or a sturdy table or bed with thick blankets. You'll need two pillows and a warm blanket; people often get cold lying still.</li>
+<li>A plant, and crystals if you use them. Soft music helps both of you relax. Some Reiki music has a chime every 3–5 minutes to tell you when to move; the follow-along player in this lesson does the same.</li>
+<li>Ask before burning incense or oils; some people are sensitive to scents.</li>
+<li>Keep a box of tissues handy. Emotional release is common.</li>
+</ul>
+<h3>Prepare yourself</h3>
+<ul>
+<li>Remove rings, watches, bracelets and other jewelry, and loosen tight clothing.</li>
+<li>Avoid alcohol for 24 hours before giving Reiki.</li>
+<li>Be clean and fresh: no strong perfume, and avoid garlic or smoking beforehand. Wash your hands with a mild soap and keep your nails short.</li>
+</ul>
+<h3>Opening the session</h3>
+<p>Remember that you aren't the healer: the person receiving draws Reiki through you to wherever it's needed. Help them lie flat on their back with their arms resting at their sides and their legs uncrossed, with a pillow under the head and one under the knees or feet, and offer the blanket.</p>
+<ol>
+<li><strong>The invocation.</strong> Stand at their head, close your eyes, and bring your hands together in prayer position in front of your heart. (If they're seated, rest your hands on their shoulders.) Ask to be a channel for Reiki, in words that fit your own beliefs, for example:
+<div class="script">"I ask that Reiki flow through me for [name]'s highest good. May I be a clear and loving channel, and may this healing go wherever it is most needed."</div></li>
+<li><strong>Cleanse and harmonize the aura.</strong> Hold your hands about 15 cm (six inches) above their body and move slowly from head to feet at least three times. This clears superficial energy, builds rapport, and lets you notice any areas that feel hot, cool or "busy."</li>
+</ol>
+<h3>How to place your hands</h3>
+<ul>
+<li>Cup your hands with your fingers firmly closed, "as though you were trying to hold water."</li>
+<li>Lay them gently on the body, keeping their weight in your own arms. Stay <strong>3 to 5 minutes</strong> in each position.</li>
+<li>Move one hand at a time, so you never fully break contact.</li>
+<li>Listen through your hands. If the energy feels strong, stay until you feel it shift.</li>
+</ul>
+<div class="callout warn"><strong>Always hover over:</strong> the throat, the chest (especially with women), the groin and the buttocks, and over burns, wounds or injuries. Keep touch light everywhere else, and stop or adjust right away if the person feels uncomfortable.</div>
+<h3>Positions 1–12: face up</h3>
+${figKey()}
+${followBtn("table","Follow along: table session")}
+<p class="part-h">At the head (sit if you can)</p>
+${posGrid(SEQ.table.slice(0,6),"prac")}
+<p class="part-h">At the side, then the feet</p>
+${posGrid(SEQ.table.slice(6,12),"prac")}
+<h3>Turning over</h3>
+<p>When you've finished the front, quietly ask the person to turn over. They may have fallen asleep, so wake them gently with a light touch on the shoulder. Hold the blanket while they turn, move the pillow under their ankles, and let them rest their head turned to one side.</p>
+<h3>Positions 13–19: face down</h3>
+${posGrid(SEQ.table.slice(12),"prac")}
+<h3>Finishing the treatment</h3>
+${posGrid(SEQ.closing,"prac",{num:false})}
+<ol>
+<li><strong>Balance:</strong> left hand on the crown, right hand at the base of the spine, until the energy feels even.</li>
+<li><strong>Comb the aura</strong> three times: first stroke firmly from the crown down past the feet until you touch the floor, for grounding; then a second time lightly touching the body; then a few inches above the body.</li>
+<li><strong>Let them rest,</strong> then help them sit up slowly. Offer a glass of cold water to help them ground.</li>
+<li><strong>Wash your hands</strong> under cold running water.</li>
+</ol>
+<h3>What they might feel</h3>
+<p>Tell first-timers that any of these is normal, and so is feeling none of them: heat or cold (they may feel cold where you feel heat), seeing colors, memory flashes, involuntary twitches, itchiness, a rumbling stomach, pins and needles, emotional release, a sense of your hands moving when they're still, or falling asleep. Deep sighs and small movements are good signs that they're relaxing. If they feel nothing, explain that Reiki often works subtly and changes may show over the following days.</p>
+<h3>How long, and how often?</h3>
+<p>A full treatment takes <strong>60 to 90 minutes</strong>. Traditionally, someone new to Reiki was offered <strong>four full treatments on four consecutive days</strong> to get the flow going (manual p.11). When time is short, use the chair session in the next lesson.</p>
+<h3>After the session</h3>
+<p>Gently tell them the session is complete, give them time, and ask how they feel. Listen rather than interpret, and never tell anyone what you think is "wrong" with them. Suggest they drink water and take it easy for the rest of the day.</p>
+${check("You're about to start. What do you do right after the invocation?",["Go straight to position 1","Cleanse the aura: hands about six inches above the body, head to feet, three times","Ask them to turn over"],1,"The aura cleanse clears superficial energy, builds rapport and shows you where to focus.")}
+${check("How should you hold your hands during a treatment?",["Fingers spread wide","Cupped, with fingers together, as though holding water","Pressing firmly"],1,"Cupped hands with closed fingers, resting lightly, keep the channel strong.")}
+${check("What are the final two steps of the table treatment, before water and hand washing?",["The balancing hold, then combing the aura three times","Hands on the eyes, then the feet","Two minutes at the knees"],0,"Left hand on the crown and right hand at the base of the spine to balance, then comb the aura three times.")}
+${practiceBox("<p>Give at least two full table treatments this week to friends or family who have said yes. Use the follow-along player to keep time, and ask them afterward what they noticed. Log each one.</p>")}
+`;}
+
+/* ===== Lesson: Rapid Reiki and group sessions (Level 1) ===== */
+function lesson1Chair(k){return `
+<div class="kicker">Lesson ${k}</div>
+<h2>Rapid Reiki and Group Sessions</h2>
+<p>A full treatment isn't always practical. Rapid Reiki (manual pp.65–72) covers all the major chakras while the person sits upright, in 15 to 30 minutes. It's ideal when someone is short of time, away from your treatment room, or can't lie down comfortably.</p>
+${objectives(["give the nine Rapid Reiki positions","know when to choose a seated session","organize a group treatment"])}
+<h3>Setting up</h3>
+<ul>
+<li>The person sits upright on a chair or stool, feet flat on the floor, hands resting on their thighs.</li>
+<li>Stand behind them for positions 1 and 2. For your comfort, sit on a chair beside them for positions 3 to 8, then kneel in front for the feet.</li>
+<li>Spend <strong>3 to 5 minutes</strong> on each position, unless your intuition tells you otherwise.</li>
+</ul>
+<h3>The nine Rapid Reiki positions</h3>
+${figKey()}
+${followBtn("chair","Follow along: Rapid Reiki")}
+${posGrid(SEQ.chair,"prac")}
+<p>In positions 3 to 7, one hand works on the front of the body and the other on the back at the same level, so each chakra is held between your hands. Finish by combing the aura three times, washing your hands in cold running water, and offering a cold drink of water.</p>
+<div class="callout">A little Reiki is better than no Reiki at all.</div>
+<h3>Group treatments</h3>
+<p>Dr. Hayashi often had several practitioners treat one person together at his clinic in Tokyo. Group treatments are powerful, quick (as little as 6 to 10 minutes for a full treatment), and a lovely way to practice with other students.</p>
+<ul>
+<li>All the usual preparations apply.</li>
+<li><strong>Decide who leads.</strong> The leader works at the head and decides when to move on.</li>
+<li><strong>Share out the positions.</strong> With four or more people, have one at each end and the others along the middle.</li>
+<li><strong>Choose one person</strong> to smooth the aura at the end.</li>
+<li>Everyone washes their hands under cold running water before and after, and you share your experiences afterward.</li>
+</ul>
+${check("How long does a Rapid Reiki session usually take?",["About 5 minutes","15 to 30 minutes","60 to 90 minutes"],1,"Rapid Reiki covers the major chakras in 15 to 30 minutes.")}
+${check("In position 4, how do you treat the throat?",["Rest your hand firmly on it","Hover in front of the throat, with your other hand at the back of the neck","Skip it"],1,"Always hover over the throat; the other hand can rest at the back of the neck.")}
+${practiceBox("<p>Give two Rapid Reiki sessions this week. If you can, gather two or three friends who have Reiki and try a group treatment together.</p>")}
+`;}
+
 var LESSONS = [
 {title:"Welcome", html:function(){return `
 <figure class="fig"><svg viewBox="0 0 760 230" role="img" aria-label="Rainbow sunrise of chakra colors" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2438"/><stop offset="1" stop-color="#4a3a63"/></linearGradient></defs>
@@ -254,8 +971,10 @@ var LESSONS = [
 <li>The history of Reiki, from Mikao Usui to the present day</li>
 <li>The Five Reiki Principles</li>
 <li>A practical introduction to the chakras and the aura</li>
-<li>Self-healing: hand positions and routines for your daily practice</li>
-<li>Hand positions for treating others</li>
+<li>Hand positions for each of the Five Principles</li>
+<li>The full 18-position self-treatment, illustrated, with routines for your daily practice</li>
+<li>Treating others: a complete illustrated 19-position table treatment, step by step</li>
+<li>Rapid Reiki (a 9-position seated session) and group treatments</li>
 <li>Protecting and cleansing your own energy</li>
 <li>Ethics, consent and the scope of Reiki practice</li>
 <li>Reiki through every stage of life, from pregnancy to the end of life</li>
@@ -279,6 +998,7 @@ ${masterEnrollmentSection()}
 {title:"What Is Reiki?", html:function(){return `
 <div class="kicker">Lesson 1</div>
 <h2>What Is Reiki?</h2>
+${objectives(["explain what the word Reiki means","describe your role as a channel","tell someone what to expect in a session"])}
 <p><strong>Reiki</strong> (霊気, pronounced "ray-key") is a Japanese practice in which the practitioner places their hands lightly on or just above the body to channel life-force energy. The word combines two parts:</p>
 <figure class="fig"><svg viewBox="0 0 640 210" role="img" aria-label="The Japanese characters Rei and Ki" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="210" rx="14" fill="#fdf5f1"/>
 <text x="185" y="128" text-anchor="middle" font-size="104" fill="#d64541" font-family="serif">霊</text>
@@ -290,7 +1010,10 @@ ${masterEnrollmentSection()}
 <text x="455" y="189" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#6b6478">life-force energy</text></svg></figure>
 <p>Together, Reiki is commonly understood as "spiritually guided life-force energy."</p>
 <h3>The practitioner as a channel</h3>
-<p>A central idea in Reiki is that the practitioner doesn't use their <em>own</em> energy. You act as a channel: Reiki flows through you to the recipient. This is why giving Reiki should leave you feeling balanced rather than drained. If you feel depleted after a session, that's a sign to revisit grounding and protection (Lesson 7).</p>
+<p>A central idea in Reiki is that the practitioner doesn't use their <em>own</em> energy. You act as a channel: Reiki flows through you to the recipient. This is why giving Reiki should leave you feeling balanced rather than drained. If you feel depleted after a session, that's a sign to revisit grounding and protection (Lesson 8).</p>
+<p>Your manual puts it this way: Reiki is never <em>sent</em>; it is <em>drawn</em> through the channel by the person receiving it, to wherever it's needed. The practitioner receives a little Reiki too as it flows through them.</p>
+<h3>Tuning in: the radio</h3>
+<p>Dr. Hayashi described Reiki to Hawayo Takata like radio waves. We can't see them, but they're all around us; when you switch on a radio and tune it, you hear the programme. Reiki is everywhere in the same way, and your attunement tunes you in. Once you've been attuned, the connection stays with you for life.</p>
 <h3>What happens in a session</h3>
 <ul>
 <li>The recipient stays fully clothed, sitting in a chair or lying on a treatment table.</li>
@@ -306,12 +1029,14 @@ ${masterEnrollmentSection()}
 </table>
 <h3>Reiki is not a religion</h3>
 <p>Reiki has spiritual roots but needs no particular belief system. People of every faith, and of none, practice it.</p>
-<div class="callout">Reiki is a complementary practice. It supports relaxation and wellbeing alongside medical care and is never a replacement for it. We'll cover this fully in Lesson 8.</div>
+<div class="callout">Reiki is a complementary practice. It supports relaxation and wellbeing alongside medical care and is never a replacement for it. We'll cover this fully in Lesson 9.</div>
+${check("Where does the energy in a Reiki treatment come from?",["Your own personal energy","Universal life force, drawn through you by the person receiving it","The table"],1,"You're the channel, not the source, which is why giving Reiki shouldn't drain you.")}
 `;}},
 
 {title:"The History of Reiki", html:function(){return `
 <div class="kicker">Lesson 2</div>
 <h2>The History of Reiki</h2>
+${objectives(["outline the lineage from Usui to Hayashi to Takata","tell the traditional story of Usui's awakening","tell the traditional story apart from what historians can confirm"])}
 <figure class="fig"><svg viewBox="0 0 760 230" role="img" aria-label="Timeline of Reiki history" xmlns="http://www.w3.org/2000/svg"><rect width="760" height="230" rx="14" fill="#fdf7ef"/><line x1="95" y1="92" x2="665" y2="92" stroke="#c9bcd8" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/><circle cx="95" cy="92" r="34" fill="#d64541"/><path d="M75 104 L91 78 L99 88 L105 80 L117 104Z" fill="#fff"/>
 <text x="95" y="40" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="700" fill="#d64541">1922</text>
 <text x="95" y="160" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="16" font-weight="600" fill="#2b2438">Mikao Usui</text>
@@ -328,18 +1053,29 @@ ${masterEnrollmentSection()}
 <h3>Mikao Usui (1865–1926)</h3>
 <p>Reiki as we know it began with Mikao Usui, a Japanese man with wide interests in Buddhism, medicine and spiritual study. According to the traditional account, in 1922 Usui undertook a 21-day fasting meditation on Mount Kurama, near Kyoto. At the end of it he experienced a powerful awakening and an understanding of how to channel healing energy.</p>
 <p>That same year he founded the <strong>Usui Reiki Ryoho Gakkai</strong> (Usui Reiki Healing Method Society) in Tokyo, where he taught and treated many people, including survivors of the 1923 Great Kanto earthquake. He trained around twenty teachers before his death in 1926.</p>
+<h3>The traditional story: four miracles</h3>
+<p>Reiki teachers have passed down a story about the end of Usui's 21 days on Mount Kurama. On the last morning, a light came toward him and struck him on the forehead, and he saw the symbols he had been studying. On his way down the mountain, four things happened that are often called the <strong>four miracles</strong>:</p>
+<ol>
+<li>He stubbed his toe, put his hand on it, and the bleeding and pain stopped.</li>
+<li>After 21 days of fasting, he ate a full meal at an inn without any stomach pain.</li>
+<li>He eased the toothache and swollen face of the young woman who served him.</li>
+<li>Back at the monastery, he relieved his friend the abbot's arthritis pain.</li>
+</ol>
+<p>Treat this as the traditional teaching story rather than documented history; it is told to show the gift Usui received and how simply Reiki works through the hands.</p>
 <div class="callout warn">You may come across a story that Usui was a Christian minister or university president searching for how Jesus healed. Researchers have found no evidence for this; it is generally seen as a later Western embellishment.</div>
 <h3>Chujiro Hayashi (1880–1940)</h3>
 <p>Hayashi, a retired naval officer and physician, was one of Usui's master students. He opened a Reiki clinic in Tokyo and developed a more structured system, including standard hand positions and treatments with the recipient lying on a table, with several practitioners working at once.</p>
 <h3>Hawayo Takata (1900–1980)</h3>
-<p>Takata was a Japanese-American woman from Hawaii. In 1935, while seriously ill, she received treatment at Hayashi's clinic, recovered, and went on to train with him. She brought Reiki to Hawaii and later mainland America, and before her death trained 22 Reiki Masters, through whom Reiki spread around the world.</p>
+<p>Takata was a Japanese-American woman from Hawaii. In 1935, while seriously ill, she received treatment at Hayashi's clinic, recovered, and went on to train with him. As the story goes, she was about to have surgery when she heard an inner voice say the operation wasn't necessary, and asked her surgeon about other options; he sent her to Hayashi's clinic. After months of treatment she recovered, then trained and worked at the clinic. She brought Reiki to Hawaii in 1937, and Hayashi made her a Reiki Master in 1938, the first woman and the first person outside Japan to receive it. Before her death in 1980 she trained 22 Reiki Masters, through whom Reiki spread around the world.</p>
 <h3>Reiki today</h3>
 <p>Many branches now exist, including Usui Shiki Ryoho, Jikiden Reiki and Holy Fire Reiki. This course follows the general Usui system, which is the most widely taught. Practitioners trace their <strong>lineage</strong> back through their teachers to Usui.</p>
+${check("Who opened a Reiki clinic in Tokyo and developed the standard hand positions?",["Hawayo Takata","Chujiro Hayashi","Mikao Usui"],1,"Hayashi's clinic used standard positions and group treatments, and it was there that Takata was treated and trained.")}
 `;}},
 
 {title:"The Five Reiki Principles", html:function(){return `
 <div class="kicker">Lesson 3</div>
 <h2>The Five Reiki Principles</h2>
+${objectives(["recite the Five Principles","use a meditation to explore one principle","use the hand position that goes with each principle"])}
 <p>Usui taught five principles, the <strong>Gokai</strong>, as the foundation of Reiki practice. Reiki is not only something you do with your hands; it's a way of living. A common translation:</p>
 <ul class="principles">
 <li>Just for today, I will not be angry.</li>
@@ -358,12 +1094,29 @@ ${masterEnrollmentSection()}
 <li><strong>Honest work:</strong> This covers integrity in all you do, including your Reiki practice.</li>
 <li><strong>Kindness:</strong> This includes kindness to yourself.</li>
 </ul>
-<div class="callout"><strong>Practice:</strong> For the next week, read the principles aloud each morning and pick one to focus on for the day.</div>
+<p>This course lists the principles in the order of Usui's original Japanese, which begins with anger. Some English translations, including your manual, begin with worry. The meaning is the same.</p>
+<h3>Meditating on a principle</h3>
+<p>Your manual suggests reading the principles aloud at least twice a day, and keeping a framed copy where you'll see it (or in your healing room). To go deeper:</p>
+<ol>
+<li>Sit or lie comfortably and close your eyes.</li>
+<li>Repeat one principle aloud several times, like a mantra.</li>
+<li>As you settle into a meditative state, notice what happens in your mind and body: feelings, emotions and thoughts.</li>
+<li>Afterward, write down everything you noticed. Repeat the meditation for each principle, and again each year, and compare your notes to see how you've grown.</li>
+</ol>
+<h3>A hand position for each principle</h3>
+<p>Your manual gives a two-hand position to rebalance each principle (pp.23–27). You can use them on yourself or on another person; stay as long as feels right.</p>
+${figKey()}
+${principleHolds()}
+<div class="callout">The Five Principles aren't commandments; they are gifts of wisdom.</div>
+${check("Why does each principle begin with \"Just for today\"?",["Because Reiki only works for one day","Committing to one day at a time is achievable, and each day is a fresh start","It's a translation error"],1,"You don't have to be perfect. If you slip up today, you can begin again tomorrow.")}
+${check("Which hand position does your manual give for letting go of worry?",["One hand on the root chakra and one on the heart","Both hands on the feet","Both hands on the crown"],0,"Root and heart: worry is said to block the root chakra.")}
+${practiceBox("<p>For the next week, read the principles aloud each morning and evening. Each day, pick one to focus on, meditate on it, and use its hand position for a few minutes.</p>")}
 `;}},
 
 {title:"The Energy Body", html:function(){return `
 <div class="kicker">Lesson 4</div>
 <h2>The Energy Body: Chakras and Aura</h2>
+${objectives(["name the seven main chakras, their colors and locations","describe the aura","recognize the sensations called hibiki"])}
 <p>Usui's original teaching didn't use chakras, which come from Indian yogic traditions. Most Western Reiki teaching has adopted them, though, because they give a useful map of where energy may feel blocked or out of balance.</p>
 <h3>The seven main chakras</h3>
 <figure class="fig"><svg viewBox="0 0 560 330" role="img" aria-label="Seated figure showing the seven chakras" xmlns="http://www.w3.org/2000/svg"><rect width="560" height="330" rx="14" fill="#f7f3fb"/><g transform="translate(60,20)" fill="#e4dcee" stroke="#c9bcd8" stroke-width="2">
@@ -377,129 +1130,34 @@ ${masterEnrollmentSection()}
 <circle cx="150" cy="60" r="31"/>
 </g><circle cx="210" cy="278" r="17" fill="#d64541" opacity=".22"/><circle cx="210" cy="278" r="9" fill="#d64541"/><path d="M222 278 C 300 278 300 300 360 300" fill="none" stroke="#d64541" stroke-width="1.5" opacity=".7"/><circle cx="366" cy="300" r="5" fill="#d64541"/><text x="378" y="305" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">Root</text><circle cx="210" cy="246" r="17" fill="#f08a24" opacity=".22"/><circle cx="210" cy="246" r="9" fill="#f08a24"/><path d="M222 246 C 300 246 300 258 360 258" fill="none" stroke="#f08a24" stroke-width="1.5" opacity=".7"/><circle cx="366" cy="258" r="5" fill="#f08a24"/><text x="378" y="263" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">Sacral</text><circle cx="210" cy="216" r="17" fill="#f4b400" opacity=".22"/><circle cx="210" cy="216" r="9" fill="#f4b400"/><path d="M222 216 C 300 216 300 216 360 216" fill="none" stroke="#f4b400" stroke-width="1.5" opacity=".7"/><circle cx="366" cy="216" r="5" fill="#f4b400"/><text x="378" y="221" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">Solar plexus</text><circle cx="210" cy="178" r="17" fill="#2fa36b" opacity=".22"/><circle cx="210" cy="178" r="9" fill="#2fa36b"/><path d="M222 178 C 300 178 300 174 360 174" fill="none" stroke="#2fa36b" stroke-width="1.5" opacity=".7"/><circle cx="366" cy="174" r="5" fill="#2fa36b"/><text x="378" y="179" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">Heart</text><circle cx="210" cy="120" r="17" fill="#2e86de" opacity=".22"/><circle cx="210" cy="120" r="9" fill="#2e86de"/><path d="M222 120 C 300 120 300 132 360 132" fill="none" stroke="#2e86de" stroke-width="1.5" opacity=".7"/><circle cx="366" cy="132" r="5" fill="#2e86de"/><text x="378" y="137" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">Throat</text><circle cx="210" cy="76" r="17" fill="#3c4fc6" opacity=".22"/><circle cx="210" cy="76" r="9" fill="#3c4fc6"/><path d="M222 76 C 300 76 300 90 360 90" fill="none" stroke="#3c4fc6" stroke-width="1.5" opacity=".7"/><circle cx="366" cy="90" r="5" fill="#3c4fc6"/><text x="378" y="95" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">Third eye</text><circle cx="210" cy="40" r="17" fill="#9b3fb5" opacity=".22"/><circle cx="210" cy="40" r="9" fill="#9b3fb5"/><path d="M222 40 C 300 40 300 48 360 48" fill="none" stroke="#9b3fb5" stroke-width="1.5" opacity=".7"/><circle cx="366" cy="48" r="5" fill="#9b3fb5"/><text x="378" y="53" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#2b2438">Crown</text></svg><figcaption>The chakras run from the root at the base of the spine to the crown at the top of the head.</figcaption></figure>
 <table>
-<tr><th>Chakra</th><th>Location</th><th>Associated with</th><th>Linked gland</th></tr>
-<tr><td><span class="chakra" style="background:#c0392b"></span>Root</td><td>Base of the spine</td><td>Safety, grounding, survival</td><td>Adrenals</td></tr>
-<tr><td><span class="chakra" style="background:#e67e22"></span>Sacral</td><td>Lower abdomen</td><td>Creativity, emotions, pleasure</td><td>Ovaries or testes</td></tr>
-<tr><td><span class="chakra" style="background:#f1c40f"></span>Solar plexus</td><td>Upper abdomen</td><td>Confidence, personal power</td><td>Pancreas</td></tr>
-<tr><td><span class="chakra" style="background:#27ae60"></span>Heart</td><td>Center of the chest</td><td>Love, compassion, connection</td><td>Thymus</td></tr>
-<tr><td><span class="chakra" style="background:#2e86de"></span>Throat</td><td>Throat</td><td>Communication, self-expression</td><td>Thyroid</td></tr>
-<tr><td><span class="chakra" style="background:#3c40c6"></span>Third eye</td><td>Between the brows</td><td>Intuition, insight</td><td>Pituitary</td></tr>
-<tr><td><span class="chakra" style="background:#8e44ad"></span>Crown</td><td>Top of the head</td><td>Spiritual connection</td><td>Pineal</td></tr>
+<tr><th>Chakra</th><th>Color</th><th>Location</th><th>Associated with</th><th>Linked gland</th></tr>
+<tr><td><span class="chakra" style="background:#c0392b"></span>Root</td><td>Red</td><td>Base of the spine, at the perineum</td><td>Safety, grounding, survival</td><td>Adrenals</td></tr>
+<tr><td><span class="chakra" style="background:#e67e22"></span>Sacral</td><td>Orange</td><td>Just below the navel</td><td>Creativity, emotions, pleasure</td><td>Ovaries or testes</td></tr>
+<tr><td><span class="chakra" style="background:#f1c40f"></span>Solar plexus</td><td>Yellow</td><td>Just above the navel, below the ribs</td><td>Confidence, personal power</td><td>Pancreas</td></tr>
+<tr><td><span class="chakra" style="background:#27ae60"></span>Heart</td><td>Green (or rose)</td><td>Center of the chest</td><td>Love, compassion, connection</td><td>Thymus</td></tr>
+<tr><td><span class="chakra" style="background:#2e86de"></span>Throat</td><td>Light blue</td><td>Throat</td><td>Communication, self-expression</td><td>Thyroid</td></tr>
+<tr><td><span class="chakra" style="background:#3c40c6"></span>Third eye</td><td>Indigo</td><td>Between the brows</td><td>Intuition, insight</td><td>Pituitary</td></tr>
+<tr><td><span class="chakra" style="background:#8e44ad"></span>Crown</td><td>Violet or white</td><td>Top of the head</td><td>Spiritual connection</td><td>Pineal</td></tr>
 </table>
 <p>Many Reiki traditions link each chakra with a gland of the <strong>endocrine system</strong>, the glands that release hormones and, with the nervous system, keep the body in balance. It's a helpful map for where to place your hands, though it's symbolic rather than medical.</p>
+<p>You also have smaller energy centers in the palms of your hands, which is where Reiki flows out when you place your hands.</p>
 <h3>The aura</h3>
 <p>The aura is described as an energy field surrounding the body, extending from a few inches to several feet. Many practitioners sweep or smooth the aura with their hands at the beginning and end of a session.</p>
 <h3>What you might feel</h3>
 <p>As your hands move over the body you may notice heat, coolness, tingling, a magnetic pull, or a sense that an area needs more time. Practitioners call these sensations <strong>hibiki</strong> (echoes). Trust them, but don't over-interpret them: hibiki guide where you place your hands; they are never a basis for telling someone what's wrong with them.</p>
+${check("Which chakra sits between the brows and is linked with intuition?",["The crown","The third eye","The throat"],1,"The third eye (indigo) sits in the middle of the forehead, just above the eyebrows.")}
 `;}},
 
-{title:"Self-Healing with Reiki", html:function(){return `
-<div class="kicker">Lesson 5</div>
-<h2>Self-Healing with Reiki</h2>
-<p>Self-healing is the heart of Level 1. Before Reiki is something you give to others, it's something you give to yourself. A daily self-treatment deepens your connection to Reiki, keeps your own energy balanced, builds sensitivity in your hands, and is your strongest foundation as a practitioner. Usui himself taught that healing begins with the self.</p>
-<div class="callout">You can't pour from an empty cup. The more consistently you treat yourself, the clearer a channel you become for others.</div>
+{title:"Self-Healing with Reiki", html:function(){return lesson1Self(5);}},
 
-<h3>Preparing for self-healing</h3>
-<ol>
-<li><strong>Find your space.</strong> Choose somewhere quiet. Sit with your feet flat on the floor or lie on your back; a bed is perfect. Use pillows under your elbows so your arms can rest without strain.</li>
-<li><strong>Gassho.</strong> Bring your palms together at your heart. Take a few slow breaths and let the day settle.</li>
-<li><strong>Breathe in Reiki (Joshin Kokyu Ho).</strong> This traditional Japanese breathing technique is a lovely way to begin. As you breathe in through your nose, imagine light flowing in through the crown of your head and down to your lower belly, just below the navel (the <em>hara</em>). As you breathe out, imagine that light spreading through your whole body and out through your skin. Repeat for a few minutes.</li>
-<li><strong>Set your intention,</strong> for example: "I am open to receiving Reiki for my highest good."</li>
-</ol>
+{title:"Treating Others: The Table Session", html:function(){return lesson1Table(6);}},
 
-<h3>The self-healing hand positions</h3>
-<p>Hold each position for about 3–5 minutes, or until it feels complete. Keep your fingers together and your hands relaxed, resting lightly on your body. Move your hands one at a time so you always keep contact.</p>
-<figure class="fig"><svg viewBox="0 0 600 420" role="img" aria-label="Self-treatment hand positions numbered 1 to 10" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="420" rx="14" fill="#eef7f1"/><g transform="translate(20,10)" fill="#e4dcee" stroke="#c9bcd8" stroke-width="2">
-<path d="M104 146 Q160 134 216 146 Q248 154 250 192 L240 388 L80 388 L70 192 Q72 154 104 146Z"/>
-<rect x="146" y="108" width="28" height="34" rx="8"/>
-<ellipse cx="160" cy="72" rx="40" ry="46"/>
-</g><circle cx="180" cy="80" r="15" fill="#d64541" stroke="#d64541" stroke-width="2.5"/><text x="180" y="85" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#fff">1</text><circle cx="180" cy="32" r="15" fill="#e8603c" stroke="#e8603c" stroke-width="2.5"/><text x="180" y="37" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#fff">2</text><circle cx="234" cy="62" r="15" fill="#fff" stroke="#f08a24" stroke-width="2.5" stroke-dasharray="4 3"/><text x="234" y="67" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#f08a24">3</text><circle cx="180" cy="140" r="15" fill="#f4b400" stroke="#f4b400" stroke-width="2.5"/><text x="180" y="145" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#fff">4</text><circle cx="180" cy="192" r="15" fill="#7cb342" stroke="#7cb342" stroke-width="2.5"/><text x="180" y="197" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#fff">5</text><circle cx="180" cy="242" r="15" fill="#2fa36b" stroke="#2fa36b" stroke-width="2.5"/><text x="180" y="247" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#fff">6</text><circle cx="180" cy="294" r="15" fill="#1aa3a3" stroke="#1aa3a3" stroke-width="2.5"/><text x="180" y="299" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#fff">7</text><circle cx="180" cy="348" r="15" fill="#2e86de" stroke="#2e86de" stroke-width="2.5"/><text x="180" y="353" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#fff">8</text><circle cx="252" cy="178" r="15" fill="#fff" stroke="#3c4fc6" stroke-width="2.5" stroke-dasharray="4 3"/><text x="252" y="183" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#3c4fc6">9</text><circle cx="246" cy="340" r="15" fill="#fff" stroke="#9b3fb5" stroke-width="2.5" stroke-dasharray="4 3"/><text x="246" y="345" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#9b3fb5">10</text><circle cx="390" cy="46" r="11" fill="#d64541" stroke="#d64541" stroke-width="2"/><text x="390" y="50" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#fff">1</text><text x="410" y="51" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#2b2438">Eyes</text><circle cx="390" cy="79" r="11" fill="#e8603c" stroke="#e8603c" stroke-width="2"/><text x="390" y="83" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#fff">2</text><text x="410" y="84" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#2b2438">Crown</text><circle cx="390" cy="112" r="11" fill="#fff" stroke="#f08a24" stroke-width="2" stroke-dasharray="3 2"/><text x="390" y="116" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#f08a24">3</text><text x="410" y="117" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#2b2438">Back of head (behind)</text><circle cx="390" cy="145" r="11" fill="#f4b400" stroke="#f4b400" stroke-width="2"/><text x="390" y="149" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#fff">4</text><text x="410" y="150" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#2b2438">Throat</text><circle cx="390" cy="178" r="11" fill="#7cb342" stroke="#7cb342" stroke-width="2"/><text x="390" y="182" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#fff">5</text><text x="410" y="183" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#2b2438">Heart</text><circle cx="390" cy="211" r="11" fill="#2fa36b" stroke="#2fa36b" stroke-width="2"/><text x="390" y="215" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#fff">6</text><text x="410" y="216" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#2b2438">Solar plexus</text><circle cx="390" cy="244" r="11" fill="#1aa3a3" stroke="#1aa3a3" stroke-width="2"/><text x="390" y="248" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#fff">7</text><text x="410" y="249" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#2b2438">Navel</text><circle cx="390" cy="277" r="11" fill="#2e86de" stroke="#2e86de" stroke-width="2"/><text x="390" y="281" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#fff">8</text><text x="410" y="282" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#2b2438">Lower abdomen</text><circle cx="390" cy="310" r="11" fill="#fff" stroke="#3c4fc6" stroke-width="2" stroke-dasharray="3 2"/><text x="390" y="314" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#3c4fc6">9</text><text x="410" y="315" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#2b2438">Shoulders (behind)</text><circle cx="390" cy="343" r="11" fill="#fff" stroke="#9b3fb5" stroke-width="2" stroke-dasharray="3 2"/><text x="390" y="347" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#9b3fb5">10</text><text x="410" y="348" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#2b2438">Lower back (behind)</text><text x="390" y="395" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="12" fill="#6b6478">Dashed = reach behind you</text></svg></figure>
-<table>
-<tr><th>#</th><th>Position</th><th>Placement</th><th>Focus</th></tr>
-<tr><td>1</td><td>Eyes / face</td><td>Palms over the eyes, fingertips on the forehead</td><td>Third eye: clarity, intuition, resting a busy mind</td></tr>
-<tr><td>2</td><td>Crown</td><td>Hands on top of the head, fingertips meeting</td><td>Crown: spiritual connection, calm</td></tr>
-<tr><td>3</td><td>Back of head</td><td>Hands cupping the back of the head</td><td>Settling racing thoughts; a good one for sleep</td></tr>
-<tr><td>4</td><td>Throat</td><td>Hands resting gently around the throat or jaw</td><td>Throat: speaking your truth, releasing held-back words</td></tr>
-<tr><td>5</td><td>Heart</td><td>Hands on the upper chest</td><td>Heart: love, grief, compassion for yourself</td></tr>
-<tr><td>6</td><td>Solar plexus</td><td>Hands on the upper abdomen, below the ribs</td><td>Solar plexus: confidence, stress you carry in your stomach</td></tr>
-<tr><td>7</td><td>Navel</td><td>Hands on either side of the navel</td><td>Sacral: emotions, creativity, the <em>hara</em></td></tr>
-<tr><td>8</td><td>Lower abdomen</td><td>Hands forming a V over the lower belly</td><td>Root and sacral: grounding, safety</td></tr>
-<tr><td>9</td><td>Shoulders</td><td>Hands reaching over the shoulders onto the upper back</td><td>Tension and the burdens you carry</td></tr>
-<tr><td>10</td><td>Lower back</td><td>Hands on the lower back at the kidneys</td><td>Feeling supported; grounding</td></tr>
-</table>
-<p>Finish with your feet if you can reach them comfortably, sitting or lying with your knees bent. It helps bring your energy back down and grounds you.</p>
-
-<h3>Closing your session</h3>
-<p>Return to gassho and thank Reiki and yourself. Sweep your aura by passing your hands a few inches above your body from head to toe, or use Kenyoku (Lesson 7). Take a moment before getting up and drink a glass of water.</p>
-
-<h3>Making it a daily practice</h3>
-<table>
-<tr><th>Routine</th><th>When</th><th>What to do</th></tr>
-<tr><td><strong>Full session</strong><br>30–60 min</td><td>A few times a week, and daily during the 21 days after your attunement</td><td>All 10 positions, plus the feet</td></tr>
-<tr><td><strong>Morning reset</strong><br>10 min</td><td>Before you get out of bed</td><td>Read the Five Principles, then crown, heart and solar plexus</td></tr>
-<tr><td><strong>Bedtime</strong><br>15 min</td><td>Lying in bed</td><td>Back of head, heart, solar plexus, lower abdomen. It's fine to fall asleep; Reiki keeps flowing.</td></tr>
-<tr><td><strong>In the moment</strong><br>1–3 min</td><td>Whenever you feel stressed</td><td>One hand on your heart, one on your solar plexus. Breathe.</td></tr>
-</table>
-
-<h3>Reiki breaks through the day</h3>
-<p>Your body runs in natural cycles of roughly 90 to 120 minutes, called <strong>ultradian rhythms</strong>. At the low point of each cycle you may notice yawning, wandering focus, or a craving for coffee or a snack. Psychologist Ernest Rossi suggested treating these dips as a cue to rest. Instead of pushing through, take a 10–20 minute Reiki break: close your eyes, rest one hand on your heart and one on your solar plexus, and let Reiki flow. You'll often return clearer and more refreshed.</p>
-<h3>Listening to your body</h3>
-<ul>
-<li><strong>Follow your hands.</strong> If a position feels warm, tingly or "busy," stay longer. If it feels complete, move on. The positions are a guide, not a rule.</li>
-<li><strong>Let emotions move.</strong> Tears, sighs, laughter or memories can surface. Let them come and go without judging them. This is a normal part of self-healing.</li>
-<li><strong>Feeling nothing is okay.</strong> Some days are quiet. Reiki is still flowing; your sensitivity will grow with practice.</li>
-<li><strong>Journal.</strong> A few notes after each session (sensations, feelings, how you slept) help you notice changes over weeks.</li>
-</ul>
-<div class="callout warn">Self-healing supports your wellbeing, but it doesn't replace medical or mental health care. If you're dealing with a health condition, use Reiki alongside the care of a qualified professional.</div>
-`;}},
-
-{title:"Treating Others", html:function(){return `
-<div class="kicker">Lesson 6</div>
-<h2>Treating Others</h2>
-<p>At Level 1 you can share Reiki with friends, family and pets. (Working with paying clients is covered at Level 2.)</p>
-<h3>Before the session</h3>
-<ul>
-<li><strong>Ask permission.</strong> Never give Reiki without consent.</li>
-<li>Explain what will happen and ask whether they prefer light touch or hands just above the body.</li>
-<li>Ask them to remove shoes, glasses and anything tight. They stay fully clothed.</li>
-<li>Wash your hands, center yourself, and set your intention.</li>
-</ul>
-<h3>Preparing yourself</h3>
-<ul>
-<li>Remove rings, watches and bracelets, and loosen anything tight.</li>
-<li>Avoid alcohol before giving Reiki.</li>
-<li>Wash your hands, keep your nails short, and skip strong perfumes or scents.</li>
-<li>Silence your phone. Keep water and tissues nearby, and a blanket in case they get cold.</li>
-</ul>
-<h3>Opening the session</h3>
-<p>Remember that you aren't the healer: the person receiving draws Reiki through you to where it's needed. Many practitioners begin with a short <strong>invocation</strong>, a moment of intention that sets ego aside. Stand at their head (or rest your hands on their shoulders if they're seated), bring your hands to gassho, and say something in your own words that fits your beliefs, for example:</p>
-<div class="callout"><em>"I ask that Reiki flow through me for [name]'s highest good. May I be a clear and loving channel, and may this healing go wherever it is most needed."</em></div>
-<p>Then <strong>sweep the aura</strong>: hold your hands about six inches above their body and move slowly from head to feet three times. This smooths their energy, helps you tune in, and lets you notice any areas that draw your hands.</p>
-<h3>Table treatment positions</h3>
-<p>With the recipient lying face up, work from head to feet; then, if comfortable, they turn over for the back.</p>
-<table>
-<tr><th>Front</th><th>Back</th></tr>
-<tr><td>Over the eyes · sides of the head · back of the head · throat (hands hovering) · heart · solar plexus · navel · lower abdomen (hands hovering) · knees · feet</td><td>Shoulders · shoulder blades · middle back · lower back · sacrum (hands hovering) · backs of knees · soles of feet</td></tr>
-</table>
-<h3>Chair treatment</h3>
-<p>A seated session of 15–20 minutes works well when a table isn't practical: shoulders, crown, sides of head, upper chest and back, and finally the knees and feet.</p>
-<h3>Group treatments</h3>
-<p>Dr. Hayashi often had several practitioners treat one person together at his clinic. Group treatments are powerful, quicker (often 10–20 minutes), and a lovely way to practice with other students.</p>
-<ul>
-<li>Decide beforehand who leads. The leader works at the head and decides when to move on.</li>
-<li>Share out the other positions. With four or more people, have one at each end and the others along the middle.</li>
-<li>Choose one person to smooth the aura at the end.</li>
-<li>Everyone washes their hands before and after, and you share your experiences afterward.</li>
-</ul>
-<h3>Sensitive areas</h3>
-<div class="callout warn">Always hover your hands over the throat, chest (especially for women), groin and buttocks rather than touching. Keep touch light everywhere else, and stop or adjust immediately if the person feels uncomfortable.</div>
-<h3>After the session</h3>
-<p>Gently tell them the session is complete, give them time to sit up slowly, offer water, and ask how they feel. Listen rather than interpret.</p>
-`;}},
+{title:"Rapid Reiki and Group Sessions", html:function(){return lesson1Chair(7);}},
 
 {title:"Protecting Your Energy", html:function(){return `
-<div class="kicker">Lesson 7</div>
+<div class="kicker">Lesson 8</div>
 <h2>Protecting and Cleansing Your Energy</h2>
+${objectives(["ground and shield yourself before a session","cleanse your energy with Kenyoku and cold water","care for yourself as a channel"])}
 <p>Because you are a channel, Reiki itself doesn't drain you. Still, many practitioners notice that after time with others, especially people who are stressed, grieving or in pain, they can feel heavy, tired or "not themselves." Good energetic hygiene keeps you clear and balanced, and it's a habit worth building from day one.</p>
 <figure class="fig"><svg viewBox="0 0 600 400" role="img" aria-label="Seated figure surrounded by a shield of light with grounding roots" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="sh" cx=".5" cy=".45" r=".55"><stop offset=".55" stop-color="#fff6d6" stop-opacity="0"/><stop offset=".92" stop-color="#f4c542" stop-opacity=".35"/><stop offset="1" stop-color="#f4b400" stop-opacity=".75"/></radialGradient></defs><rect width="600" height="400" rx="14" fill="#eef4fb"/><rect x="0" y="300" width="600" height="100" rx="0" fill="#e9e1d6"/><rect x="0" y="388" width="600" height="12" fill="#e9e1d6"/><line x1="0" y1="300" x2="600" y2="300" stroke="#c9b79c" stroke-width="2"/><path d="M300 300 C300 330 296 350 300 392" fill="none" stroke="#8a6a46" stroke-width="4" stroke-linecap="round" opacity=".8"/><path d="M300 300 C285 330 250 345 232 378" fill="none" stroke="#8a6a46" stroke-width="4" stroke-linecap="round" opacity=".8"/><path d="M300 300 C318 330 352 345 370 380" fill="none" stroke="#8a6a46" stroke-width="4" stroke-linecap="round" opacity=".8"/><path d="M296 318 C270 335 230 330 200 350" fill="none" stroke="#8a6a46" stroke-width="2.5" stroke-linecap="round" opacity=".8"/><path d="M304 318 C330 335 372 330 402 352" fill="none" stroke="#8a6a46" stroke-width="2.5" stroke-linecap="round" opacity=".8"/><path d="M300 340 C285 360 270 372 262 392" fill="none" stroke="#8a6a46" stroke-width="2.5" stroke-linecap="round" opacity=".8"/><path d="M300 340 C316 360 330 372 340 392" fill="none" stroke="#8a6a46" stroke-width="2.5" stroke-linecap="round" opacity=".8"/><ellipse cx="300" cy="170" rx="150" ry="150" fill="url(#sh)"/><g transform="translate(150,10)" fill="#e4dcee" stroke="#c9bcd8" stroke-width="2">
 <ellipse cx="150" cy="268" rx="112" ry="32"/>
@@ -543,11 +1201,13 @@ ${masterEnrollmentSection()}
 <li>Know your limits. It's okay not to give Reiki when you're unwell or exhausted.</li>
 </ul>
 <div class="callout"><strong>Protection comes from a place of strength, not fear.</strong> These practices are about staying clear and centered so you can give your best. Reiki can only be used for good, and your own steady self-practice is the strongest foundation you have.</div>
+${check("After a session you feel heavy and not yourself. Which of these helps?",["Skip your self-treatment","Wash your hands in cool running water, do Kenyoku and ground yourself","Give another session straight away"],1,"Cleansing, grounding and your own self-treatment keep you clear.")}
 `;}},
 
 {title:"Ethics and Scope", html:function(){return `
-<div class="kicker">Lesson 8</div>
+<div class="kicker">Lesson 9</div>
 <h2>Ethics and Scope of Practice</h2>
+${objectives(["explain why Reiki complements, never replaces, medical care","get clear consent, including for touch","keep what people share confidential"])}
 <p>Being a trustworthy practitioner matters as much as technique. These guidelines protect the people you work with, and they protect you.</p>
 <h3>Reiki complements medical care</h3>
 <ul>
@@ -568,11 +1228,13 @@ ${masterEnrollmentSection()}
 <h3>Practicing responsibly</h3>
 <p>Rules for hands-on practice differ between states and countries. If you later work with clients, check your local regulations and consider professional liability insurance. You'll learn more about this at Level 2.</p>
 <div class="callout warn">If someone is in a medical emergency, call emergency services first. Reiki can be offered afterward, never instead.</div>
+${check("During a session you sense something unusual around a friend's stomach. What do you say?",["Tell them they have a stomach problem","Nothing diagnostic; if they mention a health concern, encourage them to see a doctor","Suggest they change their diet"],1,"Never diagnose. Hibiki guide your hands; they are not a basis for telling anyone what's wrong.")}
 `;}},
 
 {title:"Every Stage of Life", html:function(){return `
-<div class="kicker">Lesson 9</div>
+<div class="kicker">Lesson 10</div>
 <h2>Reiki Through Every Stage of Life</h2>
+${objectives(["adapt Reiki for pregnancy, babies, children and older adults","offer Reiki with care at the end of life"])}
 <p>Reiki is gentle enough for anyone, from before birth to the end of life. In every case, it offers comfort and support <em>alongside</em> medical care, never instead of it.</p>
 <h3>Pregnancy</h3>
 <ul>
@@ -595,7 +1257,7 @@ ${masterEnrollmentSection()}
 <li>Reiki at bedtime can help them settle into sleep.</li>
 <li>After a fall or a fright, give first aid first, then rest one hand on their tummy and one on their lower back to soothe them.</li>
 <li>Share the Five Principles with them; children often take to them naturally.</li>
-<li>Always have a parent or guardian's consent and presence (Lesson 8).</li>
+<li>Always have a parent or guardian's consent and presence (Lesson 9).</li>
 </ul>
 <h3>Older adults</h3>
 <ul>
@@ -612,11 +1274,13 @@ ${masterEnrollmentSection()}
 <li><strong>Care for the family.</strong> Loved ones and caregivers often need Reiki as much as the person who is dying, both before and after the death.</li>
 <li><strong>Care for yourself.</strong> This work can stir your own grief. Give yourself Reiki and reach out for support.</li>
 </ul>
+${check("A child falls and is upset but not badly hurt. After first aid, where can you place your hands?",["One hand on the tummy (solar plexus) and one on the lower back","On the knees only","Nowhere; Reiki is only for adults"],0,"Your manual suggests the solar plexus and the base of the spine to soothe shock.")}
 `;}},
 
 {title:"Animals, Plants & Everyday Life", html:function(){return `
-<div class="kicker">Lesson 10</div>
+<div class="kicker">Lesson 11</div>
 <h2>Animals, Plants and Everyday Life</h2>
+${objectives(["offer Reiki to animals on their terms","use Reiki with plants, food and water","find your own everyday uses"])}
 <p>Reiki flows to every living thing. Your imagination is the only limit on how you share it.</p>
 <h3>Animals</h3>
 <p>Animals are often very sensitive to Reiki, and they're honest about what they want.</p>
@@ -647,11 +1311,13 @@ ${masterEnrollmentSection()}
 <h3>Everyday life</h3>
 <p>Give Reiki to your bath water, your bed before sleep, your home, your car before a journey, your workspace, or a letter before you send it. Keep your first-aid kit charged with Reiki too, alongside proper first aid, never instead of it.</p>
 <div class="callout"><strong>Practice:</strong> make a list of as many ways to use Reiki in your daily life as you can think of, then try one new idea each day this week.</div>
+${check("How do you treat a fish with Reiki?",["Take it out of the water","Hold your hands on either side of the tank","Only by distance"],1,"Hands on either side of the tank work well.")}
 `;}},
 
 {title:"Your Level 1 Attunement", html:function(){return `
-<div class="kicker">Lesson 11</div>
+<div class="kicker">Lesson 12</div>
 <h2>Your Level 1 Attunement</h2>
+${objectives(["prepare for your attunement","understand the 21-day cleanse that follows","look after yourself through a healing crisis"])}
 <p>An <strong>attunement</strong> (in Japanese, <em>reiju</em>) is the process in which a Reiki Master opens your connection to Reiki. In this course, your attunement is given by distance, meaning you and your teacher don't need to be in the same place.</p>
 <div class="callout">Attunements are optional for Levels 1 and 2. You can learn from these courses without one. But if you plan to become a Reiki Master, you'll need your Level 1 and Level 2 attunements before taking Level 3.</div>
 <h3>How distance attunement works</h3>
@@ -661,7 +1327,9 @@ ${attunementSteps()}
 <p>Attunements are offered on a sliding scale starting at $5, and every dollar supports ${TEACHER.business}. Once we've agreed on a time, read on to prepare.</p>
 <h3>Preparing</h3>
 <ul>
-<li>In the days before, eat lightly, drink plenty of water, and cut back on alcohol and caffeine if you can.</li>
+<li>Avoid alcohol and recreational drugs for at least 48 hours before.</li>
+<li>For a day before, eat lightly (fruit, salad and vegetables are ideal), drink plenty of water, and cut back on caffeine.</li>
+<li>If you can, meditate each day for a week beforehand, and on the day, take a gentle walk.</li>
 <li>Choose a quiet space where you won't be disturbed for 30 minutes. Silence your phone.</li>
 <li>A few minutes before the agreed time, sit comfortably with your feet on the floor and your hands in gassho or resting in your lap.</li>
 <li>Set the intention: "I am open to receiving my Reiki Level 1 attunement."</li>
@@ -669,14 +1337,14 @@ ${attunementSteps()}
 <h3>During the attunement</h3>
 <p>Simply relax and breathe. You may notice warmth, tingling, colors, emotion, or deep peace, or very little at all. Every experience is valid; the attunement works either way.</p>
 <h3>The 21-day integration</h3>
-<p>Traditionally, the 21 days after an attunement are a time of adjustment, echoing Usui's 21 days on Mount Kurama.</p>
+<p>Traditionally, the 21 days after an attunement are a time of adjustment, echoing Usui's 21 days on Mount Kurama. Your manual describes it as a cleansing cycle through the seven chakras: starting at the root and ending at the crown, each chakra takes about a day, and the cycle happens three times (7 × 3 = 21 days).</p>
 <figure class="fig"><svg viewBox="0 0 600 300" role="img" aria-label="Ring of 21 days in rainbow colors" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="300" rx="14" fill="#f3eefb"/><circle cx="300.0" cy="40.0" r="13" fill="#d64541"/><text x="300.0" y="44.0" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">1</text><circle cx="332.4" cy="44.9" r="13" fill="#e2553f"/><text x="332.4" y="48.9" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">2</text><circle cx="362.0" cy="59.1" r="13" fill="#e8603c"/><text x="362.0" y="63.1" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">3</text><circle cx="386.0" cy="81.4" r="13" fill="#ec7530"/><text x="386.0" y="85.4" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">4</text><circle cx="402.4" cy="109.8" r="13" fill="#f08a24"/><text x="402.4" y="113.8" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">5</text><circle cx="409.7" cy="141.8" r="13" fill="#f29f12"/><text x="409.7" y="145.8" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">6</text><circle cx="407.2" cy="174.5" r="13" fill="#f4b400"/><text x="407.2" y="178.5" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">7</text><circle cx="395.3" cy="205.0" r="13" fill="#c6b524"/><text x="395.3" y="209.0" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">8</text><circle cx="374.8" cy="230.6" r="13" fill="#99b437"/><text x="374.8" y="234.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">9</text><circle cx="347.7" cy="249.1" r="13" fill="#7cb342"/><text x="347.7" y="253.1" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">10</text><circle cx="316.4" cy="258.8" r="13" fill="#55ab57"/><text x="316.4" y="262.8" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">11</text><circle cx="283.6" cy="258.8" r="13" fill="#2fa36b"/><text x="283.6" y="262.8" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">12</text><circle cx="252.3" cy="249.1" r="13" fill="#25a387"/><text x="252.3" y="253.1" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">13</text><circle cx="225.2" cy="230.6" r="13" fill="#1aa3a3"/><text x="225.2" y="234.6" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">14</text><circle cx="204.7" cy="205.0" r="13" fill="#2495c0"/><text x="204.7" y="209.0" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">15</text><circle cx="192.8" cy="174.5" r="13" fill="#2e86de"/><text x="192.8" y="178.5" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">16</text><circle cx="190.3" cy="141.8" r="13" fill="#356bd2"/><text x="190.3" y="145.8" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">17</text><circle cx="197.6" cy="109.8" r="13" fill="#3c4fc6"/><text x="197.6" y="113.8" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">18</text><circle cx="214.0" cy="81.4" r="13" fill="#5347c4"/><text x="214.0" y="85.4" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">19</text><circle cx="238.0" cy="59.1" r="13" fill="#6a3fc1"/><text x="238.0" y="63.1" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">20</text><circle cx="267.6" cy="44.9" r="13" fill="#9b3fb5"/><text x="267.6" y="48.9" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">21</text><text x="300" y="148" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="40" font-weight="300" fill="#2b2438">21</text><text x="300" y="172" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" letter-spacing="2" fill="#6b6478">DAYS OF</text><text x="300" y="190" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" letter-spacing="2" fill="#6b6478">INTEGRATION</text></svg></figure>
 <p>During this time:</p>
 <ul>
 <li>Give yourself a full self-treatment every day.</li>
 <li>Drink plenty of water and rest when you need to.</li>
 <li>You may notice vivid dreams, emotional ups and downs, or tiredness as old patterns release. This is normal and passes.</li>
-<li>Keep a journal of your experiences. It's lovely to look back on.</li>
+<li>Keep a journal of your experiences, including your dreams. It's lovely to look back on.</li>
 </ul>
 <h3>A healing crisis</h3>
 <p>Sometimes, after an attunement or a session, people feel a little worse before they feel better: tired, emotional, achy, or unsettled. Practitioners call this a <strong>healing crisis</strong> or cleansing reaction. Think of a still pond: when it's stirred, sediment rises to the surface before the water settles clear again. Reiki doesn't create what comes up; it brings to the surface what was already there, so it can be released.</p>
@@ -695,6 +1363,7 @@ ${attunementSteps()}
 <li>After 10 minutes, bring your hands to gassho and give thanks.</li>
 </ol>
 <p>If anything feels overwhelming, reach out to your teacher.</p>
+${check("How does your manual explain the 21 days after an attunement?",["A cleansing cycle through the seven chakras, root to crown, three times","A waiting period before you can use Reiki","A time to avoid Reiki"],0,"About a day per chakra, three times over: 7 × 3 = 21 days. Daily self-treatment supports it.")}
 `;}},
 
 {title:"Final Quiz", quiz:true}
@@ -715,6 +1384,12 @@ var QUIZ = [
 {q:"Which position is usually best for a Reiki session late in pregnancy?", a:["Lying flat on the back","Lying on the side, supported with pillows","Lying face down","Standing"], c:1, why:"Many care providers advise against lying flat on the back later in pregnancy. Side-lying with pillows, or sitting, is more comfortable."},
 {q:"How should you begin giving Reiki to an animal?", a:["Hold it still so it can't move away","Offer your hands, let it come to you, and stop when it moves away","Only treat animals asleep","Always place your hands on the belly first"], c:1, why:"Let the animal lead. It will show you where it wants Reiki and when it's had enough."},
 {q:"A few days after a session, a client develops a severe new pain. What should you advise?", a:["It's a healing crisis, so ignore it","Book more Reiki sessions","See a doctor","Drink more water and wait a month"], c:2, why:"Never assume a new, severe or worsening symptom is a healing crisis. It needs medical attention."},
+{q:"How many self-treatment positions are there in your manual's full sequence?", a:["7","10","18","30"], c:2, why:"Eighteen positions: the head, the front of the body, the knees, the back and finally the feet."},
+{q:"How should your hands be held during a treatment?", a:["Fingers spread wide","Cupped, with fingers together, as though holding water","Clenched","Pressing firmly"], c:1, why:"Cupped hands with closed fingers, resting lightly."},
+{q:"What do you do just before the first hand position on another person?", a:["Massage their shoulders","An invocation, then cleanse the aura from head to feet three times","Draw a symbol","Ask them to turn over"], c:1, why:"Invocation, then an aura cleanse about six inches above the body."},
+{q:"How does a full table treatment finish?", a:["Hands over the eyes","The balancing hold (crown and base of the spine), then combing the aura three times","Hands on the knees","Nothing; you just stop"], c:1, why:"Balance the energy, comb the aura, offer cold water, and wash your hands under cold running water."},
+{q:"How long does Rapid Reiki take?", a:["About 5 minutes","15 to 30 minutes","60 to 90 minutes","Two hours"], c:1, why:"Rapid Reiki covers the major chakras in 15 to 30 minutes, with the person seated."},
+{q:"Which hand position does your manual give for the principle of gratitude?", a:["Third eye and back of the head","Both feet","Throat and knees","Heart and feet"], c:0, why:"One hand on the third eye and one over the occipital ridge."},
 {q:"What is traditionally recommended during the 21 days after an attunement?", a:["Avoid giving yourself Reiki","Daily self-treatment, plenty of water and rest","Give Reiki to as many people as possible","Fast completely"], c:1, why:"Daily self-treatment, water and rest support the integration period."}
 ];
 
