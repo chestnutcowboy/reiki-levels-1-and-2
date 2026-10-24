@@ -263,7 +263,7 @@ var LESSONS = [
 <li>How your Level 1 attunement works</li>
 </ul>
 <h3>How this course works</h3>
-<p>Work through the lessons in order. Progress isn't saved between visits, so set aside some time, or note which lesson you reached so you can jump back to it from the lesson list. The final quiz unlocks once you've opened every lesson; you'll need ${PASS_MARK}% to pass, and you can retake it as often as you like.</p>
+<p>Work through the lessons in order, and use the <strong>Mark lesson complete</strong> button at the end of each one. Your progress saves in this browser; to continue on another device, use the resume code under <strong>My progress</strong>. Record your practice sessions in the <strong>Practice log</strong>. The final quiz unlocks once every lesson is marked complete; you'll need ${PASS_MARK}% to pass, and you can retake it as often as you like.</p>
 <p>You're welcome to take Levels 1 and 2 without receiving an attunement; the knowledge here is yours either way. But the attunement is what opens your connection to Reiki, and it is <strong>vital if you want to become a Reiki Master</strong>: an attunement at each level is required before you can take Level 3.</p>
 <hr class="rainbow-rule">
 <h3>When you finish: your attunement</h3>
@@ -740,8 +740,10 @@ var hadSaved=false;
 function cleanState(s){
   var out={v:[],cur:0,best:null,name:"",log:[]};
   if(!s||typeof s!=="object")return out;
-  if(Array.isArray(s.v))s.v.forEach(function(i){i=parseInt(i,10);if(i>=0&&i<lessonCount()&&out.v.indexOf(i)<0)out.v.push(i);});
+  if(Array.isArray(s.vt)){s.vt.forEach(function(t){for(var i=0;i<lessonCount();i++){if(LESSONS[i].title===t&&out.v.indexOf(i)<0)out.v.push(i);}});}
+  else if(Array.isArray(s.v))s.v.forEach(function(i){i=parseInt(i,10);if(i>=0&&i<lessonCount()&&out.v.indexOf(i)<0)out.v.push(i);});
   var c=parseInt(s.cur,10);if(c>=0&&c<LESSONS.length)out.cur=c;
+  if(typeof s.curT==="string"){for(var j=0;j<LESSONS.length;j++){if(LESSONS[j].title===s.curT)out.cur=j;}}
   var b=parseInt(s.best,10);if(b>=0&&b<=100)out.best=b;
   if(typeof s.name==="string")out.name=s.name.slice(0,80);
   if(Array.isArray(s.log))s.log.forEach(function(e){
@@ -756,7 +758,7 @@ function load(){
 }
 function save(){
   if(!storageOK)return;
-  try{localStorage.setItem(STORE_KEY,JSON.stringify(state));}catch(e){}
+  try{var o=JSON.parse(JSON.stringify(state));o.vt=state.v.map(function(i){return LESSONS[i].title;});o.curT=LESSONS[state.cur].title;localStorage.setItem(STORE_KEY,JSON.stringify(o));}catch(e){}
 }
 
 /* ----- Resume codes: lessons done, current page and best score, with a checksum ----- */
@@ -780,6 +782,7 @@ function readCode(code){
   var bytes=[];for(var k=0;k+8<=bits.length;k+=8)bytes.push(parseInt(bits.substr(k,8),2));
   if(bytes.length<5)return {err:"That code is too short. Please check it and try again."};
   var n=bytes[1],need=4+Math.ceil(n/8)+1;
+  if(n!==lessonCount())return {err:"This code is from an earlier version of the course, which had a different number of lessons. Please mark your completed lessons again; your practice log isn't affected."};
   if(bytes.length<need)return {err:"That code is too short. Please check it and try again."};
   if(body.length!==Math.ceil(need*8/5)||/1/.test(bits.slice(need*8)))return {err:"That code didn't check out. Please check for typos and try again."};
   bytes=bytes.slice(0,need);
@@ -946,7 +949,8 @@ function showProgress(){
     document.getElementById("resumeCode").textContent=makeCode();
   };
   document.getElementById("dlBtn").onclick=function(){
-    var data=JSON.stringify({course:"reiki-"+COURSE.id,saved:new Date().toISOString(),progress:state},null,2);
+    var pr=JSON.parse(JSON.stringify(state));pr.vt=state.v.map(function(i){return LESSONS[i].title;});pr.curT=LESSONS[state.cur].title;
+    var data=JSON.stringify({course:"reiki-"+COURSE.id,saved:new Date().toISOString(),progress:pr},null,2);
     downloadFile("reiki-level-"+COURSE.level+"-progress-"+today()+".json",data,"application/json");
   };
   document.getElementById("fileIn").onchange=function(){
