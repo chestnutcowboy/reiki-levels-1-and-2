@@ -8,9 +8,9 @@ This public GitHub Pages site hosts **free Reiki Levels 1 and 2 only**. The Reik
 - `reiki-level-2.html` — free Level 2 (Okuden)
 
 ## Reiki Master enrollment
-Access to the private Wix Level 3 classroom is granted by emailed password after a manually verified PayPal payment. The homepage and both free courses explain the four one-time amounts ($11.11, $22.22, $33.33, $44.44), payment instructions, password policy, and classroom link.
+Access to the private Wix Level 3 classroom is granted by emailed password after a manually verified PayPal payment. The homepage and both free courses explain the four one-time amounts ($11.11, $22.22, $33.33, $44.44), show the PayPal QR code, payment instructions, password policy, and classroom link.
 
-PayPal QR payment link: https://www.paypal.com/qrcodes/managed/5540da59-2d81-46f1-8863-8c0be7410e29?utm_source=consweb_more
+Payment is by PayPal QR code only (no payment buttons). The code image is `paypal-qr.png` on the landing page and is embedded in both free courses.
 
 Classroom link: https://www.theblackrootpress.com/reiki-master-classroom-shinpiden
 
