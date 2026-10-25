@@ -29,5 +29,6 @@ The old public repository history included Level 3. Removing that file does not 
 - **My progress** shows a short resume code (for example `L2-0860-RS7Z-1Z6G`) that restores completed lessons, current page and best quiz score on another device. A downloadable progress file also backs up the practice log.
 - Clicking **Next** at the end of a lesson marks it complete automatically (learners can still unmark it). The final quiz unlocks when every lesson is complete.
 - **Practice log** records practice sessions; learners can print it or email it to the teacher.
+- Finishing a **follow-along** session (with at least a minute on the timer) logs it automatically, with an optional note; learners can still add sessions by hand.
 - If the browser blocks storage (for example private browsing), the course still works and tells the learner to use the resume code.
 - Quiz scoring is client-side; GitHub does not record results.
