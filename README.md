@@ -27,7 +27,7 @@ The old public repository history included Level 3. Removing that file does not 
 - Both free courses are self-contained HTML.
 - Progress saves automatically in the learner's browser (localStorage). Nothing is sent to a server, and there are no accounts.
 - **My progress** shows a short resume code (for example `L2-0860-RS7Z-1Z6G`) that restores completed lessons, current page and best quiz score on another device. A downloadable progress file also backs up the practice log.
-- Learners mark each lesson complete themselves; the final quiz unlocks when every lesson is marked complete.
+- Clicking **Next** at the end of a lesson marks it complete automatically (learners can still unmark it). The final quiz unlocks when every lesson is complete.
 - **Practice log** records practice sessions; learners can print it or email it to the teacher.
 - If the browser blocks storage (for example private browsing), the course still works and tells the learner to use the resume code.
 - Quiz scoring is client-side; GitHub does not record results.
