@@ -166,6 +166,8 @@ body.pl-open{overflow:hidden}
 .pl-text h3{margin:0 0 4px;font-size:24px;font-weight:normal;color:var(--c-deep)}
 .pl-text p{margin:8px 0;font-size:17px}
 .pl-text .sym{font:15px system-ui,sans-serif;color:var(--muted)}
+.pl-fig[hidden]{display:none!important}
+.pl-done{font:15px system-ui,sans-serif}.pl-done textarea{width:100%;box-sizing:border-box;font:inherit;padding:8px;border:1px solid var(--line,#ccc);border-radius:8px;margin:6px 0;background:transparent;color:inherit}.pl-done .ok{color:var(--c-deep)}
 .pl-ctrl{border-top:1px solid var(--line);padding-top:12px}
 .pl-time{font:600 34px/1 ui-monospace,Menlo,Consolas,monospace;text-align:center}
 .pl-bar{height:6px;background:#eee8f2;border-radius:3px;margin:10px 0;overflow:hidden}
@@ -1050,10 +1052,10 @@ ${practiceBox("<p>Pick three positions from the library that fit something you o
   function fmt(s){s=Math.max(0,Math.ceil(s));return Math.floor(s/60)+":"+("0"+(s%60)).slice(-2);}
   function openPlayer(seq,from){
     var list=seq==="table"?SEQ.table.concat(SEQ.closing):SEQ[seq];
-    P={seq:seq,list:list,i:0,mins:seq==="chair"?2:3,left:0,run:false,sound:true,from:from,timer:null,wake:null};
+    P={seq:seq,list:list,i:0,mins:seq==="chair"?2:3,left:0,run:false,sound:true,from:from,timer:null,wake:null,timed:0,logged:null};
     var ov=document.createElement("div");ov.className="player";ov.setAttribute("role","dialog");ov.setAttribute("aria-modal","true");ov.setAttribute("aria-label","Follow-along practice");
     ov.innerHTML='<div class="pl-box"><div class="pl-top"><span class="pl-step" id="plStep"></span><button class="pl-x" id="plClose" aria-label="Close follow-along">✕</button></div>'
-      +'<div class="pl-body"><div class="pl-fig" id="plFig"></div><div class="pl-text"><h3 id="plName" tabindex="-1"></h3><span class="where" id="plWhere"></span><p id="plHow"></p><p class="sym" id="plSym"></p></div></div>'
+      +'<div class="pl-body"><div class="pl-fig" id="plFig"></div><div class="pl-text"><h3 id="plName" tabindex="-1"></h3><span class="where" id="plWhere"></span><p id="plHow"></p><p class="sym" id="plSym"></p><div class="pl-done" id="plDone"></div></div></div>'
       +'<div class="pl-ctrl"><div class="pl-time" id="plTime" aria-live="off">3:00</div><div class="pl-bar"><i id="plBar"></i></div>'
       +'<div class="pl-btns"><button class="btn secondary" id="plPrev">← Back</button><button class="btn" id="plPlay">▶ Start timer</button><button class="btn secondary" id="plNext">Next →</button></div>'
       +'<div class="pl-opts"><label>Minutes per position <select id="plMins">'+[1,2,3,4,5].map(function(m){return '<option'+(m===P.mins?' selected':'')+'>'+m+'</option>';}).join("")+'</select></label>'
@@ -1073,10 +1075,10 @@ ${practiceBox("<p>Pick three positions from the library that fit something you o
   }
   function go2(i){
     if(!P)return;if(i<0)i=0;
-    if(i>=P.list.length){stop();P.el.querySelector("#plStep").textContent="Complete";P.el.querySelector("#plName").textContent="Session complete";P.el.querySelector("#plHow").textContent="Well done. Give thanks, drink a glass of water, and note this session in your practice log.";P.el.querySelector("#plSym").textContent="";P.el.querySelector("#plWhere").textContent="";P.el.querySelector("#plFig").innerHTML="";P.i=P.list.length;paint();return;}
-    P.i=i;P.left=P.mins*60;var p=P.list[i];
+    if(i>=P.list.length){stop();P.el.querySelector("#plStep").textContent="Complete";P.el.querySelector("#plName").textContent="Session complete";P.el.querySelector("#plHow").textContent="Well done. Give thanks and drink a glass of water.";logSession();P.el.querySelector("#plSym").textContent="";P.el.querySelector("#plWhere").textContent="";P.el.querySelector("#plFig").innerHTML="";P.el.querySelector("#plFig").hidden=true;P.i=P.list.length;paint();return;}
+    P.i=i;P.left=P.mins*60;var p=P.list[i];P.el.querySelector("#plDone").innerHTML="";
     P.el.querySelector("#plStep").textContent=(typeof p.n==="number"?"Position "+p.n:"Closing "+p.n)+" · "+(i+1)+" of "+P.list.length;
-    P.el.querySelector("#plFig").innerHTML=figFor(p,P.seq==="self"?"self":"prac",null);
+    P.el.querySelector("#plFig").hidden=false;P.el.querySelector("#plFig").innerHTML=figFor(p,P.seq==="self"?"self":"prac",null);
     P.el.querySelector("#plName").textContent=p.name;
     var w=P.el.querySelector("#plWhere");w.textContent=p.where||"";w.hidden=!p.where;
     P.el.querySelector("#plHow").textContent=p.how;
@@ -1091,15 +1093,34 @@ ${practiceBox("<p>Pick three positions from the library that fit something you o
     P.el.querySelector("#plPrev").disabled=P.i===0;P.el.querySelector("#plNext").disabled=P.i>=P.list.length;
   }
   function toggle(){
-    if(P.i>=P.list.length){go2(0);return;}
+    if(P.i>=P.list.length){P.timed=0;P.logged=null;go2(0);return;}
     if(P.run)stop();else{P.run=true;P.last=Date.now();P.timer=setInterval(tick,250);try{navigator.wakeLock&&navigator.wakeLock.request("screen").then(function(l){P&&(P.wake=l);}).catch(function(){});}catch(e){}chime();}
     paint();
   }
   function stop(){if(!P)return;P.run=false;clearInterval(P.timer);try{P.wake&&P.wake.release();}catch(e){}P.wake=null;}
   function tick(){
-    var now=Date.now();P.left-=(now-P.last)/1000;P.last=now;
+    var now=Date.now(),dt=(now-P.last)/1000;P.left-=dt;P.timed+=dt;P.last=now;
     if(P.left<=0){chime();var r=P.run;go2(P.i+1);if(r&&P.i<P.list.length){P.run=true;}else stop();}
     paint();
+  }
+  /* Auto-log a finished follow-along session in the practice log. */
+  var SEQ_LOG={self:["Self-treatment","Follow-along self-treatment"],table:["Treating someone else","Follow-along table treatment"],chair:["Treating someone else","Follow-along Rapid Reiki (chair)"]};
+  function logSession(){
+    var box=P.el.querySelector("#plDone");
+    if(P.logged){box.innerHTML='<p class="ok">✓ Saved to your practice log.</p>';return;}
+    var mins=Math.round(P.timed/60);
+    if(mins<1){box.innerHTML='<p>The timer wasn\'t used, so this session wasn\'t logged automatically. You can add it yourself in the <button class="linkbtn" id="plToLog">Practice log</button>.</p>';box.querySelector("#plToLog").onclick=function(){closePlayer();if(typeof showLog==="function")showLog();};return;}
+    var t=SEQ_LOG[P.seq]||["Other","Follow-along session"];
+    var e=cleanState({log:[{id:Date.now()+"-"+Math.floor(Math.random()*1e6),date:today(),type:t[0],mins:mins,did:t[1]+" ("+P.list.length+" positions). Logged automatically.",noticed:"",ask:""}]}).log[0];
+    state.log.push(e);save();P.logged=e.id;
+    box.innerHTML='<p class="ok">✓ Saved to your practice log ('+mins+' min).</p>'
+      +'<label for="plNote">What did you notice? <span class="muted">Optional</span></label><textarea id="plNote" rows="2" placeholder="Sensations in your hands, feelings, anything that came up"></textarea>'
+      +'<button class="btn secondary" id="plSaveNote">Save note</button> <span id="plNoteMsg" class="muted" role="status"></span>';
+    box.querySelector("#plSaveNote").onclick=function(){
+      var v=box.querySelector("#plNote").value.trim().slice(0,2000);
+      state.log.forEach(function(x){if(x.id===P.logged)x.noticed=v;});save();
+      box.querySelector("#plNoteMsg").textContent=v?"Note saved.":"Note cleared.";
+    };
   }
   function closePlayer(){if(!P)return;stop();var f=P.from;P.el.remove();document.body.classList.remove("pl-open");P=null;if(f)f.focus();}
 })();
