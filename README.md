@@ -3,18 +3,14 @@
 This public GitHub Pages site hosts **free Reiki Levels 1 and 2 only**. The Reiki Level 3 (Master / Shinpiden) course is a **separate paid course**, and must not be stored in the public repository.
 
 ## Files
-- `index.html` — free course landing page plus Level 3 PayPal enrollment instructions and classroom link
+- `index.html` — free course landing page, with an email link for attunements and Reiki Master training
 - `reiki-level-1.html` — free Level 1 (Shoden)
 - `reiki-level-2.html` — free Level 2 (Okuden)
 
-## Reiki Master enrollment
-Access to the private Wix Level 3 classroom is granted by emailed password after a manually verified PayPal payment. The homepage and both free courses explain the four one-time amounts ($11.11, $22.22, $33.33, $44.44), show the PayPal QR code, payment instructions, password policy, and classroom link.
+## Attunements and Reiki Master training
+The site no longer takes payment. The landing page and both free courses ask learners to reach out to Luke to receive attunements or ask about Reiki Master training, with an **Email Luke** button (editor@theblackrootpress.com).
 
-Payment is by PayPal QR code only (no payment buttons). The code image is `paypal-qr.png` on the landing page and is embedded in both free courses.
-
-Classroom link: https://www.theblackrootpress.com/reiki-master-classroom-shinpiden
-
-Never commit the classroom password or the Level 3 course HTML to this public repository.
+Never commit Level 3 course HTML or any classroom password to this public repository.
 
 ## Publishing
 In **Settings → Pages**, select **Deploy from a branch**, **main** and **/(root)**.
